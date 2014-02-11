@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en" class="custom-scroll">
+<head>
+	<meta charset="UTF-8">
+	<title>Booktype Edit Screen</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-theme.css' rel='stylesheet' type='text/css' />
+  <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href='css/booki-new.css' rel='stylesheet' type='text/css' />
+  <link href='css/aloha.css' rel='stylesheet' type='text/css' />
+  <link href='css/backo.css' rel='stylesheet' type='text/css' />
+
+
+</head>
+<body>
+	
+    <!-- Main menu left -->
+<div class="sf-main-menu">
+  <div class="sf-menu-header-bar"></div>
+  <div class="sf-menu-content">
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">My Dashboard</a>
+      </li>
+      <li>
+        <a href="#">Books</a>
+      </li>
+      <li>
+        <a href="#">Groups</a>
+      </li>
+      <li>
+        <a href="#">People</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="active">
+        <a href="#">Admin Home</a>
+      </li>
+      <li>
+        <a href="#">Admin Books</a>
+      </li>
+      <li>
+        <a href="#">Admin People</a>
+      </li>
+      <li>
+        <a href="#">Admin Settings</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+
+    <!-- Navbar -->
+    <div class="navigation-bar">
+      <div class="user">
+        <div class="btn-group">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Vladimir Stefanovic<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-user"></i>Profile</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-gears"></i>Control Center</a></li>
+              <li class="divider"></li>
+              <li><a href="/accounts/signout/"><i class="icon-signout"></i>Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-flag"></i>en</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-flag"></i>de</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="collapse-navigation"><a href="#"></a></div>  	
+    <div class="logo"><a href="#"></a></div>
+  	</div>
+    <!-- end Navbar -->
+
+    <!-- Bookbar -->
+  	<div class="bookbar">
+	   	<h1>Admin Control Center</h1>             
+	  </div>
+    <!-- end Bookbar -->
+
+    <div class="container admin-panel">
+    	<div class="row two-col">
+    	<div class="col-xs-12">
+        <div class="box white clearfix">
+          <ul id="settings" class="nav nav-tabs col-xs-3">
+            <h4>Site</h4>
+            <li class=""><a href="#description" data-toggle="tab">Description</a></li>
+            <li class=""><a href="#appearance" data-toggle="tab">Appearance</a></li>
+            <li class=""><a href="#frontpage" data-toggle="tab">Frontpage</a></li>
+
+            <br>
+
+            <h4>General</h4>
+            <li class="active"><a href="#licenses" data-toggle="tab">Licenses</a></li>
+            <li class=""><a href="#default_book_settings" data-toggle="tab">Default Book Settings</a></li>
+            <li class=""><a href="#privacy" data-toggle="tab">Privacy</a></li>
+
+             <br>
+
+            <h4>Publish options</h4>
+            <li class=""><a href="#allowed_options" data-toggle="tab">Allowed publishing options</a></li>
+            <li class=""><a href="#default_settings" data-toggle="tab">Default settings</a></li>
+
+
+          </ul>
+          <div id="myTabContent" class="tab-content col-xs-9">
+            <div class="tab-pane fade" id="description">
+              <h4 class="border-bottom">Description</h4>
+              <form enctype="multipart/form-data" action="/_control/settings/description/" method="POST" role="form">
+                <ul class="list">
+                  <li><label for="id_title">Site title:</label> <input id="id_title" class="form-control" maxlength="200" name="title" type="text"></li>
+                  <li><label for="id_tagline">Tagline:</label> <input id="id_tagline" class="form-control" maxlength="200" name="tagline" type="text"></li>
+                  <li><label for="id_favicon">Favicon:</label> <input id="id_favicon" name="favicon" type="file"> <span class="helptext">Upload .ico file</span></li>
+                  <li>
+                    <input type="submit" class="btn btn-default" name="submit" value="Save changes">
+                    <input type="submit" class="btn btn-default" name="submit" value="Cancel">
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="appearance">
+              <h4 class="border-bottom">Appearance</h4>
+              <form enctype="multipart/form-data" action="/_control/settings/appearance/" method="POST">
+                <ul class="list">
+                  <li><label for="id_css">CSS:</label> <textarea cols="40" id="id_css" name="css" rows="20"></textarea></li>
+                  <li>
+                    <input type="submit" class="btn btn-default" name="submit" value="Save changes">
+                    <input type="submit" class="btn btn-default" name="submit" value="Cancel">
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="frontpage">
+              <h4 class="border-bottom">Frontpage</h4>
+              <form enctype="multipart/form-data" action="/_control/settings/frontpage/" method="POST">
+                <ul class="list">
+                  <li><label for="id_description">Welcome message:</label> <textarea cols="40" id="id_description" name="description" rows="20"></textarea></li>
+                  <li><label for="id_show_changes">Show activity:</label> <input checked="checked" id="id_show_changes" name="show_changes" type="checkbox"></li>
+                  <li>
+                    <input type="submit" class="btn btn-default" name="submit" value="Save changes">
+                    <input type="submit" class="btn btn-default" name="submit" value="Cancel">
+                  </li>
+                </ul>
+              </form>
+            </div>
+
+            <div class="tab-pane fade active in" id="licenses">
+              <h4 class="border-bottom">License</h4>
+
+      				<form enctype="multipart/form-data" action="/_control/settings/license/" method="POST">
+      					<ul class="list">
+      						<li><label for="id_abbrevation">Abbrevation:</label> <input id="id_abbrevation" class="form-control" maxlength="30" name="abbrevation" type="text" value="CC BY"></li>
+      						<li><label for="id_name">Name:</label> <input id="id_name" class="form-control" maxlength="100" name="name" type="text" value="Creative Commons Attribution"></li>
+      						<li><input type="submit" class="btn btn-default" name="submit" value="Save changes">
+      						<input type="submit" class="btn btn-default" name="submit" value="Cancel"></li>
+      					</ul>
+      				</form>
+
+      			<h4 class="border-bottom">Books licensed with "Creative Commons Attribution"</h4>
+
+      				<ul class="list smaller-spacing">
+      					<li><a href="#" data-toggle="modal" data-target="#myModal">Adam's Apple</a></li>
+						<!-- Modal -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						        <h2 class="modal-title" id="myModalLabel">Adam's Apple</h2>
+						      </div>
+						      <div class="modal-body">
+								<form enctype="multipart/form-data" action="/_control/books/adams-apple/_edit/" method="POST">
+								  	<ul class="list">
+									    <li><label for="id_description">Description:</label> <textarea cols="40" id="id_description" name="description" rows="10">Blah blah blah</textarea></li>
+										<li><label for="id_owner">Owner:</label>
+											<select id="id_owner" name="owner">
+												<option value="">---------</option>
+												<option value="66">2adamhyde</option>
+												<option value="32">AdamHyde</option>
+												<option value="33">AdamJHyde</option>
+												<option value="18" selected="selected">AdamThomas</option>
+												<option value="42">EEisenstein</option>
+												<option value="77">Flowdeeps</option>
+												<option value="4">Fritz</option>
+												<option value="16">JamesSimmons</option>
+												<option value="81">Lisa</option>
+											</select>
+										</li>
+										<li><label for="id_license">License:</label>
+											<select id="id_license" name="license">
+												<option value="">---------</option>
+												<option value="4" selected="selected">Creative Commons Attribution</option>
+												<option value="6">Creative Commons Attribution-NoDerivs</option>
+												<option value="7">Creative Commons Attribution-NonCommercial</option>
+												<option value="9">Creative Commons Attribution</option>
+												<option value="8">Creative Commons Attribution-NonCommercial</option>
+												<option value="5">Creative Commons Attribution-ShareAlike</option>
+												<option value="3">Creative Commons No Rights Reserved</option>
+												<option value="10">GNU General Public License</option>
+												<option value="2">MIT License</option>
+												<option value="11">Neka moja licenca</option>
+												<option value="1">Public Domain</option>
+											</select>
+										</li>
+										<li><label for="id_is_hidden">Initially hide from others:</label> <input checked="checked" id="id_is_hidden" name="is_hidden" type="checkbox"></li>
+
+										<li>
+											<label for="id_cover">Cover image:</label> 
+
+											<p>Currently: <a href="/var/www/booksparkdev/data/cover_images/adams-apple.jpg">/var/www/booksparkdev/data/cover_images/adams-apple.jpg</a></p>
+										</li>
+
+										<li>
+											<label for="id_cover">Change:</label>
+											<input id="id_cover" name="cover" type="file">
+										</li>
+
+										<li>
+											<label for="cover-clear_id">Clear</label>
+											<input id="cover-clear_id" name="cover-clear" type="checkbox">
+										</li>
+
+									</ul>
+						      </div>
+						      <div class="modal-footer">
+						        <input type="submit" name="submit" value="Save changes" class="btn btn-primary">
+						        <input type="submit" name="submit" value="Cancel" class="btn btn-default" data-dismiss="modal">
+						      </div>
+								</form>
+						    </div><!-- /.modal-content -->
+						  </div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+
+      					<li><a href="#" data-toggle="modal" data-target="#myModal">Cum facilisis proin mauris platea velit! Dictumst in sed augue, est rhoncus non odio velit ultricies aliquet ridiculus, aliquet sed scelerisque ultricies scelerisque turpis! Proin augue.</a></li>
+      					<li><a href="#" data-toggle="modal" data-target="#myModal">Backo's book</a></li>
+      					<li><a href="#" data-toggle="modal" data-target="#myModal">Excellent Adventures</a></li>
+      					<li><a href="#" data-toggle="modal" data-target="#myModal">Newscoop</a></li>
+      					<li><a href="#" data-toggle="modal" data-target="#myModal">Репортерские истории</a></li>
+      				</ul>
+
+            </div>
+
+            <div class="tab-pane fade" id="default_book_settings">
+			<h4 class="border-bottom">Default Book Settings for Creating Books</h4>
+
+			<form enctype="multipart/form-data" action="/_control/settings/book_create/" method="POST">
+				<ul class="list">
+					<li><label for="id_visible">Default visibility:</label> <input checked="checked" id="id_visible" name="visible" type="checkbox"> <span class="helptext">If it is turned on then all books will be visible to everyone.</span></li>
+					<li><label for="id_license">Default License:</label> <select id="id_license" name="license">
+					<option value="" selected="selected">---------</option>
+					<option value="4">Creative Commons Attribution</option>
+					<option value="6">Creative Commons Attribution-NoDerivs</option>
+					<option value="7">Creative Commons Attribution-NonCommercial</option>
+					<option value="9">Creative Commons Attribution-NonCommercial-NoDerivs</option>
+					<option value="8">Creative Commons Attribution-NonCommercial-ShareAlike</option>
+					<option value="5">Creative Commons Attribution-ShareAlike</option>
+					<option value="3">Creative Commons No Rights Reserved</option>
+					<option value="10">GNU General Public License</option>
+					<option value="2">MIT License</option>
+					<option value="11">Neka moja licenca</option>
+					<option value="1">Public Domain</option>
+					</select> <span class="helptext">Default license for newly created books.</span></li>
+					<li>
+						<input type="submit" class="btn btn-default" name="submit" value="Save changes">
+						<input type="submit" class="btn btn-default" name="submit" value="Cancel">
+					</li>
+				</ul>
+			</form>
+              
+            </div>
+
+            <div class="tab-pane fade" id="privacy">
+
+				<h4 class="border-bottom">Privacy</h4>
+
+				<form enctype="multipart/form-data" action="/_control/settings/privacy/" method="POST">
+					<ul class="list">
+						<li><label for="id_user_register">Anyone can register:</label> <input checked="checked" id="id_user_register" name="user_register" type="checkbox"> <span class="helptext">Anyone can register on the site and create account</span></li>
+						<li><label for="id_create_books">Only admin can create books:</label> <input id="id_create_books" name="create_books" type="checkbox"></li>
+						<li><label for="id_import_books">Only admin can import books:</label> <input id="id_import_books" name="import_books" type="checkbox"></li>
+						<li>
+							<input type="submit" class="btn btn-default" name="submit" value="Save changes">
+							<input type="submit" class="btn btn-default" name="submit" value="Cancel">
+						</li>
+					</ul>
+				</form>
+            </div>
+
+            <div class="tab-pane fade" id="allowed_options">
+
+				<h4 class="border-bottom">Allowed publishing options</h4>
+
+				<form enctype="multipart/form-data" action="/_control/settings/publishing/" method="POST">
+					<ul class="list">
+						<li><label for="id_publish_book">book:</label> <input checked="checked" id="id_publish_book" name="publish_book" type="checkbox"></li>
+						<li><label for="id_publish_ebook">ebook:</label> <input checked="checked" id="id_publish_ebook" name="publish_ebook" type="checkbox"></li>
+						<li><label for="id_publish_pdf">PDF:</label> <input checked="checked" id="id_publish_pdf" name="publish_pdf" type="checkbox"></li>
+						<li><label for="id_publish_odt">ODT:</label> <input checked="checked" id="id_publish_odt" name="publish_odt" type="checkbox"></li>
+						<li>
+							<input type="submit" class="btn btn-default" name="submit" value="Save changes">
+							<input type="submit" class="btn btn-default" name="submit" value="Cancel">
+						</li>
+					</ul>
+				</form>
+
+            </div>
+
+            <div class="tab-pane fade" id="default_settings">
+
+				<h4 class="border-bottom">Default settings</h4>
+
+				<form enctype="multipart/form-data" action="/_control/settings/publishing_defaults/" method="POST">
+				<ul class="list">
+				<li><label for="id_book_css">Book CSS:</label> <textarea cols="40" id="id_book_css" name="book_css" rows="20"></textarea></li>
+				<li><label for="id_ebook_css">E-Book CSS:</label> <textarea cols="40" id="id_ebook_css" name="ebook_css" rows="20"></textarea></li>
+				<li><label for="id_pdf_css">PDF CSS:</label> <textarea cols="40" id="id_pdf_css" name="pdf_css" rows="20"></textarea></li>
+				<li><label for="id_odt_css">ODT CSS:</label> <textarea cols="40" id="id_odt_css" name="odt_css" rows="20"></textarea></li>
+				<li>
+					<input type="submit" class="btn btn-default" name="submit" value="Save changes">
+					<input type="submit" class="btn btn-default" name="submit" value="Cancel">
+				</li>
+				</ul>
+				</form>
+
+        	</div>
+
+          </div>
+
+
+        	
+
+        </div> <!-- End of box white clearfix -->
+
+        </div> <!-- End of row two-col -->
+        </div>
+
+    </div> <!-- End of container -->
+
+    <footer>
+    	<div class="container">
+	    	<div class="col-xs-4">
+	    		<h2>About</h2>
+	    		<p>This is a demonstration server for Booktype. This server is reset on a regular basis, and any books created here will be deleted at that time.</p>
+	    	</div>
+
+	    	<div class="col-xs-4">
+	    		<h2>How to use</h2>
+	    		<p>If you wish to have your own installation please either download the sources <a href="http://www.sourcefabric.org/en/booktype/">http://www.sourcefabric.org/en/booktype/</a> or check out Booktype Pro, our free, cloud-hosted publishing service - <a href="http://sourcefabric.com/en/booktypepro/">http://sourcefabric.com/en/booktypepro/</a>.</p>
+	    	</div>
+
+	    	<div class="col-xs-4">
+	    		<h2>Need Help?</h2>
+	    		<p>With social tools, easy workflows and freedom to choose your own licences, Booktype Pro is perfect for internal, or public-facing, use. Publishers, print-on-demand services and education institutions produce better books, faster, while Sourcefabric takes care of your own platform's installation, hosting, upgrades, and security.</p>
+	    	</div>
+	    	<div class="content-divider"></div>
+	    	<div class="col-xs-4">
+	    		<img class="pull-right" src="img/footer_logo.png">
+	    	</div>
+	    	<div class="col-xs-8">
+	    		<p>Powered by Booktype, the open content management system for professional  writers. <br>
+				© 2013 Sourcefabric o.p.s. | contact@sourcefabric.org</p>
+	    	</div>
+	    </div>
+    </footer>
+
+  
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+<script type="text/javascript" src="js/tooltip.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
+<script type="text/javascript" src="js/booki-init.js"></script>
+
+<script type="text/javascript">
+    // Backo book lists and thumb
+    $( document ).ready(function() {
+        $('.showList').click(function(){
+          $('#books-prew, #books-prew-2').attr('class','book-list');
+        });
+        $('.showGrid').click(function(){
+          $('#books-prew, #books-prew-2').attr('class','book-thumb');
+        });
+   });
+</script>
+
+</body>
+</html>

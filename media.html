@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" class="custom-scroll">
+<head>
+	<meta charset="UTF-8">
+	<title>Booktype Media Screen</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href='css/booki-new.css' rel='stylesheet' type='text/css' />
+
+</head>
+<body>
+	
+    <!-- Navbar -->
+    <div class="user">
+        <div class="btn-group float-right">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Vladimir Stefanovic<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-user"></i>Profile</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-gears"></i>Control Center</a></li>
+              <li class="divider"></li>
+              <li><a href="/accounts/signout/"><i class="icon-signout"></i>Logout</a></li>
+            </ul>
+        </div>
+    </div>    
+    <div class="navigation-bar">
+		<div class="logo"><a href="#"></a></div>
+	</div>
+    <!-- end Navbar -->
+
+    <!-- Bookbar -->
+	<div class="bookbar">
+		<h1>Book title here</h1>       
+        <div class="btn-toolbar float-right">
+
+      <div class="btn-group" data-toggle="buttons">
+      <button type="button" data-toggle="button" class="btn btn-default" rel="tooltip" title="" id="button-toc" data-placement="bottom" data-original-title="Table Of Contents"><i class="icon-list-alt"></i></button>
+      <button type="button" data-toggle="button" class="btn btn-default active" rel="tooltip" title="" id="button-media" data-placement="bottom" data-original-title="Media"><i class="icon-picture"></i></button>        
+      <button type="button" data-toggle="button" class="btn btn-default" rel="tooltip" title="" id="button-cover" data-placement="bottom" data-original-title="Cover Manager"><i class="icon-tablet"></i></button>            
+      <button type="button" data-toggle="button" class="btn btn-default" rel="tooltip" id="button-publish" title="" data-placement="bottom" data-original-title="Publishing"><i class="icon-print"></i></button> 
+      </div>
+      </div>
+	</div>
+    <!-- end Bookbar -->
+
+    <!-- ToC / Chapter header -->
+	<div class="contentHeader">
+        <h2>Media - Images and Files</h2>
+	</div>
+    <!-- end ToC/Chapter header -->
+
+    <div class="contentContainer">
+   		<div class="content">
+   		   <p>All images added to your book are listed here as well as any additional files you have uploaded.</p>
+           <table border="0" cellspacing="0" cellpadding="0" class="mediaTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>name</th>
+                        <th>dimension</th>
+                        <th>size</th>
+                        <th>created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="8551" value="06032013107.jpg">
+                        </td>
+                        <td>
+                            <a href="/libro-electronico-de-unisan/_draft/_v/1.0/static/06032013107.jpg" target="_new">06032013107.jpg</a></td>
+                        <td>2592x1944</td>
+                        <td>928 Kb</td>
+                        <td>20.07.2013 16:30:40</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="8532" value="13032013110.jpg">
+                        </td>
+                        <td>
+                            <a href="/libro-electronico-de-unisan/_draft/_v/1.0/static/13032013110.jpg" target="_new">13032013110.jpg</a>
+                        </td>
+                        <td>2592x1944</td>
+                        <td>703 Kb</td>
+                        <td>20.07.2013 16:19:48</td>
+                    </tr>
+                </tbody>
+            </table>    
+        <button type="button" class="btn btn-default" id="delete-selected-items">Delete selected items</button>
+        </div>
+    </div>
+
+<!-- Tabs content -->
+<div class="tablist left-tablist">
+    <ul class="navigation-tabs">
+        <li><a href="#" id="online-users-tab"><i class="big-icon-online-users"></i></a></li>
+        <li><a href="#" id="chat-tab"><i class="big-icon-chat"></i></a></li>
+    </ul>
+</div>
+<div class="tablist right-tablist"></div>
+<div id="left-tabpane" class="tabpane left-tabpane">
+    <section class="tab-content hold" source_id="online-users-tab">
+        <h3>Online Users</h3>
+        <p>Online users content here</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+    </section>
+    <section class="tab-content" source_id="chat-tab">
+        <h3>Chat</h3>
+        <p>some chat here</p>        
+    </section>
+</div>
+<div id="right-tabpane" class="tabpane right-tabpane">
+    
+</div>
+
+
+<!-- Modal windows -->
+<div id="newChapter" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Create New Chapter</h3>
+  </div>
+  <div class="modal-body">
+    <input type="text" placeholder="Enter new Chapter title">
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    <button class="btn btn-primary">Create Chapter</button>
+  </div>
+</div>
+<div id="newSection" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Create New Section</h3>
+  </div>
+  <div class="modal-body">
+    <input type="text" placeholder="Enter new Section title">
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    <button class="btn btn-primary">Create Section</button>
+  </div>
+</div>
+<div id="importChapter" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Clone Chapter</h3>
+  </div>
+  <div class="modal-body">
+    <fieldset>
+        <input type="text" placeholder="Enter Book ID">
+        <input type="text" placeholder="Enter Chapter ID">
+        <input type="text" placeholder="New title (optional)">
+    </fieldset>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    <button class="btn btn-primary">Clone Chapter</button>
+  </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+<script type="text/javascript" src="js/tooltip.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
+<script type="text/javascript" src="js/booki-init.js"></script>
+
+</body>
+</html>

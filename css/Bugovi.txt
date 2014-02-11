@@ -1,0 +1,1 @@
+dashboard.html - za grid i list view ikonice, staviti active state po defaultu.

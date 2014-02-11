@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en" class="custom-scroll">
+<head>
+	<meta charset="UTF-8">
+	<title>Booktype Edit Screen</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-theme.css' rel='stylesheet' type='text/css' />
+  <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href='css/booki-new.css' rel='stylesheet' type='text/css' />
+  <link href='css/aloha.css' rel='stylesheet' type='text/css' />
+  <link href='css/backo.css' rel='stylesheet' type='text/css' />
+
+
+</head>
+<body>
+	
+    <!-- Main menu left -->
+<div class="sf-main-menu">
+  <div class="sf-menu-header-bar"></div>
+  <div class="sf-menu-content">
+    <ul>
+      <li class="active">
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">My Dashboard</a>
+      </li>
+      <li>
+        <a href="#">Books</a>
+      </li>
+      <li>
+        <a href="#">Groups</a>
+      </li>
+      <li>
+        <a href="#">People</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+
+    <!-- Navbar -->
+    <div class="navigation-bar">
+      <div class="user">
+        <div class="btn-group">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Vladimir Stefanovic<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-user"></i>Profile</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-gears"></i>Control Center</a></li>
+              <li class="divider"></li>
+              <li><a href="/accounts/signout/"><i class="icon-signout"></i>Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-flag"></i>en</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-flag"></i>de</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="collapse-navigation"><a href="#"></a></div>  	
+    <div class="logo"><a href="#"></a></div>
+  	</div>
+    <!-- end Navbar -->
+
+    <!-- Bookbar -->
+  	<div class="bookbar">
+	   	<h1>Books</h1>             
+	  </div>
+    <!-- end Bookbar -->
+
+    <div class="container">
+    	<div class="row two-col">
+    		<div class="col-xs-8">
+    			<div class="box gray">
+    				<h2 class="box-title-alter">
+    					Books
+
+    					<div class="btn-toolbar float-right">
+	    					
+	    				<div class="btn-group float-right">
+                  <button class="btn btn-default btn-sm showGrid" rel="tooltip" title="" data-placement="bottom" data-original-title="Show grid"><i class="icon-th"></i></button>
+                  <button class="btn btn-default btn-sm showList" rel="tooltip" title="" data-placement="bottom" data-original-title="Show List"><i class="icon-list-ul"></i></button>
+              </div>
+
+    					</div>
+
+    				</h2>
+
+    				<div class="book-thumb" id="books-prew"> <!-- For list view add book-list class, and remove book-thumb -->
+						<div class="grid-4">
+							<figure class="custom-cover">
+								<img src="pictures/cover.png">
+							</figure>
+							<div class="book-info">
+							<h4><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a></h4>
+								<div class="btn-group float-right">
+									<a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="Edit Book" data-toggle="modal" href="#editCover"><i class="icon-pencil"></i></a>
+                  <a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="View Book" href="pictures/cover0.jpg" target="_blank"><i class="icon-eye-open"></i></a>
+                  <a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete Book"><i class="icon-trash"></i></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="grid-4">
+							<figure class="default-cover">
+								<img src="img/thumb-default.png">
+							</figure>
+							<div class="book-info">
+							<h4><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a></h4>
+								<div class="btn-group float-right">
+									<a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="Edit Book" data-toggle="modal" href="#editCover"><i class="icon-pencil"></i></a>
+                  <a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="View Book" href="pictures/cover0.jpg" target="_blank"><i class="icon-eye-open"></i></a>
+                  <a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete Book"><i class="icon-trash"></i></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="grid-4">
+							<figure class="custom-cover">
+								<img src="pictures/cover.png">
+							</figure>
+							<div class="book-info">
+							<h4><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a></h4>
+								<div class="btn-group float-right">
+									<a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="Edit Book" data-toggle="modal" href="#editCover"><i class="icon-pencil"></i></a>
+                  <a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="View Book" href="pictures/cover0.jpg" target="_blank"><i class="icon-eye-open"></i></a>
+                  <a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete Book"><i class="icon-trash"></i></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="grid-4">
+							<figure class="default-cover">
+								<img src="img/thumb-default.png">
+							</figure>
+							<div class="book-info">
+							<h4><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a></h4>
+								<div class="btn-group float-right">
+									<a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="Edit Book" data-toggle="modal" href="#editCover"><i class="icon-pencil"></i></a>
+                  <a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="View Book" href="pictures/cover0.jpg" target="_blank"><i class="icon-eye-open"></i></a>
+                  <a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete Book"><i class="icon-trash"></i></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="grid-4">
+							<figure class="default-cover">
+								<img src="img/thumb-default.png">
+							</figure>
+							<div class="book-info">
+							<h4><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a></h4>
+								<div class="btn-group float-right">
+									<a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="Edit Book" data-toggle="modal" href="#editCover"><i class="icon-pencil"></i></a>
+                  <a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="View Book" href="pictures/cover0.jpg" target="_blank"><i class="icon-eye-open"></i></a>
+                  <a class="btn btn-xs" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete Book"><i class="icon-trash"></i></a>
+								</div>
+							</div>
+						</div>
+
+    				</div> <!-- End of book list (book-thumb or book-list) -->
+
+    			</div>
+
+    		</div>
+
+    		<div class="col-xs-4">
+    			<div class="box gray">
+    				<h2 class="box-title">My Profile</h2>
+    				<ul class="list-people list user-avatar">
+    					<li>
+    						<figure><img src="pictures/fritz.png"></figure>
+    						<div class="people-info">
+	    						<h4><a href="#">Fritz</a></h4>
+	    						<span>Vladimir Stefanovic</span>
+    						</div>
+    					</li>
+    				</ul>
+
+    				<div class="box-bottom-white">
+    					<button href="#" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="My Dashboard">MY DASHBOARD</button>
+    					<button href="#" role="button" class="btn btn-default float-right" rel="tooltip" title="" data-placement="bottom" data-original-title="Go to settings">SETTINGS</button>
+
+    				</div>
+    			</div>
+
+    			<div class="box white">
+    				<h2 class="box-title">Latest Books</h2>
+    				<ul class="list border-top">
+    					<li>
+	    					<figure><img src="img/list-default.png"></figure>
+	    					<div class="list-info">
+	    						<h4><a href="#">Electronic Information Sources</a></h4>
+    						</div>
+    					</li>
+
+    					<li>
+	    					<figure><img src="img/list-default.png"></figure>
+	    					<div class="list-info">
+	    						<h4><a href="#">Integrated library systems generations</a></h4>
+    						</div>
+    					</li>
+
+    				</ul>
+
+    				<h2 class="box-title">Latest Chapters</h2>
+    				<ul class="list border-top">
+    					<li>
+	    					<figure><img src="img/chapter-default.png"></figure>
+	    					<div class="list-info">
+	    						<h4><a href="#">Airtime 2.5 for boradcasters</a></h4>
+    						</div>
+    					</li>
+
+    					<li>
+	    					<figure><img src="img/chapter-default.png"></figure>
+	    					<div class="list-info">
+	    						<h4><a href="#">Airtime API authentication Airtime API authentication Airtime API authentication Airtime API authentication</a></h4>
+    						</div>
+    					</li>
+
+    				</ul>
+    			</div>
+
+    			<div class="box white">
+            <h2 class="box-title">Recent Activity</h2>
+            <ul class="list border-top user-avatar circle">
+                  <li>
+                    <figure><img src="pictures/gideon_thumb.png"></figure>
+                    <div class="list-info">
+                      <span class="time">6 hours ago</span>
+                      <h4><a href="#">Gideon</a></h4>
+                      <p>
+                        New chapter <a href="#">“Airtime API auth Airtime API auth Airtime API auth Airtime API auth Airtime API auth "</a>
+                        <span>#airtime-25-for-broadcasters</span>
+                      </p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <figure><img src="pictures/fritz.png"></figure>
+                    <div class="list-info">
+                      <span class="time">6 hours ago</span>
+                      <h4><a href="#">Fritz</a></h4>
+                      <p>
+                        New chapter <a href="#">“Airtime API auth"</a>
+                        <span>#airtime-25-for-broadcasters</span>
+                      </p>
+                    </div>
+                  </li>
+
+                </ul>
+          </div>
+          
+    		</div>
+    	</div>
+    </div> <!-- End of container -->
+
+    <footer>
+    	<div class="container">
+	    	<div class="col-xs-4">
+	    		<h2>About</h2>
+	    		<p>This is a demonstration server for Booktype. This server is reset on a regular basis, and any books created here will be deleted at that time.</p>
+	    	</div>
+
+	    	<div class="col-xs-4">
+	    		<h2>How to use</h2>
+	    		<p>If you wish to have your own installation please either download the sources <a href="http://www.sourcefabric.org/en/booktype/">http://www.sourcefabric.org/en/booktype/</a> or check out Booktype Pro, our free, cloud-hosted publishing service - <a href="http://sourcefabric.com/en/booktypepro/">http://sourcefabric.com/en/booktypepro/</a>.</p>
+	    	</div>
+
+	    	<div class="col-xs-4">
+	    		<h2>Need Help?</h2>
+	    		<p>With social tools, easy workflows and freedom to choose your own licences, Booktype Pro is perfect for internal, or public-facing, use. Publishers, print-on-demand services and education institutions produce better books, faster, while Sourcefabric takes care of your own platform's installation, hosting, upgrades, and security.</p>
+	    	</div>
+	    	<div class="content-divider"></div>
+	    	<div class="col-xs-4">
+	    		<img class="pull-right" src="img/footer_logo.png">
+	    	</div>
+	    	<div class="col-xs-8">
+	    		<p>Powered by Booktype, the open content management system for professional  writers. <br>
+				© 2013 Sourcefabric o.p.s. | contact@sourcefabric.org</p>
+	    	</div>
+	    </div>
+    </footer>
+
+  
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+<script type="text/javascript" src="js/tooltip.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
+<script type="text/javascript" src="js/booki-init.js"></script>
+
+<script type="text/javascript">
+    // Backo book lists and thumb
+    $( document ).ready(function() {
+        $('.showList').click(function(){
+          $('#books-prew, #books-prew-2').attr('class','book-list');
+        });
+        $('.showGrid').click(function(){
+          $('#books-prew, #books-prew-2').attr('class','book-thumb');
+        });
+   });
+</script>
+
+</body>
+</html>
