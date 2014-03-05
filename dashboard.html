@@ -11,8 +11,6 @@
   <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 	<link href='css/booki-new.css' rel='stylesheet' type='text/css' />
   <link href='css/aloha.css' rel='stylesheet' type='text/css' />
-  <link href='css/backo.css' rel='stylesheet' type='text/css' />
-
 
 </head>
 <body>
@@ -83,11 +81,58 @@
 
     					<div class="btn-toolbar float-right">
 
-							<button href="#" role="button" class="btn btn-default float-right btn-group" rel="tooltip" title="" data-placement="bottom" data-original-title="Create new book">CREATE NEW BOOK</button>
+							<button href="#" role="button" class="btn btn-default float-right btn-group" data-toggle="modal" data-target="#myModal" rel="tooltip" title="" data-placement="bottom" data-original-title="Create new book">CREATE NEW BOOK</button>
 	    					
 	    					<div class="btn-group float-right">
 							    <button class="btn btn-default btn-sm showGrid" rel="tooltip" title="" data-placement="bottom" data-original-title="Show grid"><i class="icon-th"></i></button>
 							    <button class="btn btn-default btn-sm showList" rel="tooltip" title="" data-placement="bottom" data-original-title="Show List"><i class="icon-list-ul"></i></button>
+							</div>
+
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							        <h2 class="modal-title" id="myModalLabel">Create New Book</h2>
+							      </div>
+							      	<div class="modal-body">
+
+
+
+			<section id="basic">
+                <h2 class="page-header">Basic Example</h2>
+                <div id="wizard-1" role="application" class="wizard clearfix"><div class="steps clearfix"><ul role="tablist"><li role="tab" class="first current" aria-disabled="false" aria-selected="true"><a id="wizard-1-t-0" href="#wizard-1-h-0" aria-controls="wizard-1-p-0"><span class="current-info audible">current step: </span><span class="number">1.</span> Keyboard</a></li><li role="tab" class="disabled" aria-disabled="true"><a id="wizard-1-t-1" href="#wizard-1-h-1" aria-controls="wizard-1-p-1"><span class="number">2.</span> Effects</a></li><li role="tab" class="disabled last" aria-disabled="true"><a id="wizard-1-t-2" href="#wizard-1-h-2" aria-controls="wizard-1-p-2"><span class="number">3.</span> Pager</a></li></ul></div><div class="content clearfix">
+                    <h3 id="wizard-1-h-0" tabindex="-1" class="title current">Keyboard</h3>
+                    <section id="wizard-1-p-0" role="tabpanel" aria-labelledby="wizard-1-h-0" class="body current" aria-hidden="false" style="display: block;">
+                        <p>Try the keyboard navigation by clicking arrow left or right!</p>
+                    </section>
+
+                    <h3 id="wizard-1-h-1" tabindex="-1" class="title">Effects</h3>
+                    <section id="wizard-1-p-1" role="tabpanel" aria-labelledby="wizard-1-h-1" class="body" aria-hidden="true" style="display: none;">
+                        <p>Wonderful transition effects.</p>
+                    </section>
+
+                    <h3 id="wizard-1-h-2" tabindex="-1" class="title">Pager</h3>
+                    <section id="wizard-1-p-2" role="tabpanel" aria-labelledby="wizard-1-h-2" class="body" aria-hidden="true" style="display: none;">
+                        <p>The next and previous buttons help you to navigate through your content.</p>
+                    </section>
+                </div><div class="actions clearfix"><ul role="menu" aria-label="Pagination"><li class="disabled" aria-disabled="true"><a href="#previous" role="menuitem">Previous</a></li><li aria-hidden="false" aria-disabled="false"><a href="#next" role="menuitem">Next</a></li><li aria-hidden="true" style="display: none;"><a href="#finish" role="menuitem">Finish</a></li></ul></div></div>
+            </section>
+
+
+
+
+
+
+
+									</div>
+							      <div class="modal-footer">
+							        <input type="submit" name="submit" value="Save changes" class="btn btn-primary">
+							        <input type="submit" name="submit" value="Cancel" class="btn btn-default" data-dismiss="modal">
+							      </div>
+									
+							    </div><!-- /.modal-content -->
+							  </div><!-- /.modal-dialog -->
 							</div>
 
     					</div>
@@ -357,6 +402,8 @@
 <script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
 <script type="text/javascript" src="js/booki-init.js"></script>
 
+<script type="text/javascript" src="js/jquery.steps.min.js"></script>
+
 <script type="text/javascript">
     // Backo book lists and thumb
     $( document ).ready(function() {
@@ -367,6 +414,11 @@
         	$('#books-prew, #books-prew-2').attr('class','book-thumb');
         });
    });
+</script>
+
+
+<script>
+	$("#wizard").steps();
 </script>
 
 </body>
