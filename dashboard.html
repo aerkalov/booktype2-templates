@@ -89,7 +89,7 @@
 							</div>
 
 							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							  <div class="modal-dialog">
+							  <div class="modal-dialog new_book">
 							    <div class="modal-content">
 							      <div class="modal-header">
 							        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -99,25 +99,73 @@
 
 
 
-			<section id="basic">
-                <h2 class="page-header">Basic Example</h2>
-                <div id="wizard-1" role="application" class="wizard clearfix"><div class="steps clearfix"><ul role="tablist"><li role="tab" class="first current" aria-disabled="false" aria-selected="true"><a id="wizard-1-t-0" href="#wizard-1-h-0" aria-controls="wizard-1-p-0"><span class="current-info audible">current step: </span><span class="number">1.</span> Keyboard</a></li><li role="tab" class="disabled" aria-disabled="true"><a id="wizard-1-t-1" href="#wizard-1-h-1" aria-controls="wizard-1-p-1"><span class="number">2.</span> Effects</a></li><li role="tab" class="disabled last" aria-disabled="true"><a id="wizard-1-t-2" href="#wizard-1-h-2" aria-controls="wizard-1-p-2"><span class="number">3.</span> Pager</a></li></ul></div><div class="content clearfix">
-                    <h3 id="wizard-1-h-0" tabindex="-1" class="title current">Keyboard</h3>
-                    <section id="wizard-1-p-0" role="tabpanel" aria-labelledby="wizard-1-h-0" class="body current" aria-hidden="false" style="display: block;">
-                        <p>Try the keyboard navigation by clicking arrow left or right!</p>
-                    </section>
+										<section id="basic">
 
-                    <h3 id="wizard-1-h-1" tabindex="-1" class="title">Effects</h3>
-                    <section id="wizard-1-p-1" role="tabpanel" aria-labelledby="wizard-1-h-1" class="body" aria-hidden="true" style="display: none;">
-                        <p>Wonderful transition effects.</p>
-                    </section>
+								            <form method="post" action="/accounts/Fritz/_create_book/" target="hidden_frame" enctype="multipart/form-data"><input type="hidden" name="csrfmiddlewaretoken" value="cbFF3Y1lqxPMojRh0EOxNEWwv4oOpwdu">
 
-                    <h3 id="wizard-1-h-2" tabindex="-1" class="title">Pager</h3>
-                    <section id="wizard-1-p-2" role="tabpanel" aria-labelledby="wizard-1-h-2" class="body" aria-hidden="true" style="display: none;">
-                        <p>The next and previous buttons help you to navigate through your content.</p>
-                    </section>
-                </div><div class="actions clearfix"><ul role="menu" aria-label="Pagination"><li class="disabled" aria-disabled="true"><a href="#previous" role="menuitem">Previous</a></li><li aria-hidden="false" aria-disabled="false"><a href="#next" role="menuitem">Next</a></li><li aria-hidden="true" style="display: none;"><a href="#finish" role="menuitem">Finish</a></li></ul></div></div>
-            </section>
+							                	<div id="wizard-1">
+
+								                    <h3>Title</h3>
+								                    <section>
+								                        <p class="wizard_desc">What is the title of your book?</p>
+											            <label for="title">Title of Book</label> <input class="form-control" maxlength="200" name="title" type="text">
+								                    </section>
+
+								                    <h3>Description</h3>
+								                    <section>
+								                        <p class="wizard_desc">Give some information so others can find it to help you (this can be added or changed later).</p>
+        												<label for="description">Description</label>
+														<textarea class="form-control" name="description" cols="40" rows="7"></textarea>
+
+								                    </section>
+
+								                    <h3>Choose license</h3>
+								                    <section>
+								                        <p class="wizard_desc">Choose from the following license</p>
+														<label for="hidden">License</label>
+														<select id="id_license" name="license">
+															<option value="">---------</option>
+															<option value="4" selected="selected">Creative Commons Attribution</option>
+															<option value="6">Creative Commons Attribution-NoDerivs</option>
+															<option value="7">Creative Commons Attribution-NonCommercial</option>
+															<option value="9">Creative Commons Attribution</option>
+															<option value="8">Creative Commons Attribution-NonCommercial</option>
+															<option value="5">Creative Commons Attribution-ShareAlike</option>
+															<option value="3">Creative Commons No Rights Reserved</option>
+															<option value="10">GNU General Public License</option>
+															<option value="2">MIT License</option>
+															<option value="11">Neka moja licenca</option>
+															<option value="1">Public Domain</option>
+														</select>
+								                        
+								                    </section>
+
+								                    <h3>Image</h3>
+								                    <section>
+								                        <p class="wizard_desc">If you have an image for the book then add it now (this can be added or changed later)</p>
+								                        <label for="hidden">Book Image</label>
+														<input type="file" name="cover" size="40">
+								                    </section>
+
+								                    <h3>Make Public?</h3>
+								                    <section>
+								                        <p class="wizard_desc">Would you like to keep your book private or make it public? If the book is public others can find the book to help you.
+														<b>Note:</b> this setting can be changed later from your dashboard.</p>
+
+														<label for="hidden">Initially hide from others</label> <input checked="checked" name="hidden" type="checkbox">
+
+
+
+								                    </section>
+
+							                	</div>
+
+								            </form>
+
+							            </section>
+
+
+
 
 
 
@@ -126,10 +174,7 @@
 
 
 									</div>
-							      <div class="modal-footer">
-							        <input type="submit" name="submit" value="Save changes" class="btn btn-primary">
-							        <input type="submit" name="submit" value="Cancel" class="btn btn-default" data-dismiss="modal">
-							      </div>
+
 									
 							    </div><!-- /.modal-content -->
 							  </div><!-- /.modal-dialog -->
@@ -418,7 +463,12 @@
 
 
 <script>
-	$("#wizard").steps();
+	$("#wizard-1").steps({
+                headerTag: "h3",
+                bodyTag: "section",
+                transitionEffect: "slideLeft",
+                autoFocus: true
+            });
 </script>
 
 </body>
