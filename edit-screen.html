@@ -13,7 +13,7 @@
   <link href='css/aloha.css' rel='stylesheet' type='text/css' />
 
 </head>
-<body>
+<body class="opentabpane-left">
 	
     <!-- Main menu left -->
 <div class="sf-main-menu">
@@ -208,7 +208,7 @@ What Is EPUB 3? discusses this exciting new format, which is set to unleash a co
         <li><a href="#" id="history-tab"><i class="big-icon-history"></i></a></li>
     </ul>
 </div>
-<div id="left-tabpane" class="tabpane left-tabpane">
+<div id="left-tabpane" class="tabpane left-tabpane open">
     <section class="tab-content" source_id="chapters-tab">
         <h3>Chapters</h3>
         <button href="#" role="button" class="btn btn-default btn-xs" id="" rel="tooltip" title="" data-placement="bottom" data-original-title="Expand Table of Contents">EXPAND TOC</button>
@@ -254,14 +254,67 @@ What Is EPUB 3? discusses this exciting new format, which is set to unleash a co
             </li>            
         </ul>
     </section>
+
+    <!-- online users content -->
     <section class="tab-content" source_id="online-users-tab">
         <h3>Online Users</h3>
         <p>Online users content here</p>
     </section>
-    <section class="tab-content" source_id="chat-tab">
+
+    <!-- chat tab content -->
+    <section class="tab-content chat" source_id="chat-tab" style="display:block;">
         <h3>Chat</h3>
-        <p>some chat here</p>        
+
+        <div class="notification-list-box">
+          <ul class="notification-list  shadow-target shadow-source" shadow-id="5">
+            <li >
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><b>Michael White</b> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><b>John Doe</b> finished article <i>“Europe car sales 
+break losing streak”</i></p>
+                <span class="notification-info">Today at 12:39</span>
+              </div>
+            </li>
+            <li class="important">
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><b>Editor:</b> guys, we have to get this out before 
+14:00 </p>
+                <span class="notification-info">Today at 13:05</span>
+              </div>
+            </li>
+            <li class="personal">
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><b>Editor:</b> OK, good news. We just got another 
+hour, so 15:00 at latest</p>
+                <span class="notification-info">Today at 13:15</span>
+              </div>
+            </li>                              
+          </ul>
+        </div> 
+
+        <div class="notification-write-box">
+          <textarea class="notification-writer" placeholder="Post a notification"></textarea>
+          <div class="notification-important">
+            <i class="icon-info-sign"></i>
+          </div>
+          <div class="button-area clearfix">            
+              <a class="btn btn-primary pull-right send-notif">Send</a>            
+              <a class="btn btn-default pull-right cancel-notif">Cancel</a>
+          </div>
+        </div>
     </section>
+    
+    <!-- style tab content -->
     <section class="tab-content" source_id="style-tab">
         <h3>Style</h3>
         <ol>
