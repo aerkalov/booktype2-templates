@@ -1999,6 +1999,12 @@ dt textarea {
 .list figure + .list-info {
   display: block;
   margin-left: 35px;
+  position: relative;
+}
+.list figure + .list-info .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .list p {
   margin: 0px;
@@ -2173,7 +2179,11 @@ fieldset .list input,
 form .list textarea,
 fieldset .list textarea {
   display: inline-block;
-  max-width: 300px;
+  max-width: 322px;
+}
+form .list .btn-sm {
+  vertical-align: top;
+  margin-left: 4px;
 }
 textarea.form-control {
   vertical-align: top;
