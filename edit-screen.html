@@ -13,7 +13,7 @@
   <link href='css/aloha.css' rel='stylesheet' type='text/css' />
 
 </head>
-<body class="opentabpane-left">
+<body>
 	
     <!-- Main menu left -->
 <div class="sf-main-menu">
@@ -197,7 +197,12 @@ What Is EPUB 3? discusses this exciting new format, which is set to unleash a co
     <ul class="navigation-tabs">
         <li><a href="#" id="chapters-tab"><i class="big-icon-chapters"></i></a></li>
         <li><a href="#" id="online-users-tab"><i class="big-icon-online-users"></i></a></li>
-        <li><a href="#" id="chat-tab"><i class="big-icon-chat"></i></a></li>
+        <li>
+          <a href="#" id="chat-tab">
+            <i class="big-icon-chat"></i>
+            <span class="label label-success">23</span>
+          </a>
+        </li>
         <li><a href="#" id="style-tab"><i class="big-icon-style"></i></a></li>
     </ul>
 </div>
@@ -208,69 +213,124 @@ What Is EPUB 3? discusses this exciting new format, which is set to unleash a co
         <li><a href="#" id="history-tab"><i class="big-icon-history"></i></a></li>
     </ul>
 </div>
-<div id="left-tabpane" class="tabpane left-tabpane open">
+<div id="left-tabpane" class="tabpane left-tabpane">
     <section class="tab-content" source_id="chapters-tab">
         <h3>Chapters</h3>
         <button href="#" role="button" class="btn btn-default btn-xs" id="" rel="tooltip" title="" data-placement="bottom" data-original-title="Expand Table of Contents">EXPAND TOC</button>
-        <ul class="edit-toc">        
-            <li>               
-                <div><span class="section">What Is EPUB 3? </span> </div>                                       
-            </li>
-            <li>
-                <div><span class="section">Preface</span> </div>                               
-            </li>
-            <li class="active">
-                  <div><a href="#" title="1926">Attribution and Permissions</a></div>                                              
-            </li>            
-            <li>               
-                  <div><a href="#" title="1927">Safari® Books Online</a></div>                                                 
-            </li>            
-            <li>               
-                  <div><a href="#" title="1928">How to Contact Us</a></div>                                                 
-            </li>            
-            <li>               
-                <div><span class="section">1. What Is EPUB 3?</span> </div>                                                 
-            </li>            
-            <li>               
-                  <div><a href="#" title="1929">EPUB 3 in a Nutshell</a></div>                                                 
-            </li>            
-            <li>               
-                  <div><a href="#" title="1930">The EPUB 3 Revision</a></div>                                                 
-            </li>            
-            <li>               
-                  <div><a href="#" title="1931">EPUB and Web Standards</a></div>                                                 
-            </li>            
-            <li>               
-                <div><span class="section">The Goodies</span> </div>                                                 
-            </li>            
-            <li>               
-                  <div><a href="#" title="1932">Multimedia</a></div>                                                 
-            </li>            
-            <li>               
-                  <div><a href="#" title="1933">The Arrival</a></div>                                                 
-            </li>            
-            <li>               
-                  <div><a href="#" title="1934">About the Author</a></div>                                                 
-            </li>            
-        </ul>
+        <div class="scrollable">
+          <ul class="edit-toc">        
+              <li>               
+                  <div><span class="section">What Is EPUB 3? </span> </div>                                       
+              </li>
+              <li>
+                  <div><span class="section">Preface</span> </div>                               
+              </li>
+              <li class="active">
+                    <div><a href="#" title="1926">Attribution and Permissions</a></div>                                              
+              </li>            
+              <li>               
+                    <div><a href="#" title="1927">Safari® Books Online</a></div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1928">How to Contact Us</a></div>                                                 
+              </li>            
+              <li>               
+                  <div><span class="section">1. What Is EPUB 3?</span> </div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1929">EPUB 3 in a Nutshell</a></div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1930">The EPUB 3 Revision</a></div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1931">EPUB and Web Standards</a></div>                                                 
+              </li>            
+              <li>               
+                  <div><span class="section">The Goodies</span> </div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1932">Multimedia</a></div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1933">The Arrival</a></div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1934">About the Author</a></div>                                                 
+              </li>            
+          </ul>
+        </div>
     </section>
 
     <!-- online users content -->
     <section class="tab-content" source_id="online-users-tab">
         <h3>Online Users</h3>
-        <p>Online users content here</p>
+        
+        <div class="scrollable">
+          <ul class="list border-top user-avatar circle">
+              <li>
+                <figure><img src="pictures/fritz.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">Fritz</a></h4>
+                  <p>Vladimir Stefanović</p>
+                  <span class="label label-default">Editor</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/iva.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">iva.h</a></h4>
+                  <p>Iva Heilová</p>
+                  <span class="label label-default">Editor</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/aco.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">aerkalov</a></h4>
+                  <p>Aco Erkalović</p>
+                  <span class="label label-primary">Admin</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="img/default-profile.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">noavataruser</a></h4>
+                  <p>Firstname lastname</p>
+                  <span class="label label-default">Editor</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/gideon_thumb.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">gideonlehmann</a></h4>
+                  <p>Gideon Lehmann</p>
+                  <span class="label label-default">Editor</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/darko.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">darconny</a></h4>
+                  <p>Darko Tomic</p>
+                  <span class="label label-default">Designer</span>
+                </div>
+              </li>
+          </ul>
+        </div>
+        
     </section>
 
     <!-- chat tab content -->
-    <section class="tab-content chat" source_id="chat-tab" style="display:block;">
+    <section class="tab-content chat" source_id="chat-tab">
         <h3>Chat</h3>
 
         <div class="notification-list-box">
-          <ul class="notification-list  shadow-target shadow-source" shadow-id="5">
-            <li >
-              <figure class="notification-avatar"></figure>
-              <div class="notification-content">
-                <p class="notification-text"><b>Michael White</b> sent article <i>“Two Nigels don't 
+          <ul class="notification-list">
+            <li>
+              <figure class="notification-avatar"><img src="pictures/gideon_thumb.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Gideon Lehmann</span> sent article <i>“Two Nigels don't 
 make a right on Europe”</i> to review</p>
                 <span class="notification-info">Today at 12:45</span>
               </div>
@@ -278,15 +338,15 @@ make a right on Europe”</i> to review</p>
             <li>
               <figure class="notification-avatar"></figure>
               <div class="notification-content">
-                <p class="notification-text"><b>John Doe</b> finished article <i>“Europe car sales 
+                <p class="notification-text"><span class="notification-author">John Doe</span> finished article <i>“Europe car sales 
 break losing streak”</i></p>
                 <span class="notification-info">Today at 12:39</span>
               </div>
             </li>
             <li class="important">
-              <figure class="notification-avatar"></figure>
+              <figure class="notification-avatar"><img src="pictures/darko.png"></figure>
               <div class="notification-content">
-                <p class="notification-text"><b>Editor:</b> guys, we have to get this out before 
+                <p class="notification-text"><span class="notification-author">Darko Tomic</span> guys, we have to get this out before 
 14:00 </p>
                 <span class="notification-info">Today at 13:05</span>
               </div>
@@ -294,11 +354,108 @@ break losing streak”</i></p>
             <li class="personal">
               <figure class="notification-avatar"></figure>
               <div class="notification-content">
-                <p class="notification-text"><b>Editor:</b> OK, good news. We just got another 
+                <p class="notification-text"><span class="notification-author">Editor:</span> OK, good news. We just got another 
 hour, so 15:00 at latest</p>
                 <span class="notification-info">Today at 13:15</span>
               </div>
-            </li>                              
+            </li> 
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Michael White</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"><img src="pictures/aco.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Aco Erkalovic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"><img src="pictures/maja.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Maja Nukic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Darko Tomic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Michael White</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><span class="notification-author">John Doe</span> finished article <i>“Europe car sales 
+break losing streak”</i></p>
+                <span class="notification-info">Today at 12:39</span>
+              </div>
+            </li>
+            <li class="important">
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><span class="notification-author">Editor:</span> guys, we have to get this out before 
+14:00 </p>
+                <span class="notification-info">Today at 13:05</span>
+              </div>
+            </li>
+            <li class="personal">
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><span class="notification-author">Editor:</span> OK, good news. We just got another 
+hour, so 15:00 at latest</p>
+                <span class="notification-info">Today at 13:15</span>
+              </div>
+            </li> 
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Michael White</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"><img src="pictures/aco.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Aco Erkalovic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"><img src="pictures/maja.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Maja Nukic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"><img src="pictures/darko.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Darko Tomic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>                             
+
           </ul>
         </div> 
 
@@ -317,11 +474,9 @@ hour, so 15:00 at latest</p>
     <!-- style tab content -->
     <section class="tab-content" source_id="style-tab">
         <h3>Style</h3>
-        <ol>
-          <li><a href="#" data-style="style1">Style 1</a></li>
-          <li><a href="#" data-style="style2">Style 2</a></li>
-          <li><a href="#" data-style="style3">Style 3</a></li>
-        </ol>
+        <div class="scrollable">
+          <p>content here</p>
+        </div>
     </section>
 </div>
 

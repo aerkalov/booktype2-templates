@@ -263,6 +263,20 @@
         });
 
 
+        // Chat Tab
+        $('.notification-writer').focus(function(){ 
+            $('.tab-content.chat').addClass('typing-active');  
+            $('.notification-list').animate({ scrollTop: $('.notification-list').height() }, "slow");
+        });
+        $('.notification-write-box .cancel-notif').click(function(e){ 
+            $('.tab-content.chat').removeClass('typing-active'); 
+            $('.notification-writer').val("").removeClass("important");
+            return false; 
+        });
+        $('.notification-important').click(function(e){
+            $('.notification-writer').toggleClass('important');
+        });
+
 
         //$('#imageManager').modal('show')
     });
