@@ -2,6 +2,7 @@
 /* Booktype stylesheet
 
 ------------------------------------------------- */
+/* Variables LESS */
 /* Common
 ------------------------------------------------- */
 html {
@@ -135,10 +136,11 @@ a:hover {
   border-bottom: 1px solid #bfbfbf;
   height: 60px;
   padding: 10px 20px 10px 20px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
   position: fixed;
   top: 40px;
   left: 0;
@@ -151,11 +153,12 @@ a:hover {
 }
 .bookbar h1 {
   float: left;
-  width: 58%;
-  box-sizing: border-box;
+  width: 54%;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   white-space: nowrap;
@@ -175,10 +178,11 @@ a:hover {
   height: 55px;
   border-bottom: 1px solid #e0e0e0;
   padding: 8px 20px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
   position: fixed;
   top: 100px;
   left: 0;
@@ -201,10 +205,11 @@ a:hover {
   border-left: 1px solid #e0e0e0;
   border-right: 1px solid #e0e0e0;
   padding: 40px 50px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
   min-height: 100%;
 }
 .logo a {
@@ -223,10 +228,11 @@ a:hover {
   float: left;
   width: 50px;
   height: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
   background: url(../img/menu-collapse.png) no-repeat center center;
   border-right: 1px solid #222;
 }
@@ -271,6 +277,7 @@ a:hover {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-shadow: inset -13px 0 10px -10px #070707, 0 2px 3px 0 #202020;
@@ -286,6 +293,7 @@ a:hover {
   top: 40px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   overflow: auto;
@@ -306,6 +314,7 @@ a:hover {
   height: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   border-bottom: 1px solid #353535;
@@ -492,6 +501,7 @@ a:hover {
   z-index: 10;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all .3s ease;
@@ -502,8 +512,6 @@ a:hover {
   -webkit-box-shadow: -2px 0 8px 0 rgba(40, 50, 50, 0.35);
   -moz-box-shadow: -2px 0 8px 0 rgba(40, 50, 50, 0.35);
   box-shadow: -2px 0 8px 0 rgba(40, 50, 50, 0.35);
-  /*overflow-y:auto;*/
-
 }
 .tabpane.right-tabpane {
   right: -330px;
@@ -592,7 +600,7 @@ a:hover {
 .tabpane .tab-content .scrollable .list .label {
   color: white;
   position: absolute;
-  top: 10px;
+  top: 0;
   right: 0;
   font-size: 10px;
   padding: 1px 4px 2px 4px;
@@ -654,10 +662,11 @@ a:hover {
   padding: 4px 6px;
   width: 100%;
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .tabpane .tab-content ul.edit-toc li a:hover {
   background: #ddd;
@@ -669,10 +678,11 @@ a:hover {
   padding: 4px 6px;
   width: 100%;
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
   font-weight: bold;
 }
 .tabpane .tab-content ul.edit-toc li.active a {
@@ -684,13 +694,6 @@ a:hover {
   position: absolute;
   top: 14px;
   right: 0px;
-}
-/* chat */
-.tabpane .tab-content.chat {
-  /*position:absolute;
-			top:0;
-			bottom:0;*/
-
 }
 .tabpane .tab-content.chat .notification-list-box {
   position: absolute;
@@ -720,6 +723,7 @@ a:hover {
   padding: 3px 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   height: 30px;
@@ -754,6 +758,7 @@ a:hover {
   padding: 2px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
@@ -810,6 +815,7 @@ a:hover {
   padding: 10px 5px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -900,10 +906,11 @@ a:hover {
   text-align: center;
   text-transform: uppercase;
   line-height: 120%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* Nested Sortable classes
 ------------------------------------------------------*/
@@ -1066,6 +1073,7 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   height: 30px;
@@ -1140,9 +1148,11 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
   background-color: #FAFAFA;
   padding: 4px 7px 5px 18px;
   display: block;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1192,6 +1202,7 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
 .responsive-popup .modal-body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
@@ -1214,8 +1225,11 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
 }
 .modal-left-pane {
   width: 130px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1230,8 +1244,11 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
   margin: 5px 0;
 }
 .modal-right-pane {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
   position: absolute;
   margin: 15px 15px 15px 15px;
   top: 0;
@@ -1492,6 +1509,7 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
   margin: 0 15%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -1704,10 +1722,11 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
   background-color: #f6f6f6;
   text-align: left;
   font-size: 12px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  box-sizing: border-box;
   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   opacity: 0;
@@ -1999,6 +2018,17 @@ dt textarea {
   position: relative;
   clear: both;
 }
+.list li .people-info {
+  min-height: 47px;
+  overflow: hidden;
+  border-left: 2px solid #d7d7d7;
+  background-color: #fff;
+  padding-top: 5px;
+  padding-left: 20px;
+  position: relative;
+  display: block;
+  margin-left: 35px;
+}
 .list figure + .list-info {
   display: block;
   margin-left: 35px;
@@ -2020,9 +2050,6 @@ dt textarea {
 .list h4 a {
   font-size: 13px;
   font-weight: 600;
-}
-#books-prew h4 a {
-  font-size: 13px;
 }
 .list span {
   font-size: 11px;
@@ -2046,42 +2073,66 @@ dt textarea {
   padding: 0px;
   margin-bottom: 10px;
 }
-.list li .people-info {
-  min-height: 47px;
-  overflow: hidden;
-  border-left: 2px solid #d7d7d7;
-  background-color: #fff;
-  padding-top: 5px;
-  padding-left: 20px;
-  position: relative;
-  display: block;
-  margin-left: 35px;
-}
-/*
-.list-people li .people-info:before {
-	background: url('../img/people-info.png') no-repeat;
-	width: 4px;
-	height: 7px;
-	z-index: 999;
-	display: block;
-	content: " ";
-	position: absolute;
-	left: 0px;
-}
-*/
-.border-top li {
-  border-top: 1px solid #e1e1e1;
+.list.user-avatar figure {
+  width: 47px;
 }
 .list.user-avatar figure + .list-info {
   margin-left: 65px;
-}
-.list.user-avatar figure {
-  width: 47px;
 }
 .list.user-avatar.circle img {
   -moz-border-radius: 24px;
   -webkit-border-radius: 24px;
   border-radius: 24px;
+}
+.list.history li {
+  padding: 7px 8px;
+}
+.list.history li.active {
+  background: #fff;
+}
+.list.history li.active .list-info .revision-time {
+  color: #000;
+  font-weight: 600;
+}
+.list.history li.active .list-info .revision-number {
+  color: #000;
+}
+.list.history li.active .list-info .btn-xs {
+  padding: 2px 5px;
+}
+.list.history li:first-child {
+  margin-top: 1px;
+}
+.list.history li:hover {
+  background: #fff;
+}
+.list.history li h4 {
+  float: left;
+  margin-top: 2px;
+}
+.list.history li h4 a {
+  font-weight: 400;
+}
+.list.history li .list-info .revision-time {
+  color: #333;
+  font-size: 13px;
+  font-weight: 400;
+}
+.list.history li .list-info .revision-number {
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  display: inline;
+  float: right;
+}
+.list.history li .list-info .restore-btn {
+  float: right;
+}
+#books-prew h4 a {
+  font-size: 13px;
+}
+.border-top li {
+  border-top: 1px solid #e1e1e1;
 }
 /* Book info page styles */
 .profile-box .contributors img {
@@ -2671,7 +2722,7 @@ footer {
     padding: 10px;
   }
   .bookbar h1 {
-    width: 46% !important;
+    width: 44% !important;
   }
   .btn-toolbar > .btn-group + .btn-group {
     margin-left: 6px!important;

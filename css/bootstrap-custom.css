@@ -16,10 +16,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	padding: 3px 5px;
 	font-weight: 600;
 }
-.btn-sm {
+/*.btn-sm {
 	font-size: 11px;
 	padding:3px 6px;
-}
+}*/
 .btn [class^="icon-"] {
 	margin-right: 4px;
 }

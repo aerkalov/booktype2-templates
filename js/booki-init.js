@@ -172,6 +172,20 @@
             }
         );
 
+        // history tab
+        var restoreBtn = "<div class=\"restore-btn\">" +
+            "<button type=\"button\" id=\"some_id\" class=\"btn btn-default btn-xs\">RESTORE<\/button>" +
+            "<\/div>";
+
+        $('.list.history li').click(function() {
+            $(this).closest('ul').find('.restore-btn').remove();
+            $(this).closest('ul').find('li').removeClass('active');
+            $(this).toggleClass('active');
+            $(this).find('.list-info').append(restoreBtn);
+        });
+
+
+
         // link to chapter
         $('.linktochapter-header i').click(function() {
             $(this).closest('.linktochapter').toggleClass('open');
