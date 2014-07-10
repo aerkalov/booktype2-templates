@@ -5,9 +5,9 @@
 	<title>Booktype Edit Screen</title>
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />
-  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />  
   <link href='css/bootstrap-theme.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
   <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 	<link href='css/booki-new.css' rel='stylesheet' type='text/css' />
   <link href='css/aloha.css' rel='stylesheet' type='text/css' />
@@ -203,13 +203,13 @@ What Is EPUB 3? discusses this exciting new format, which is set to unleash a co
             <span class="label label-success">23</span>
           </a>
         </li>
+        <li><a href="#" id="notes-tab"><i class="big-icon-notes"></i></a></li>
         <li><a href="#" id="style-tab"><i class="big-icon-style"></i></a></li>
     </ul>
 </div>
 <div class="tablist right-tablist">
     <ul class="navigation-tabs">
-        <li><a href="#" id="attachments-tab"><i class="big-icon-attachments"></i></a></li>
-        <li><a href="#" id="notes-tab"><i class="big-icon-notes"></i></a></li>
+        <li><a href="#" id="attachments-tab"><i class="big-icon-attachments"></i></a></li>     
         <li><a href="#" id="history-tab"><i class="big-icon-history"></i></a></li>
     </ul>
 </div>
@@ -470,11 +470,23 @@ make a right on Europe”</i> to review</p>
           </div>
         </div>
     </section>
-    
+    <section class="tab-content notes" source_id="notes-tab">
+        <h3>Notes</h3>
+        <div class="scrollable margin-top">
+          <p>Shared notes for this book.</p>
+          <textarea name="description" class="form-control" cols="40" rows="20">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+          </textarea>
+          <div class="save-button">
+            <button type="button" class="btn btn-primary btn-sm">SAVE NOTE</button>
+          </div>
+        </div>
+    </section>
+
     <!-- style tab content -->
     <section class="tab-content" source_id="style-tab">
         <h3>Style</h3>
-        <div class="scrollable">
+        <div class="scrollable margin-top">
           <p>content here</p>
         </div>
     </section>
@@ -483,10 +495,7 @@ make a right on Europe”</i> to review</p>
 <div id="right-tabpane" class="tabpane right-tabpane">
     <section class="tab-content" source_id="attachments-tab">
         <h3>Attachments</h3>
-    </section>
-    <section class="tab-content" source_id="notes-tab">
-        <h3>Notes</h3>
-    </section>
+    </section>    
     <section class="tab-content" source_id="history-tab">
         <h3>History</h3>
     </section>    

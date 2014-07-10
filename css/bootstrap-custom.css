@@ -158,9 +158,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	background-color: #7656b2;
 	border-color: #50397d;
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-	background-color: #64459f;
-	border-color:#64459f;
+.btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+	background-color: #64459f !important;
+	border-color:#47336f !important;
 }
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
 	background-color: #7656b2;

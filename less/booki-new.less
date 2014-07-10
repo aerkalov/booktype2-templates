@@ -604,6 +604,9 @@ a:focus, a:hover {
 			right:0;
 			overflow-y:auto;
 			}
+			.tabpane .tab-content .scrollable.margin-top {
+				top:60px;
+			}
 			.tabpane .tab-content .scrollable .list li {
 				overflow:hidden;
 				}
@@ -2286,6 +2289,38 @@ form .list .btn-sm {
 textarea.form-control {
 	vertical-align: top;
 }
+.notes {
+	textarea.form-control {
+		position:absolute;
+		top:30px;
+		bottom:40px;
+		left:0;
+		right:0;
+		&::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+			margin: -1px 0;
+		}
+		&::-webkit-scrollbar-track { 
+			background:#fff; 
+			border:none; 
+			box-shadow: none;
+		}
+		&::-webkit-scrollbar-thumb {
+			border:none;
+			box-shadow: none;
+			background:#949494; 
+			&:hover {
+				background:#6e6e6e;
+			}
+		}
+	}
+	.save-button {
+		position:absolute;
+		bottom:5px;
+	}
+}
+
 
 #settings.nav-tabs {
 	border: none;
