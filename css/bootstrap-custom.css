@@ -16,10 +16,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	padding: 3px 5px;
 	font-weight: 600;
 }
-/*.btn-sm {
+.list .btn-sm,
+.scrollable .btn-sm {
 	font-size: 11px;
 	padding:3px 6px;
-}*/
+}
 .btn [class^="icon-"] {
 	margin-right: 4px;
 }
@@ -162,9 +163,19 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	background-color: #64459f !important;
 	border-color:#47336f !important;
 }
+.btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
+	background-color: #70b854 !important;
+	border-color:#4a8433 !important;
+	background-image:none;
+}
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
 	background-color: #7656b2;
 	color:#FFF;
+}
+.btn-success + .dropdown-menu li a:hover, 
+.btn-success + .dropdown-menu li a:focus {
+	background-color: #62aa46;
+	background-image:none;
 }
 
 /* Modal styles */
