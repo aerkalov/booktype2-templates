@@ -1552,6 +1552,7 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
   vertical-align: middle;
   border-bottom: 1px solid #e6e6e6;
 }
+.mediaTable th img,
 .mediaTable td img {
   width: auto;
   max-height: 60px;
@@ -1563,6 +1564,70 @@ li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
 .mediaTable input[type="checkbox"] {
   margin: 5px 0 0 !important;
   vertical-align: top;
+}
+.historyTable {
+  width: 100%;
+  font-size: 12px;
+  color: #222;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+  background: #fff;
+}
+.historyTable th,
+.historyTable td {
+  text-align: left;
+  white-space: no-wrap;
+  padding: 5px 8px;
+  vertical-align: top;
+  vertical-align: middle;
+  border-bottom: 1px solid #e6e6e6;
+}
+.historyTable th a,
+.historyTable td a {
+  font-weight: 600;
+}
+.historyTable tr:last-child td {
+  border-bottom: 1px solid #ccc;
+}
+.historyTable tr:hover {
+  background: #f8f8f8;
+}
+.historyTable thead th {
+  background: #f6f6f6;
+}
+.historyTable input[type="radio"] {
+  margin: 5px 0 0 5px;
+}
+.historyTable input[type="radio"] + input[type="radio"] {
+  margin-left: 10px;
+}
+.historyTable.chapter {
+  background: #f6f6f6;
+}
+.historyTable.chapter tr:hover {
+  background: #eee;
+}
+.historyTable.chapter th,
+.historyTable.chapter td {
+  padding: 4px 8px 2px 8px;
+}
+.history-compare {
+  overflow: hidden;
+  margin: 30px 0 0;
+  background: #D1D1D1;
+  padding: 10px;
+}
+.history-compare h3 {
+  float: left;
+  color: #222;
+  font-size: 1.2em;
+  margin: 4px 0 0 10px;
+}
+.history-compare .btn {
+  float: left;
+}
+.history-compare :after {
+  clear: both;
 }
 /* Page break
 ------------------------------------------------------*/

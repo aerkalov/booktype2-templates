@@ -16,6 +16,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	padding: 3px 5px;
 	font-weight: 600;
 }
+.content .btn-sm {
+	padding: 3px 6px;
+	font-size: 11px;
+	line-height: 1.6;
+}
 .list .btn-sm,
 .scrollable .btn-sm {
 	font-size: 11px;
