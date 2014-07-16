@@ -292,5 +292,6 @@
         });
 
 
-        //$('#imageManager').modal('show')
-    });
+        //$('#compareDialog').modal('show')
+
+   });

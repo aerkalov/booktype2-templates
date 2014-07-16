@@ -65,6 +65,11 @@ h3 {
 
 p	{
 	margin:0 0 1.2em;
+	&.small {
+		margin:-1em 0 1em 0;
+		font-size: 11px;
+		color: black;
+	}
 }
 a	{
 	color:#4b2e82;
@@ -84,7 +89,7 @@ a:focus, a:hover {
 	font-size: 1.1em;
 	line-height: 160%;
 
-	h1 {
+	& > h1 {
 		font-size: 2em;
 		margin: 10px 0 20px 0;
 		border: 1px solid #e0dfe1;
@@ -1432,6 +1437,59 @@ a:focus, a:hover {
 			min-width: 20px;
 		}
 
+/* History, compare dialog */
+.compare {
+	.modal-dialog {
+		width:760px;
+		.modal-content {
+			.modal-body {
+				.row {
+					margin-bottom:20px;
+					margin-left: 0;
+					margin-right: 0;
+					.header {
+						font-size: 14px;
+						font-weight: 600;
+						padding:6px 10px;
+						/*border-bottom: 1px solid #e1e1e1;
+						border-top: 1px solid #e1e1e1;*/
+						background:#f2f2f2;
+						& + .header {
+							border-left: 1px solid #ccc;
+						}
+					}					
+					.marker {
+						padding: 1px 6px;
+						font-size: 11px;
+						font-weight: 600;
+						margin-left: -10px;
+					}
+					.changed {
+						background-color: #ffeda8;						
+					}
+					.added {
+						background-color: #b9f0a2;	
+					}
+					.deleted {
+						background-color: #fa897a;	
+					}
+				}
+			}
+		}
+	}
+}
+.history-filters {
+	margin: 20px 0 10px 0;
+	padding: 4px 0;
+	float:left;
+	input {
+		width:auto;
+		float:left;
+		margin-right: 10px;
+	}
+}
+
+
 /* Notifications
 ------------------------------------------------------*/
 .notificationContainer {
@@ -1498,30 +1556,33 @@ a:focus, a:hover {
 	width: 100%;
 	font-size: 12px;
 	color:#222;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #c2c2c2;
 	margin-bottom:20px;
-	background: #fff;
+	background: #f6f6f6;
 	th, td {
 		text-align: left;
 		white-space: no-wrap;
-		padding:5px 8px;
+		padding:5px 10px;
 		vertical-align: top;
 		vertical-align: middle;
-		border-bottom: 1px solid #e6e6e6;
 		a {
 			font-weight: 600;
 		}
+	}
+	td {
+		border-bottom: 1px solid #e6e6e6;
 	}
 	tr {
 		&:last-child td {
 			border-bottom:1px solid #ccc;
 		}
 		&:hover {
-			background:#f8f8f8;
+			background:#eee;
 		}	
 	}
 	thead th {
-		background:#f6f6f6;
+		background:#D1D1D1;
+		padding:8px 10px;
 	}	
 	input[type="radio"] {
 		margin: 5px 0 0 5px;
@@ -1531,14 +1592,14 @@ a:focus, a:hover {
 	}
 	&.chapter {
 		background:#f6f6f6;
-		tr {
-			&:hover {
-				background:#eee;
-			}
-		}
 		th, td {
 			padding:4px 8px 2px 8px;
 		}
+		thead th {
+			background:#f6f6f6;
+			border-bottom: 1px solid #e6e6e6;
+			padding: 6px 8px;
+		}	
 	}
 }
 .history-compare {
@@ -1550,16 +1611,83 @@ a:focus, a:hover {
 		float:left;
 		color:#222;
 		font-size: 1.2em;
-		margin: 4px 0 0 10px;
+		margin: 3px 2px;
 	}	
 	.btn {
 		float:left;
+		margin-right: 10px;
+		& + h3 {
+			margin: 4px 0 0;
+		}
 	}
 	:after {
 		clear:both;
 	}
 }
+.revision-details {
+	font-size: 13px;
+	margin: 0;
+	color:black;
+	padding: 20px 12px 10px 12px;
+	.detail-label {
+		min-width: 70px;
+		display: inline-block;
+		color:#777;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+.revision-header {
+	padding:6px 12px 12px 12px;
+	font-size: 13px;
+	overflow:hidden;
+	clear:both;
+	.number {
+		float:left;
+		color:#777;
+	}
+	.label {
+		font-size: 13px;
+		padding:1px 5px 2px 5px;
+		margin: 0 25px 0 16px;
+		position:relative;
+		&:after {
+			content:"\A";
+		    border-style: solid;
+		    border-width: 0 8px 8px 8px;
+		    border-color: transparent transparent #e0e0e0 transparent;
+		    position: absolute;
+		    bottom: -14px;
+		    left: 12%;
+		}
+	}
+	.btn-group {
+		margin-top: 1px;
+		.btn {
+			[class^="icon-"] {
+				line-height: 1.4;
+				font-size: 12px;
+				margin: 0;
+			}
+			&.btn-xs {		
+				padding:2px 7px;	
+			}
+			& + .btn {
+				margin-left: 6px !important;
+			}
+		}
+	}
+	&:after {
 
+	}
+}
+.revision-content {
+	background:#fafafa;
+	padding:20px;
+	border: 1px solid #e0e0e0;
+	position:relative;
+}
 
 /* Page break
 ------------------------------------------------------*/
