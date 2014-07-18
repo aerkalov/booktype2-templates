@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en" class="custom-scroll">
+<head>
+	<meta charset="UTF-8">
+	<title>Book Settings</title>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />  
+  <link href='css/bootstrap-theme.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
+  <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href='css/booki-new.css' rel='stylesheet' type='text/css' />
+  <link href='css/aloha.css' rel='stylesheet' type='text/css' />
+
+</head>
+<body>
+	
+    <!-- Navbar -->
+    <div class="user">
+        <div class="btn-group float-right">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Vladimir Stefanovic<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-user"></i>Profile</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-gears"></i>Control Center</a></li>
+              <li class="divider"></li>
+              <li><a href="/accounts/signout/"><i class="icon-signout"></i>Logout</a></li>
+            </ul>
+        </div>
+    </div>    
+    <div class="navigation-bar">
+		<div class="logo"><a href="#"></a></div>
+	</div>
+    <!-- end Navbar -->
+
+    <!-- Bookbar -->
+	<div class="bookbar">
+      <h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</h1>       
+      <div class="btn-toolbar float-right">      
+      <div class="btn-group" data-toggle="buttons-radio">
+        <button type="button" data-toggle="button" class="btn btn-default" title="" id="button-toc">Table of Contents</button>
+        <button type="button" data-toggle="button" class="btn btn-default" title="" id="button-media" >Media</button>        
+        <button type="button" data-toggle="button" class="btn btn-default" title="" id="button-cover" data-original-title="Cover Manager">Cover Manager</button>
+        <button type="button" data-toggle="button" class="btn btn-default" title="" id="button-history" data-original-title="History">History</button>
+        <button type="button" data-toggle="button" class="btn btn-default active" title="" id="button-settings" data-original-title="Settigns">Settings</button>
+        
+      </div>
+      <div class="btn-group">            
+      <button type="button" class="btn btn-primary" id="button-publish" title="">Publish</button> 
+      </div>
+      </div>
+    </div>
+    <!-- end Bookbar -->
+
+    <!-- ToC / Chapter header -->
+	<div class="contentHeader">
+        <h2>Book Settings</h2>            
+	</div>
+    <!-- end ToC/Chapter header -->
+
+    <div class="contentContainer">
+   		<div class="content settings">
+          <div class="container">
+      <div class="row two-col">
+      <div class="col-xs-12">
+        <div class="box white clearfix">
+          <ul id="settings" class="nav nav-tabs col-xs-3">
+            <h4>Site</h4>
+            <li class="active"><a href="#description" data-toggle="tab">Description</a></li>
+            <li class=""><a href="#appearance" data-toggle="tab">Appearance</a></li>
+            <li class=""><a href="#frontpage" data-toggle="tab">Frontpage</a></li>
+
+            <br>
+
+            <h4>General</h4>
+            <li class=""><a href="#default_book_settings" data-toggle="tab">Default Book Settings</a></li>
+            <li class=""><a href="#privacy" data-toggle="tab">Privacy</a></li>
+             <br>            
+
+
+          </ul>
+          <div id="myTabContent" class="tab-content col-xs-9">
+            <div class="tab-pane fade active in" id="description">
+              <h4 class="border-bottom">Description</h4>
+              <form enctype="multipart/form-data" action="/_control/settings/description/" method="POST" role="form">
+                <ul class="list">
+                  <li><label for="id_title">Site title:</label> <input id="id_title" class="form-control" maxlength="200" name="title" type="text"></li>
+                  <li><label for="id_tagline">Tagline:</label> <input id="id_tagline" class="form-control" maxlength="200" name="tagline" type="text"></li>
+                  <li><label for="id_favicon">Favicon:</label> <input id="id_favicon" name="favicon" type="file"> <span class="helptext">Upload .ico file</span></li>
+                  <li>
+                    <input type="submit" class="btn btn-default" name="submit" value="Save changes">
+                    <input type="submit" class="btn btn-default" name="submit" value="Cancel">
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="appearance">
+              <h4 class="border-bottom">Appearance</h4>
+              <form enctype="multipart/form-data" action="/_control/settings/appearance/" method="POST">
+                <ul class="list">
+                  <li><label for="id_css">CSS:</label> <textarea class="form-control" cols="40" id="id_css" name="css" rows="20"></textarea></li>
+                  <li>
+                    <input type="submit" class="btn btn-default" name="submit" value="Save changes">
+                    <input type="submit" class="btn btn-default" name="submit" value="Cancel">
+                  </li>
+                </ul>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="frontpage">
+              <h4 class="border-bottom">Frontpage</h4>
+              <form enctype="multipart/form-data" action="/_control/settings/frontpage/" method="POST">
+                <ul class="list">
+                  <li><label for="id_description">Welcome message:</label> <textarea class="form-control" cols="40" id="id_description" name="description" rows="20"></textarea></li>
+                  <li><label for="id_show_changes">Show activity:</label> <input checked="checked" id="id_show_changes" name="show_changes" type="checkbox"></li>
+                  <li>
+                    <input type="submit" class="btn btn-default" name="submit" value="Save changes">
+                    <input type="submit" class="btn btn-default" name="submit" value="Cancel">
+                  </li>
+                </ul>
+              </form>
+            </div>
+            
+
+            <div class="tab-pane fade" id="default_book_settings">
+      <h4 class="border-bottom">Default Book Settings for Creating Books</h4>
+
+      <form enctype="multipart/form-data" action="/_control/settings/book_create/" method="POST">
+        <ul class="list">
+          <li><label for="id_visible">Default visibility:</label> <input checked="checked" id="id_visible" name="visible" type="checkbox"> <span class="helptext">If it is turned on then all books will be visible to everyone.</span></li>
+          <li><label for="id_license">Default License:</label> <select id="id_license" name="license">
+          <option value="" selected="selected">---------</option>
+          <option value="4">Creative Commons Attribution</option>
+          <option value="6">Creative Commons Attribution-NoDerivs</option>
+          <option value="7">Creative Commons Attribution-NonCommercial</option>
+          <option value="9">Creative Commons Attribution-NonCommercial-NoDerivs</option>
+          <option value="8">Creative Commons Attribution-NonCommercial-ShareAlike</option>
+          <option value="5">Creative Commons Attribution-ShareAlike</option>
+          <option value="3">Creative Commons No Rights Reserved</option>
+          <option value="10">GNU General Public License</option>
+          <option value="2">MIT License</option>
+          <option value="11">Neka moja licenca</option>
+          <option value="1">Public Domain</option>
+          </select> <span class="helptext">Default license for newly created books.</span></li>
+          <li>
+            <input type="submit" class="btn btn-default" name="submit" value="Save changes">
+            <input type="submit" class="btn btn-default" name="submit" value="Cancel">
+          </li>
+        </ul>
+      </form>
+              
+            </div>
+
+            <div class="tab-pane fade" id="privacy">
+
+        <h4 class="border-bottom">Privacy</h4>
+
+        <form enctype="multipart/form-data" action="/_control/settings/privacy/" method="POST">
+          <ul class="list">
+            <li><label for="id_user_register">Anyone can register:</label> <input checked="checked" id="id_user_register" name="user_register" type="checkbox"> <span class="helptext">Anyone can register on the site and create account</span></li>
+            <li><label for="id_create_books">Only admin can create books:</label> <input id="id_create_books" name="create_books" type="checkbox"></li>
+            <li><label for="id_import_books">Only admin can import books:</label> <input id="id_import_books" name="import_books" type="checkbox"></li>
+            <li>
+              <input type="submit" class="btn btn-default" name="submit" value="Save changes">
+              <input type="submit" class="btn btn-default" name="submit" value="Cancel">
+            </li>
+          </ul>
+        </form>
+            </div>
+
+            
+
+            <div class="tab-pane fade" id="default_settings">
+
+        <h4 class="border-bottom">Default settings</h4>
+
+        <form enctype="multipart/form-data" action="/_control/settings/publishing_defaults/" method="POST">
+        <ul class="list">
+        <li><label for="id_book_css">Book CSS:</label> <textarea class="form-control" cols="40" id="id_book_css" name="book_css" rows="20"></textarea></li>
+        <li><label for="id_ebook_css">E-Book CSS:</label> <textarea class="form-control" cols="40" id="id_ebook_css" name="ebook_css" rows="20"></textarea></li>
+        <li><label for="id_pdf_css">PDF CSS:</label> <textarea class="form-control" cols="40" id="id_pdf_css" name="pdf_css" rows="20"></textarea></li>
+        <li><label for="id_odt_css">ODT CSS:</label> <textarea class="form-control" cols="40" id="id_odt_css" name="odt_css" rows="20"></textarea></li>
+        <li>
+          <input type="submit" class="btn btn-default" name="submit" value="Save changes">
+          <input type="submit" class="btn btn-default" name="submit" value="Cancel">
+        </li>
+        </ul>
+        </form>
+
+          </div>
+
+          </div>        
+
+        </div> <!-- End of box white clearfix -->
+
+        </div> <!-- End of row two-col -->
+        </div>
+
+    </div>
+      </div>
+    </div>
+
+<!-- Tabs content -->
+<div class="tablist left-tablist">
+</div>
+<div class="tablist right-tablist"></div>
+<div id="left-tabpane" class="tabpane left-tabpane">
+    <section class="tab-content hold" source_id="online-users-tab">
+        <h3>Online Users</h3>
+        <p>Online users content here</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+    </section>
+    <section class="tab-content" source_id="chat-tab">
+        <h3>Chat</h3>
+        <p>some chat here</p>        
+    </section>
+</div>
+<div id="right-tabpane" class="tabpane right-tabpane">
+    
+</div>
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+<script type="text/javascript" src="js/tooltip.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
+<script type="text/javascript" src="js/booki-init.js"></script>
+
+</body>
+</html>

@@ -61,9 +61,9 @@
    		<div class="content">
         <a href="history_chapter.html" class="btn btn-default btn-sm" title=""><i class="icon-chevron-left"></i>BACK TO CHAPTER HISTORY</a> 
         <div class="history-compare"> 
-          <h3>Chili di troppo?!?</h3>          
+          <h3>Chili di troppo?!?</h3>
         </div>
-        <div class="revision-details">      
+        <div class="revision-details">   
             <p>
               <span class="detail-label">User:</span>giorgiaservente<br />
               <span class="detail-label">Modified:</span>18.06.2014 13:22:15<br />
@@ -74,17 +74,37 @@
           <div class="number">Revision <span class="label label-success">13</span></div>
           <div class="btn-group float-left">
             <button role="button" class="btn btn-default btn-xs"><i class="icon-chevron-left"></i> PREVIOUS</button> 
-            <button role="button" class="btn btn-default btn-xs">NEXT <i class="icon-chevron-right"></i></button>
-          </div> 
-        </div>
+            <button role="button" class="btn btn-default btn-xs">NEXT <i class="icon-chevron-right"></i></button>        
+            <button role="button" class="btn btn-primary btn-xs" href="#revert" data-toggle="modal">REVERT TO THIS REVISION&nbsp;&nbsp;<i class="icon-refresh"></i></button>    
+          </div>
+          <ul class="nav nav-tabs" role="tablist">
+              <li><a href="#source" role="tab" data-toggle="tab">Source View</a></li> 
+              <li class="active"><a href="#normal" role="tab" data-toggle="tab">Normal View</a></li>
+          </ul>
+        </div>        
         <div class="revision-content">
-          <h1>E’ primavera!!!!!!</h1>
-          <p>Cindy si risvegliò! Si stropicciò gli occhi, lo stomaco gorgogliò per la fame così uscì in cerca di che sfamarsi ….</p>
-          <p>Giunse allo specchio d’acqua e… vide che la sua forma era cambiata! Spariti i chili di troppo!!!!!</p>   
-          <img src="pictures/img_05.jpg" alt="" width="386" height="374">                          
-          <p>"Accipicchia!" urlò Cindy "non mi sono mossa, neppure per andare in bagno, e dove sono finiti tutti i miei rotolini di ciccia?"</p>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p> 
+          <div class="tab-content">
+            <div class="tab-pane active" id="normal">
+              <h1>E’ primavera!!!!!!</h1>
+              <p>Cindy si risvegliò! Si stropicciò gli occhi, lo stomaco gorgogliò per la fame così uscì in cerca di che sfamarsi ….</p>
+              <p>Giunse allo specchio d’acqua e… vide che la sua forma era cambiata! Spariti i chili di troppo!!!!!</p>  
+              <p> 
+                <img src="pictures/img_05.jpg" alt="" width="386" height="374">
+              </p>
+              <p>"Accipicchia!" urlò Cindy "non mi sono mossa, neppure per andare in bagno, e dove sono finiti tutti i miei rotolini di ciccia?"</p>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+            <div class="tab-pane" id="source">
+              <textarea><h1>E’ primavera!!!!!!</h1>
+<p>Cindy si risvegliò! Si stropicciò gli occhi, lo stomaco gorgogliò per la fame così uscì in cerca di che sfamarsi ….</p>
+<p>Giunse allo specchio d’acqua e… vide che la sua forma era cambiata! Spariti i chili di troppo!!!!!</p>
+<p><img src="pictures/img_05.jpg" alt="" width="386" height="374"></p>
+<p>"Accipicchia!" urlò Cindy "non mi sono mossa, neppure per andare in bagno, e dove sono finiti tutti i miei rotolini di ciccia?"</p>
+<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></textarea>
+            </div>
+          </div>           
         </div>
       </div>
     </div>
@@ -107,7 +127,6 @@
 <div id="right-tabpane" class="tabpane right-tabpane">
     
 </div>
-
 
 <!-- Modal windows -->
 <div id="compareDialog" class="modal fade compare" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -149,6 +168,24 @@ Quest'ultimo particolare e indispensabile processo si chiama respirazione cellul
     </div>
 </div>
 
+<!-- modal -->
+<div id="revert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Revert to this revision?</h3>
+          </div>
+          <div class="modal-body">
+            <i class="icon-exclamation-sign"></i>&nbsp;&nbsp;Current chapter content will be reverted to this revision. Are you sure?
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button class="btn btn-primary">Yes, revert!</button>
+          </div>
+        </div>
+    </div>
+</div>
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -157,6 +194,7 @@ Quest'ultimo particolare e indispensabile processo si chiama respirazione cellul
 <script type="text/javascript" src="js/tooltip.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
 <script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
 <script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
 <script type="text/javascript" src="js/booki-init.js"></script>

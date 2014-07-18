@@ -276,7 +276,6 @@
             $('body').toggleClass('menu-open');
         });
 
-
         // Chat Tab
         $('.notification-writer').focus(function(){ 
             $('.tab-content.chat').addClass('typing-active');  
@@ -290,7 +289,6 @@
         $('.notification-important').click(function(e){
             $('.notification-writer').toggleClass('important');
         });
-
 
         //$('#compareDialog').modal('show')
 

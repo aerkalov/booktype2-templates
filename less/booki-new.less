@@ -82,7 +82,6 @@ a:focus, a:hover {
 .float-right {float:right;}
 .float-left {float:left;}
 
-
 /* Booktype Typography
 ------------------------------------------------- */
 .content {
@@ -1488,7 +1487,11 @@ a:focus, a:hover {
 		margin-right: 10px;
 	}
 }
-
+.modal-body {
+	[class^="icon-"] {
+		font-size: 14px;
+	}
+}
 
 /* Notifications
 ------------------------------------------------------*/
@@ -1639,13 +1642,32 @@ a:focus, a:hover {
 	}
 }
 .revision-header {
-	padding:6px 12px 12px 12px;
+	padding:6px 0 0;
 	font-size: 13px;
 	overflow:hidden;
 	clear:both;
 	.number {
 		float:left;
 		color:#777;
+		margin-left: 12px;
+	}
+	.nav-tabs {
+		margin-top: 2px;
+		&>li {
+			float:right;
+			&>a {
+				padding:7px 12px;
+				&:last-child {
+					margin-right:0;
+				}
+			}
+			&.active {
+				&>a, &>a:hover, &>a:focus {
+					background:#fafafa;
+					padding:7px 12px;
+				}
+			}
+		}
 	}
 	.label {
 		font-size: 13px;
@@ -1655,10 +1677,10 @@ a:focus, a:hover {
 		&:after {
 			content:"\A";
 		    border-style: solid;
-		    border-width: 0 8px 8px 8px;
+		    border-width: 0 6px 6px 6px;
 		    border-color: transparent transparent #e0e0e0 transparent;
 		    position: absolute;
-		    bottom: -14px;
+		    bottom: -13px;
 		    left: 12%;
 		}
 	}
@@ -1676,17 +1698,25 @@ a:focus, a:hover {
 			& + .btn {
 				margin-left: 6px !important;
 			}
+			&:last-child {
+				margin-left: 26px !important;
+			}
 		}
-	}
-	&:after {
-
 	}
 }
 .revision-content {
 	background:#fafafa;
 	padding:20px;
-	border: 1px solid #e0e0e0;
 	position:relative;
+	.tab-content {
+		textarea {
+			width:100%;
+			height:400px;
+		}
+	}
+	border-style:solid;
+	border-color:#ddd;
+	border-width: 0 1px 1px 1px;
 }
 
 /* Page break
@@ -1890,7 +1920,6 @@ a:focus, a:hover {
 .two-col, .three-col {
 	margin-top: 150px;
 }
-
 .book-thumb {
 	margin-top: 20px;
 	margin-left: -20px;
@@ -2079,29 +2108,30 @@ dd input, dt input, dd textarea, dt textarea {
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
+	&.gray {
+		background-color: #f5f5f5 !important;
+	}
+	&.white {
+		background-color: #fff  !important;
+	}
+	&.purple {
+		background-color: #685886 !important;
+	}
+	&.black {
+		background-color: #464646 !important;
+	}
+	&.purple .box-title, 
+	&.purple p {
+		color: #fff;
+	}
+	.separator {		
+		height:1px;
+		background: #e1e1e1;
+		+ h2 {
+			margin-top: 16px;
+		}
+	}
 }
-
-.gray {
-	background-color: #f5f5f5 !important;
-}
-
-.white {
-	background-color: #fff  !important;
-}
-
-.purple {
-	background-color: #685886 !important;
-}
-
-.black {
-	background-color: #464646 !important;
-}
-
-.purple .box-title, .purple p {
-	color: #fff;
-}
-
-
 .box-title {
 	font-size: 18px;
 	margin: 0px;
@@ -2116,6 +2146,9 @@ dd input, dt input, dd textarea, dt textarea {
 	background-color: #fff;
 	border-bottom: 1px solid #d9d9d9;
 	position: relative;
+	+ p {
+		margin-top: 20px;
+	}
 }
 
 .box-bottom-gray {
@@ -2675,6 +2708,22 @@ footer {
 	background-color: #f5f5f5;
 	border-top: 1px solid #bfbfbf;
 }
+
+
+/* Settings styles */
+.content {
+	&.settings {
+		padding:20px 30px;
+		.two-col, .three-col {
+			margin-top: 0;
+		}
+		.box {
+			border:none;
+			padding:0;
+		}
+	}
+}
+
 
 /* Media Query
 ------------------------------------------------------*/
