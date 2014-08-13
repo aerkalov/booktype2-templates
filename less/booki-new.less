@@ -1754,7 +1754,7 @@ a:focus, a:hover {
 ------------------------------------------------------*/
 .templateCoversContent {
 }
-.templateCoversContent .coverMessageButton {
+/*.templateCoversContent .coverMessageButton {
 	text-transform: uppercase;
 	font-size: 11px;
 	font-weight: 600;
@@ -1780,6 +1780,35 @@ a:focus, a:hover {
     background: #ccc;
     height: 1px;
     width: 83%;
+}*/
+.templateCoversContent .coverMessageButton {
+    overflow: hidden;
+    text-align: left;
+    text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 600;
+	padding-left: 22px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+.templateCoversContent .coverMessageButton:before,
+.templateCoversContent .coverMessageButton:after {
+    background-color: #ccc;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+    top:-2px;
+}
+.templateCoversContent .coverMessageButton:before {
+    right: 0.6em;
+    margin-left: -100%;
+}
+.templateCoversContent .coverMessageButton:after {
+    left: 0.6em;
+    margin-right: -100%;
 }
 .templateCoversContent .coverMessageButton i {
 	font-size: 14px!important;
@@ -1790,7 +1819,7 @@ a:focus, a:hover {
 	border-color: #ccc;
 	border-style: solid;
 	border-width: 0 1px 1px 1px;
-	margin-top: -11px;
+	margin-top: -21px;
 	display:none;
 }
 .templateCoversContent .coverMessage.open {
