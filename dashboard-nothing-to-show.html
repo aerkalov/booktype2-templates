@@ -88,71 +88,7 @@
 							    <button class="btn btn-default btn-sm showList" rel="tooltip" title="" data-placement="bottom" data-original-title="Show List"><i class="icon-list-ul"></i></button>
 							</div>
 
-							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							  <div class="modal-dialog new_book">
-							    <div class="modal-content">
-							      <div class="modal-header">
-							        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-							        <h2 class="modal-title" id="myModalLabel">Create New Book</h2>
-							      </div>
-							      	<div class="modal-body">
-										<section id="basic">
-								            <form method="post" action="/accounts/Fritz/_create_book/" target="hidden_frame" enctype="multipart/form-data"><input type="hidden" name="csrfmiddlewaretoken" value="cbFF3Y1lqxPMojRh0EOxNEWwv4oOpwdu">
-
-							                	<div id="wizard-1">
-
-								                    <h3>Title</h3>
-								                    <section>
-								                        <p class="wizard_desc">What is the title of your book?</p>
-											            <label for="title">Title of Book</label> <input class="form-control" maxlength="200" name="title" type="text">
-								                    </section>
-
-								                    <h3>Description</h3>
-								                    <section>
-								                        <p class="wizard_desc">Give some information so others can find it to help you (this can be added or changed later).</p>
-        												<label for="description">Description</label>
-														<textarea class="form-control" name="description" cols="40" rows="7"></textarea>
-
-								                    </section>
-								                    <h3>Choose license</h3>
-								                    <section>
-								                        <p class="wizard_desc">Choose from the following license</p>
-														<label for="hidden">License</label>
-														<select id="id_license" name="license">
-															<option value="">---------</option>
-															<option value="4" selected="selected">Creative Commons Attribution</option>
-															<option value="6">Creative Commons Attribution-NoDerivs</option>
-															<option value="7">Creative Commons Attribution-NonCommercial</option>
-															<option value="9">Creative Commons Attribution</option>
-															<option value="8">Creative Commons Attribution-NonCommercial</option>
-															<option value="5">Creative Commons Attribution-ShareAlike</option>
-															<option value="3">Creative Commons No Rights Reserved</option>
-															<option value="10">GNU General Public License</option>
-															<option value="2">MIT License</option>
-															<option value="11">Neka moja licenca</option>
-															<option value="1">Public Domain</option>
-														</select>								                        
-								                    </section>
-								                    <h3>Image</h3>
-								                    <section>
-								                        <p class="wizard_desc">If you have an image for the book then add it now (this can be added or changed later)</p>
-								                        <label for="hidden">Book Image</label>
-														<input type="file" name="cover" size="40">
-								                    </section>
-								                    <h3>Make Public?</h3>
-								                    <section>
-								                        <p class="wizard_desc">Would you like to keep your book private or make it public? If the book is public others can find the book to help you.
-														<b>Note:</b> this setting can be changed later from your dashboard.</p>
-
-														<label for="hidden">Initially hide from others</label> <input checked="checked" name="hidden" type="checkbox">
-								                    </section>
-							                	</div>
-								            </form>
-							            </section>
-									</div>									
-							    </div><!-- /.modal-content -->
-							  </div><!-- /.modal-dialog -->
-							</div>
+							
     					</div>
     				</h2>  
                     <p>Unfortunately, nothing to show here.</p> 								
@@ -277,6 +213,66 @@
 	    </div>
     </footer>
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog new_book">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h2 class="modal-title" id="myModalLabel">Create New Book</h2>
+                    </div>
+                    <div class="modal-body">
+                        <section id="basic">
+                            <form method="post" action="/accounts/Fritz/_create_book/" target="hidden_frame" enctype="multipart/form-data"><input type="hidden" name="csrfmiddlewaretoken" value="cbFF3Y1lqxPMojRh0EOxNEWwv4oOpwdu">
+                                <div id="wizard-1">
+                                    <h3>Title</h3>
+                                    <section>
+                                        <p class="wizard_desc">What is the title of your book?</p>
+                                        <label for="title">Title of Book</label> <input class="form-control" maxlength="200" name="title" type="text">
+                                    </section>
+                                    <h3>Description</h3>
+                                    <section>
+                                        <p class="wizard_desc">Give some information so others can find it to help you (this can be added or changed later).</p>
+                                        <label for="description">Description</label>
+                                        <textarea class="form-control" name="description" cols="40" rows="7"></textarea>
+                                    </section>
+                                    <h3>Choose license</h3>
+                                    <section>
+                                        <p class="wizard_desc">Choose from the following license</p>
+                                        <label for="hidden">License</label>
+                                        <select id="id_license" name="license">
+                                          <option value="">---------</option>
+                                          <option value="4" selected="selected">Creative Commons Attribution</option>
+                                          <option value="6">Creative Commons Attribution-NoDerivs</option>
+                                          <option value="7">Creative Commons Attribution-NonCommercial</option>
+                                          <option value="9">Creative Commons Attribution</option>
+                                          <option value="8">Creative Commons Attribution-NonCommercial</option>
+                                          <option value="5">Creative Commons Attribution-ShareAlike</option>
+                                          <option value="3">Creative Commons No Rights Reserved</option>
+                                          <option value="10">GNU General Public License</option>
+                                          <option value="2">MIT License</option>
+                                          <option value="11">Neka moja licenca</option>
+                                          <option value="1">Public Domain</option>
+                                        </select>                                       
+                                    </section>
+                                    <h3>Image</h3>
+                                    <section>
+                                        <p class="wizard_desc">If you have an image for the book then add it now (this can be added or changed later)</p>
+                                        <label for="hidden">Book Image</label>
+                                        <input type="file" name="cover" size="40">
+                                    </section>
+                                    <h3>Make Public?</h3>
+                                    <section>
+                                        <p class="wizard_desc">Would you like to keep your book private or make it public? If the book is public others can find the book to help you.
+                                        <b>Note:</b> this setting can be changed later from your dashboard.</p>
+                                        <label for="hidden">Initially hide from others</label> <input checked="checked" name="hidden" type="checkbox">
+                                    </section>
+                                </div>
+                            </form>
+                        </section>
+                    </div><!-- /.modal-body -->                  
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div>
   
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
