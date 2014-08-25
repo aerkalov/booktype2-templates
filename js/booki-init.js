@@ -292,4 +292,45 @@
 
         //$('#compareDialog').modal('show')
 
+
+        // Table of contents fix (view draft page) 
+        $.fn.isOnScreen = function(){
+        
+            var win = $(window);
+            
+            var viewport = {
+                top : win.scrollTop(),
+                left : win.scrollLeft()
+            };
+            viewport.right = viewport.left + win.width();
+            viewport.bottom = viewport.top + win.height();
+            
+            var bounds = this.offset();
+            bounds.right = bounds.left + this.outerWidth();
+            bounds.bottom = bounds.top + this.outerHeight();
+            
+            return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));           
+        };
+        if ($('footer').isOnScreen()) {
+            var footer_position = $('footer').offset().top;
+            var viewportHeight = $(window).height();
+            var viewportWidth = $(window).width();
+            if (viewportWidth > 767) {
+                var sidebar_bottom = viewportHeight - footer_position + 30 + 'px';
+                $('.toc_sidebar').css('bottom', sidebar_bottom);  
+            }
+        }
+        else {
+            $('footer').bind('inview', function (event, visible) {
+                if (visible == true) {
+                    $('.toc_sidebar').addClass('footer_visible');
+                    // element is now visible in the viewport
+                } else {
+                    $('.toc_sidebar').removeClass('footer_visible');
+                    // element has gone out of viewport
+                } 
+            });
+        }
+        // end ToC fix
+
    });

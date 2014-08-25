@@ -2392,6 +2392,13 @@ dd input, dt input, dd textarea, dt textarea {
 	bottom: 0px;
 	padding-bottom: 20px;
 	z-index: 999;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	&.footer_visible {
+		bottom:407px;
+	}
 }
 
 .selected-chapter {
@@ -2402,6 +2409,7 @@ dd input, dt input, dd textarea, dt textarea {
 .table_of_contents {
 	height: 100%;
 	padding-bottom: 50px;
+	padding-right: 10px;
 }
 
  .table_of_contents .list h4 a {
@@ -2416,7 +2424,11 @@ dd input, dt input, dd textarea, dt textarea {
 .toc_wrap {
 	overflow-y: scroll;
 	height: 100%;
-}
+	}
+	.toc_wrap::-webkit-scrollbar { width: 14px !important; height: 8px; margin: -1px 0; }
+	.toc_wrap::-webkit-scrollbar-track { background:#fff; border:none; box-shadow: none; }
+    .toc_wrap::-webkit-scrollbar-thumb { background: #949494; border-left: 6px solid rgba(0,0,0,0) !important; background-clip: padding-box !important; }
+    .toc_wrap::-webkit-scrollbar-thumb:hover { background: #6e6e6e; border-left: 6px solid rgba(0,0,0,0);background-clip: padding-box; }
 
 
 /* Admin control center styles */
@@ -2787,5 +2799,16 @@ footer {
 @media (min-width: 992px) {
 	.toc_sidebar {
 		max-width: 320px;
+		&.footer_visible {
+			bottom:352px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.toc_sidebar {
+		&.footer_visible {
+			bottom:334px;
+		}
 	}
 }
