@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en" class="custom-scroll">
+<head>
+	<meta charset="UTF-8">
+	<title>Booktype Edit Screen</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />  
+  <link href='css/bootstrap-theme.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
+  <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href='css/booki-new.css' rel='stylesheet' type='text/css' />
+  <link href='css/bt20.css' rel='stylesheet' type='text/css' />  
+  <link href='css/aloha.css' rel='stylesheet' type='text/css' />
+
+</head>
+<body>
+	
+    <!-- Main menu left -->
+<div class="sf-main-menu">
+  <div class="sf-menu-header-bar"></div>
+  <div class="sf-menu-content">
+    <ul>
+      <li class="active">
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">My Dashboard</a>
+      </li>
+      <li>
+        <a href="#">Books</a>
+      </li>
+      <li>
+        <a href="#">Groups</a>
+      </li>
+      <li>
+        <a href="#">People</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+
+    <!-- Navbar -->
+    <div class="navigation-bar">
+      <div class="user">
+        <div class="btn-group float-right">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Vladimir Stefanovic<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-user"></i>Profile</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-gears"></i>Control Center</a></li>
+              <li class="divider"></li>
+              <li><a href="/accounts/signout/"><i class="icon-signout"></i>Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="collapse-navigation"><a href="#"></a></div>  	
+    <div class="logo"><a href="#"></a></div>
+  	</div>
+    <!-- end Navbar -->
+
+    <!-- Bookbar -->
+  	<div class="bookbar">
+	   	<h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</h1>       
+      <div class="btn-toolbar float-right">      
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" title="" id="button-toc" data-original-title="Table of Contents" rel="tooltip" data-placement="bottom"><i class="icon-list-alt"></i></button>
+          <button type="button" class="btn btn-default" title="" id="button-media" data-original-title="Media" rel="tooltip" data-placement="top"><i class="icon-picture"></i></button>        
+          <button type="button" class="btn btn-default" title="" id="button-cover" data-original-title="Cover Manager" rel="tooltip" data-placement="top"><i class="icon-tablet"></i></button>
+        </div>
+        <div class="btn-group float-right"> 
+          <button type="button" class="btn btn-default" title="" id="button-history" data-original-title="History" rel="tooltip" data-placement="top"><i class="icon-time"></i></button>
+          <button type="button" class="btn btn-default" title="" id="button-settings" data-original-title="Settings" rel="tooltip" data-placement="top"><i class="icon-cog"></i></button>          
+        </div>
+          <div class="btn-group">            
+          <button type="button" class="btn btn-primary" id="button-publish" title="">Publish</button> 
+          </div>
+      </div>
+	  </div>
+    <!-- end Bookbar -->
+
+    <!-- ToC / Chapter header -->
+	  <div class="contentHeader">
+      <!-- ovoooooo -->
+      <div class="templateAlohaToolbar">
+   
+<div class="edit-menu float-left">
+  <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">Insert</button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">Edit</button>
+          <ul class="dropdown-menu">
+            <li><a class="action undo" href="#"><i class="icon-undo"></i>Undo</a></li>
+            <li><a class="action redo" href="#"><i class="icon-repeat"></i>Redo</a></li>
+            <li class="divider"></li>
+            <li><a class="action font" href="#"><i class="icon-font"></i>Font</a></li>
+            <li><a class="action color" href="#"><i class="icon-tint"></i>Color</a></li>
+            <li class="divider"></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">Tools</button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+          </ul>
+        </div>
+  </div>
+</div>
+
+<div class="btn-toolbar float-left">
+  <div class="btn-group">
+    <button type="button" class="btn btn-default btn-sm action undo" id="button-undo" rel="tooltip" data-placement="bottom" data-original-title="Undo"><i class="icon-undo"></i></button>
+  </div> 
+
+  <div class="btn-group headings">
+    <button class="btn btn-default btn-sm currentHeading" title="Text Heading" rel="tooltip" data-placement="bottom" data-original-title="Text Heading">Heading</button>
+    <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" rel="tooltip"><span class="caret"></span></button>
+      <ul class="dropdown-menu">
+          <li><a href="#" class="action changeHeading" data-tagname="p" data-placement="bottom">Normal Text</a></li>
+          <li><a href="#" class="action changeHeading" data-tagname="h1" data-placement="bottom">Heading</a></li>
+          <li><a href="#" class="action changeHeading" data-tagname="h2" data-placement="bottom">Subheading</a></li>
+          <li><a href="#" class="action changeHeading" data-tagname="h3" data-placement="bottom">SubSubHeading</a></li>
+          <li><a href="#" class="action changeHeading" data-tagname="pre" data-placement="bottom">Preformated</a></li>
+      </ul>
+  </div>
+
+  <div class="btn-group">
+      <button class="btn btn-default btn-sm action aloha-dialog font" rel="tooltip" data-placement="bottom" data-original-title="Font"><i class="icon-font"></i></button>
+      <button class="btn btn-default btn-sm action aloha-dialog color" rel="tooltip" data-placement="bottom" data-original-title="Color"><i class="icon-tint"></i></button>      
+  </div>
+
+  <div class="btn-group">
+      <button id="expand" class="btn btn-default btn-sm action aloha-dialog strong" rel="tooltip" data-placement="bottom" data-original-title="Bold"><i class="icon-bold"></i></button>
+      <button id="collapse" class="btn btn-default btn-sm action aloha-dialog emphasis" rel="tooltip" data-placement="bottom" data-original-title="Italic"><i class="icon-italic"></i></button>   
+      <button id="collapse" class="btn btn-default btn-sm action aloha-dialog underline" rel="tooltip" data-placement="bottom" data-original-title="Underline"><i class="icon-underline"></i></button>
+  </div>
+
+  <div class="btn-group">
+    <button class="btn btn-default btn-sm action aloha-dialog insertLink" rel="tooltip" title="" data-placement="bottom" data-original-title="Insert Link" data-toggle="modal" href="#newLink">
+      <i class="icon-link"></i>
+    </button>
+    <button class="btn btn-default btn-sm action aloha-dialog insertImage" rel="tooltip" title="" data-placement="bottom" data-original-title="Insert Figure" data-toggle="modal" href="#imageManager"><i class="icon-picture"></i></button>
+    <button class="btn btn-default btn-sm action aloha-dialog insertPageBreak" rel="tooltip" title="" data-placement="bottom" data-original-title="Insert Page Break" href="#"><i class="icon-ellipsis-horizontal"></i></button>
+  </div>            
+
+
+  <div class="btn-group">
+    <button class="btn btn-default btn-sm action aloha-dialog alignLeft active" rel="tooltip" title="" data-placement="bottom" data-original-title="Unordered List"><i class="icon-align-left"></i></button>
+    <button class="btn btn-default btn-sm action aloha-dialog alignCenter" rel="tooltip" title="" data-placement="bottom" data-original-title="Ordered List"><i class="icon-align-center"></i></button>
+    <button class="btn btn-default btn-sm action aloha-dialog alignRight" rel="tooltip" title="" data-placement="bottom" data-original-title="Indent List"><i class="icon-align-right"></i></button>
+    <button class="btn btn-default btn-sm action aloha-dialog alignJustify" rel="tooltip" title="" data-placement="bottom" data-original-title="Outdent List"><i class="icon-align-justify"></i></button>
+  </div>
+
+
+  <div class="btn-group">
+    <button class="btn btn-default btn-sm action aloha-dialog unorderedList" rel="tooltip" title="" data-placement="bottom" data-original-title="Unordered List"><i class="icon-list-ul"></i></button>
+    <button class="btn btn-default btn-sm action aloha-dialog orderedList" rel="tooltip" title="" data-placement="bottom" data-original-title="Ordered List"><i class="icon-list-ol"></i></button>
+  </div>
+</div>  <!-- end btn-toolbar -->
+
+<div class="btn-toolbar float-right">
+    <span class="info-message"></span>
+      <div class="btn-group">
+        <button href="#save" role="button" class="btn btn-success" data-toggle="modal" id="button-save" rel="tooltip" title="" data-placement="bottom" data-original-title="Save chapter">SAVE</button>
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>          
+        </ul>
+    </div>    
+    <button href="#cancel" role="button" class="btn btn-default" data-toggle="modal" id="button-cancel" rel="tooltip" title="" data-placement="bottom" data-original-title="Cancel editing">Close</button>
+</div> 
+</div>
+
+
+    </div>
+    <!-- end ToC/Chapter header -->
+
+    <div class="contentContainer">
+   		<div class="content">
+   			    <h1>Attributions and Permissions</h1>
+                <p>Publishing has always been driven by content and the ephemeral “reading experience.” Until recently, the industry has struggled to adapt this experience to the demands of consumers used to getting what they want, when they want, and how they want in the now decade-old digital millennium. A new breed of reading devices has improved the physical experience, and now the new EPUB 3 format is poised to lead a content revolution that will transform the reading experience beyond two dimensions.</p>
+                <h2>This is Heading 2</h2>
+<p>
+What Is EPUB 3? discusses this exciting new format, which is set to unleash a content revolution in the publishing world, both for people who are curious what the hype is about and for pros looking to learn more about the new format. Laden with features the printed page could never offer—such as embedded multimedia and scripted interactivity—EPUB 3 will forever change what a book can be. This article walks you through the format and its place in the digital landscape, explaining why EPUB 3 is set to become the new global standard for ebooks as it also becomes the new accessible standard for ebooks.</p>
+<h3>This is Heading 3</h3>
+<p>This article is here to help you get your job done. If you reference limited parts of it in your work or writings, we appreciate, but do not require, attribution. An attribution usually includes the title, author, publisher, and ISBN: “What Is EPUB 3? by Matt Garrish (O’Reilly). Copyright 2011 O’Reilly Media, 978-1-449-31454-5.”</p>
+<div class="page-break"><i class="icon-ellipsis-horizontal"></i></div>
+<p>
+What Is EPUB 3? discusses this exciting new format, which is set to unleash a content revolution in the publishing world, both for people who are curious what the hype is about and for pros looking to learn more about the new format. Laden with features the printed page could never offer—such as embedded multimedia and scripted interactivity—EPUB 3 will forever change what a book can be. This article walks you through the format and its place in the digital landscape, explaining why EPUB 3 is set to become the new global standard for ebooks as it also becomes the new accessible standard for ebooks.</p>
+<h3>This is Heading 3</h3>
+<p>This article is here to help you get your job done. If you reference limited parts of it in your work or writings, we appreciate, but do not require, attribution. An attribution usually includes the title, author, publisher, and ISBN: “What Is EPUB 3? by Matt Garrish (O’Reilly). Copyright 2011 O’Reilly Media, 978-1-449-31454-5.”</p>
+        </div>
+        </div>
+
+<!-- Tabs content -->
+<div class="tablist left-tablist">
+    <ul class="navigation-tabs">
+        <li><a href="#" id="chapters-tab"><i class="big-icon-chapters"></i></a></li>
+        <li><a href="#" id="online-users-tab"><i class="big-icon-online-users"></i></a></li>
+        <li>
+          <a href="#" id="chat-tab">
+            <i class="big-icon-chat"></i>
+            <span class="label label-success">23</span>
+          </a>
+        </li>
+        <li><a href="#" id="notes-tab"><i class="big-icon-notes"></i></a></li>
+        <li><a href="#" id="style-tab"><i class="big-icon-style"></i></a></li>
+    </ul>
+</div>
+<div class="tablist right-tablist">
+    <ul class="navigation-tabs">     
+        <li><a href="#" id="history-tab"><i class="big-icon-history"></i></a></li>
+        <li><a href="#" id="attachments-tab"><i class="big-icon-attachments"></i></a></li>
+    </ul>
+</div>
+<div id="left-tabpane" class="tabpane left-tabpane">
+    <section class="tab-content" source_id="chapters-tab">
+        <h3>Chapters</h3>
+        <button href="#" role="button" class="btn btn-default btn-xs" id="" rel="tooltip" title="" data-placement="bottom" data-original-title="Expand Table of Contents">EXPAND TOC</button>
+        <div class="scrollable">
+          <ul class="edit-toc">        
+              <li>               
+                  <div><span class="section">What Is EPUB 3? </span> </div>                                       
+              </li>
+              <li>
+                  <div><span class="section">Preface</span> </div>                               
+              </li>
+              <li class="active">
+                    <div><a href="#" title="1926">Attribution and Permissions</a></div>                                              
+              </li>            
+              <li>               
+                    <div><a href="#" title="1927">Safari® Books Online</a></div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1928">How to Contact Us</a></div>                                                 
+              </li>            
+              <li>               
+                  <div><span class="section">1. What Is EPUB 3?</span> </div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1929">EPUB 3 in a Nutshell</a></div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1930">The EPUB 3 Revision</a></div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1931">EPUB and Web Standards</a></div>                                                 
+              </li>            
+              <li>               
+                  <div><span class="section">The Goodies</span> </div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1932">Multimedia</a></div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1933">The Arrival</a></div>                                                 
+              </li>            
+              <li>               
+                    <div><a href="#" title="1934">About the Author</a></div>                                                 
+              </li>            
+          </ul>
+        </div>
+    </section>
+
+    <!-- online users content -->
+    <section class="tab-content" source_id="online-users-tab">
+        <h3>Online Users</h3>
+        
+        <div class="scrollable">
+          <ul class="list border-top user-avatar circle">
+              <li>
+                <figure><img src="pictures/fritz.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">Fritz</a></h4>
+                  <p>Vladimir Stefanović</p>
+                  <span class="label label-default">Editor</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/iva.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">iva.h</a></h4>
+                  <p>Iva Heilová</p>
+                  <span class="label label-default">Editor</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/aco.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">aerkalov</a></h4>
+                  <p>Aco Erkalović</p>
+                  <span class="label label-primary">Admin</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="img/default-profile.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">noavataruser</a></h4>
+                  <p>Firstname lastname</p>
+                  <span class="label label-default">Editor</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/gideon_thumb.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">gideonlehmann</a></h4>
+                  <p>Gideon Lehmann</p>
+                  <span class="label label-default">Editor</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/darko.png"></figure>
+                <div class="list-info">
+                  <h4><a href="#">darconny</a></h4>
+                  <p>Darko Tomic</p>
+                  <span class="label label-default">Designer</span>
+                </div>
+              </li>
+          </ul>
+        </div>
+        
+    </section>
+
+    <!-- chat tab content -->
+    <section class="tab-content chat" source_id="chat-tab">
+        <h3>Chat</h3>
+
+        <div class="notification-list-box">
+          <ul class="notification-list">
+            <li>
+              <figure class="notification-avatar"><img src="pictures/gideon_thumb.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Gideon Lehmann</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><span class="notification-author">John Doe</span> finished article <i>“Europe car sales 
+break losing streak”</i></p>
+                <span class="notification-info">Today at 12:39</span>
+              </div>
+            </li>
+            <li class="important">
+              <figure class="notification-avatar"><img src="pictures/darko.png"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><span class="notification-author">Darko Tomic</span> guys, we have to get this out before 
+14:00 </p>
+                <span class="notification-info">Today at 13:05</span>
+              </div>
+            </li>
+            <li class="personal">
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><span class="notification-author">Editor:</span> OK, good news. We just got another 
+hour, so 15:00 at latest</p>
+                <span class="notification-info">Today at 13:15</span>
+              </div>
+            </li> 
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Michael White</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"><img src="pictures/aco.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Aco Erkalovic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"><img src="pictures/maja.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Maja Nukic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Darko Tomic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Michael White</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><span class="notification-author">John Doe</span> finished article <i>“Europe car sales 
+break losing streak”</i></p>
+                <span class="notification-info">Today at 12:39</span>
+              </div>
+            </li>
+            <li class="important">
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><span class="notification-author">Editor:</span> guys, we have to get this out before 
+14:00 </p>
+                <span class="notification-info">Today at 13:05</span>
+              </div>
+            </li>
+            <li class="personal">
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">
+                <p class="notification-text"><span class="notification-author">Editor:</span> OK, good news. We just got another 
+hour, so 15:00 at latest</p>
+                <span class="notification-info">Today at 13:15</span>
+              </div>
+            </li> 
+            <li>
+              <figure class="notification-avatar"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Michael White</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"><img src="pictures/aco.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Aco Erkalovic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"><img src="pictures/maja.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Maja Nukic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>
+            <li>
+              <figure class="notification-avatar"><img src="pictures/darko.png"></figure>
+              <div class="notification-content">                
+                <p class="notification-text"><span class="notification-author">Darko Tomic</span> sent article <i>“Two Nigels don't 
+make a right on Europe”</i> to review</p>
+                <span class="notification-info">Today at 12:45</span>
+              </div>
+            </li>                             
+
+          </ul>
+        </div> 
+
+        <div class="notification-write-box">
+          <textarea class="notification-writer" placeholder="Post a notification"></textarea>
+          <div class="notification-important">
+            <i class="icon-info-sign"></i>
+          </div>
+          <div class="button-area clearfix">            
+              <a class="btn btn-primary pull-right send-notif">Send</a>            
+              <a class="btn btn-default pull-right cancel-notif">Cancel</a>
+          </div>
+        </div>
+    </section>
+    <section class="tab-content notes" source_id="notes-tab">
+        <h3>Notes</h3>
+        <div class="scrollable margin-top">
+          <p>Shared notes for this book.</p>
+          <textarea name="description" class="form-control" cols="40" rows="20">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+          </textarea>
+          <div class="save-button">
+            <button type="button" class="btn btn-primary btn-sm">SAVE NOTE</button>
+          </div>
+        </div>
+    </section>
+
+    <!-- style tab content -->
+    <section class="tab-content" source_id="style-tab">
+        <h3>Style</h3>
+        <div class="scrollable margin-top">
+          <p>content here</p>
+        </div>
+    </section>
+</div>
+
+<div id="right-tabpane" class="tabpane right-tabpane">     
+    <section class="tab-content" source_id="history-tab">
+        <h3>History</h3>
+        <div class="scrollable">
+            <ul class="list border-top history">          
+              <li class="active">
+                <div class="list-info">
+                  <span class="revision-number">Rev 1.3</span>                  
+                  <span class="revision-time">12.02.2013 17:25:23</span>
+                  <h4><a href="#">Lionel Messi</a></h4> 
+                </div>
+              </li>
+              <li>
+                <div class="list-info">
+                  <span class="revision-number">Rev 1.2</span>
+                  <span class="revision-time">22.05.2014 21:15:38</span>
+                  <h4><a href="#">Thomas Müller</a></h4>
+                </div>
+              </li>
+              <li>
+                <div class="list-info">
+                  <span class="revision-number">Rev 1.1.4</span>
+                  <span class="revision-time">22.05.2014 21:15:38</span>
+                  <h4><a href="#">Darko Pancev</a></h4>
+                </div>
+              </li>
+              <li>
+                <div class="list-info">
+                  <span class="revision-number">Rev 1.1.11</span>
+                  <span class="revision-time">22.05.2014 21:15:38</span>
+                  <h4><a href="#">Neymar JR</a></h4>
+                </div>
+              </li>
+              <li>
+                <div class="list-info">
+                  <span class="revision-number">Rev 0.96</span>                  
+                  <span class="revision-time">12.02.2013 17:25:23</span>
+                  <h4><a href="#">Fritz</a></h4>                  
+                </div>
+              </li>
+              <li>
+                <div class="list-info">
+                  <span class="revision-number">Rev 0.88</span>
+                  <span class="revision-time">22.05.2014 21:15:38</span>
+                  <h4><a href="#">Aco</a></h4>
+                </div>
+              </li>
+              <li>
+                <div class="list-info">
+                  <span class="revision-number">Rev 0.84</span>
+                  <span class="revision-time">22.05.2014 21:15:38</span>
+                  <h4><a href="#">Gonzalo Higuaín</a></h4>
+                </div>
+              </li>
+              <li>
+                <div class="list-info">
+                  <span class="revision-number">Rev 0.56</span>
+                  <span class="revision-time">22.05.2014 21:15:38</span>
+                  <h4><a href="#">Miroslav Klose</a></h4>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </section>
+     <section class="tab-content" source_id="attachments-tab">
+        <h3>Attachments</h3>
+    </section>
+</div>
+
+<!-- Insert link Modal -->
+<div id="newLink"  class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">  
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Link</h3>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">              
+                <input type="text" class="form-control" id="url" placeholder="URL">
+            </div>     
+          <div class="form-group">
+                <input type="text" class="form-control" id="title" placeholder="Title">
+          </div>
+
+
+          <div class="linktochapter">
+            <div class="linktochapter-header">
+              <i class="icon-chevron-down toggle-close"></i>
+              <i class="icon-chevron-right toggle-open"></i>
+              <span class="linktochapter-title">Or link to existing chapter</span>
+            </div>
+            <div class="linktochapter-content">
+              <ul>
+                <li><a href="#"><i class="icon-check-sign"></i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Donec pede justo, fringilla vel, aliquet nec</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Nullam dictum felis eu pede mollis</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Integer tincidunt.</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Aenean vulputate eleifend tellus.</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Donec pede justo, fringilla vel, aliquet nec</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Nullam dictum felis eu pede mollis</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Integer tincidunt.</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Aenean vulputate eleifend tellus.</a></li>                
+                <li><a href="#"><i class="icon-check-sign"></i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Donec pede justo, fringilla vel, aliquet nec</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Nullam dictum felis eu pede mollis</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Integer tincidunt.</a></li>
+                <li><a href="#"><i class="icon-check-sign"></i>Aenean vulputate eleifend tellus.</a></li>
+              </ul>
+            </div>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn btn-default operation-unlink" aria-hidden="true" disabled="disabled">Break link</button>    
+        <button class="btn btn-primary">Insert link</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Insert link Modal -->
+
+<!-- Insert Image Modal -->
+<div class="modal fade responsive-popup" id="imageManager" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Insert Image</h4>
+        </div>
+        <div class="modal-body tabbable">
+          <div class="modal-left-pane">
+            <h4>Sources</h4>
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#media_library" data-toggle="tab">Media library</a></li>
+                <li><a href="#upload_image" data-toggle="tab">Upload Image</a></li>
+                <li><a href="#from_web" data-toggle="tab">From Web</a></li>
+              </ul>
+          </div><!-- end modal-left-pane -->
+          <div class="modal-right-pane tab-content">
+            <div class="tab-pane" id="upload_image">
+              <div class="drag-area">
+                  <div class="drag-area-title">
+                    Drag Your Images Here
+                  </div>
+                  <div class="drag-area-button">
+                    <button class="btn btn-default"><i class="icon-upload"></i> or Select them from folder</button>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane active" id="media_library">
+              <div class="image-info-container">
+                <div class="image-preview">
+                  <img src="0">
+                </div>
+                <div class="image-info">
+                  <ul>
+                    <li><span>File Name: </span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.jpg</li>
+                    <li><span>Modified: </span>18.05.2013, 14:18</li>
+                    <li><span>File Size: </span>236KB</li>
+                    <li><span>Dimensions: </span>300x220px</li>
+                  </ul>
+                  <h5>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </h5>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p> 
+                </div>
+                <div class="edit-metadata">
+                  <div class="form-group">
+                    <label for="imageTitle">Image Title</label>
+                    <input type="email" class="form-control" id="" placeholder="Enter Title">
+                  </div>
+                  <div class="form-group">
+                    <label for="imageTitle">Image Description</label>
+                    <textarea rows="8"class="form-control" placeholder="Description"></textarea>
+                  </div>
+                </div>
+                <a class="btn btn-default btn-xs cancel-metadata-btn" href="#">Cancel</a>
+                <a class="btn btn-primary btn-xs save-metadata-btn" href="#">Save Metadata</a>
+                <a class="btn btn-default btn-xs metadata-btn" href="#"><i class="icon-pencil"></i> Edit metadata</a> 
+                <a class="btn btn-default btn-xs closeinfo" href="#"><i class="icon-chevron-right"></i></a> 
+              </div>
+
+              <ul class="uploads-grid">
+               <li>
+                  <img src="pictures/Carla-bruni-sarkozy.jpg">
+                  <a class="image-dropdown-button" data-toggle="dropdown"><i class="icon-caret-down"></i></a>
+                  <ul class="dropdown-menu" style="">
+                    <li><a href="#"><i class="icon-list-alt"></i> Edit metadata</a></li>
+                    <li><a href="#"><i class="icon-download-alt"></i> Download</a></li>
+                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <img src="pictures/French_election__N_2200069b.jpg">
+                  <a class="image-dropdown-button" data-toggle="dropdown"><i class="icon-caret-down"></i></a>
+                  <ul class="dropdown-menu" style="">
+                    <li><a href="#"><i class="icon-list-alt"></i> Edit metadata</a></li>
+                    <li><a href="#"><i class="icon-download-alt"></i> Download</a></li>
+                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <img src="pictures/sarcozy-presidente-de-francia.jpg">
+                  <a class="image-dropdown-button" data-toggle="dropdown"><i class="icon-caret-down"></i></a>
+                  <ul class="dropdown-menu" style="">
+                    <li><a href="#"><i class="icon-list-alt"></i> Edit metadata</a></li>
+                    <li><a href="#"><i class="icon-download-alt"></i> Download</a></li>
+                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <img src="pictures/sarkyDM1910_468x505.jpg">
+                  <a class="image-dropdown-button" data-toggle="dropdown"><i class="icon-caret-down"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon-list-alt"></i> Edit metadata</a></li>
+                    <li><a href="#"><i class="icon-download-alt"></i> Download</a></li>
+                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                  </ul>
+                </li>
+               <li>
+                  <img src="pictures/Carla-bruni-sarkozy.jpg">
+                  <a class="image-dropdown-button" data-toggle="dropdown"><i class="icon-caret-down"></i></a>
+                  <ul class="dropdown-menu" style="">
+                    <li><a href="#"><i class="icon-list-alt"></i> Edit metadata</a></li>
+                    <li><a href="#"><i class="icon-download-alt"></i> Download</a></li>
+                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <img src="pictures/French_election__N_2200069b.jpg">
+                  <a class="image-dropdown-button" data-toggle="dropdown"><i class="icon-caret-down"></i></a>
+                  <ul class="dropdown-menu" style="">
+                    <li><a href="#"><i class="icon-list-alt"></i> Edit metadata</a></li>
+                    <li><a href="#"><i class="icon-download-alt"></i> Download</a></li>
+                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <img src="pictures/sarcozy-presidente-de-francia.jpg">
+                  <a class="image-dropdown-button" data-toggle="dropdown"><i class="icon-caret-down"></i></a>
+                  <ul class="dropdown-menu" style="">
+                    <li><a href="#"><i class="icon-list-alt"></i> Edit metadata</a></li>
+                    <li><a href="#"><i class="icon-download-alt"></i> Download</a></li>
+                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <img src="pictures/sarkyDM1910_468x505.jpg">
+                  <a class="image-dropdown-button" data-toggle="dropdown"><i class="icon-caret-down"></i></a>
+                  <ul class="dropdown-menu" style="">
+                    <li><a href="#"><i class="icon-list-alt"></i> Edit metadata</a></li>
+                    <li><a href="#"><i class="icon-download-alt"></i> Download</a></li>
+                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                  </ul>
+                </li></ul>
+            </div>
+            <div class="tab-pane" id="from_web">
+              <input type="text" class="form-control" id="webSearch" placeholder="Enter image link">
+            </div>
+          </div><!-- end modal-right-pane -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Insert</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+<!-- End Insert Image Modal -->
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+<script type="text/javascript" src="js/tooltip.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
+<script type="text/javascript" src="js/booki-init.js"></script>
+
+</body>
+</html>

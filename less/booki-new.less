@@ -151,7 +151,8 @@ a:focus, a:hover {
 	background: rgba(223,222,224, .9);
 	border-bottom: 1px solid #bfbfbf;
 	height: 60px;
-	padding: 10px 20px 10px 20px;
+	/*padding: 10px 20px 10px 20px;*/
+	padding: 0 0 0 20px;
 	.box-sizing(border-box); 
 	position:fixed;
 	top:40px;
@@ -167,16 +168,26 @@ a:focus, a:hover {
 		float: left;
 		width: 54%;
 		.box-sizing(border-box);
-		padding: 0;
+		padding: 10px 0;
 		margin: 0;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
 	
+	/* FLAT buttons Bookbar */
 	.btn-toolbar {
-		margin: 5px 0;
+		margin: 0;
+		}
+	.btn {
+		padding: 6px 16px;
 	}
+	.btn-default {
+		border-color:#bbb;
+	}
+	
+
+
 }
 .contentContainer {
 	padding: 155px 0 0 0;
