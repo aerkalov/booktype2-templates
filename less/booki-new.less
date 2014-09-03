@@ -151,7 +151,6 @@ a:focus, a:hover {
 	background: rgba(223,222,224, .9);
 	border-bottom: 1px solid #bfbfbf;
 	height: 60px;
-	/*padding: 10px 20px 10px 20px;*/
 	padding: 0 0 0 20px;
 	.box-sizing(border-box); 
 	position:fixed;
@@ -178,17 +177,97 @@ a:focus, a:hover {
 	/* FLAT buttons Bookbar */
 	.btn-toolbar {
 		margin: 0;
+		&>.btn-group+.btn-group {
+			margin-left: 0px !important;
 		}
+		&>.btn-group+.btn-group .btn-default:first-child {
+			border-left: 1px solid white;
+		}
+		&>.btn-group .btn-default:last-child {
+			border-right: 1px solid #bfbfbf;
+		}
+	}
 	.btn {
-		padding: 6px 16px;
+		padding: 9px 8px 9px 8px;
+		border-radius: 0;
 	}
 	.btn-default {
-		border-color:#bbb;
+		border-color: transparent #d7d6d8 transparent #d7d6d8;
+		background-image: none !important;
+		background-color: #eae9eb;
+		border-width: 0 1px 1px 1px; 
+		box-shadow: none;
+		&:hover {
+			background-color: #e4e3e6;
+		}
+		&:first-child {
+			border-color: transparent #d7d6d8 transparent #bfbfbf;
+		}
+		[class^="bk-icon-"] {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			vertical-align: text-top;
+			background-image: url(../img/side-tab-icons.png);
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			}
+		.bk-icon-toc {
+			background-position: 0 -320px;
+			}
+		.bk-icon-media {
+			background-position: 0 -360px;
+			}
+		.bk-icon-cover {
+			background-position: 0 -400px;
+			}
+		.bk-icon-history {
+			background-position: 0 -440px;
+			}
+		.bk-icon-settings {
+			background-position: 0 -480px;
+			}
+		&.active {
+			+.btn-default {
+				border-left:1px solid #7d7d7d !important;
+			}
+			.bk-icon-toc {
+				background-position: -40px -320px;
+			}
+			.bk-icon-media {
+				background-position: -40px -360px;
+			}
+			.bk-icon-cover {
+				background-position: -40px -400px;
+			}
+			.bk-icon-history {
+				background-position: -40px -440px;
+			}
+			.bk-icon-settings {
+				background-position: -40px -480px;
+			}
+		}
 	}
-	
-
-
+	.btn-primary { 
+		background-color: #704db3;
+		padding: 21px 38px 21px 22px;
+		color: #fff;
+		text-transform: uppercase;
+		background-image: url(../img/arrow-right-big.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+		text-shadow: none;
+		box-shadow: none;
+		border: none;
+		&:active {
+			background-image: url(../img/arrow-right-big.png) !important;
+			background-repeat: no-repeat !important;
+		}
+	}
+	/* end FLAT buttons */
 }
+
 .contentContainer {
 	padding: 155px 0 0 0;
 	height: 100%;
