@@ -1121,6 +1121,7 @@ a:focus, a:hover {
 	height:30px;	
 }
 
+/* Link to chapter modal */
 .linktochapter {
 	margin-bottom: 20px;
 	}
@@ -1214,7 +1215,7 @@ a:focus, a:hover {
 		.linktochapter .linktochapter-content li a.selected > i {
 			display:inline-block !important;
 		}
-		
+
 /* Image manager modal */
 .responsive-popup {
 	position: fixed;
@@ -1525,6 +1526,83 @@ a:focus, a:hover {
 		.uploads-grid .dropdown-menu [class^="icon-"] {
 			min-width: 20px;
 		}
+
+
+/* Modal with tabs */
+.tabbed-popup {
+	.modal-dialog {
+		.modal-content {
+			.modal-body {
+				/*min-height: 380px;*/
+				.modal-left-pane {
+					padding: 10px 0 15px 0;					
+					h4 + .nav-tabs { 
+						padding-top: 0; 
+					}
+					.nav-tabs {
+						padding-top: 20px;
+						&>li {
+							float: none;
+							&>a {
+								border-radius: 0;
+								border-bottom: 1px solid #eee;
+								margin-right: -1px;
+								padding: 8px 15px 8px 3px;
+								&:hover {
+									background-color: #f0f0f0;
+									border-color: #d2d2d2 #d2d2d2 #eee transparent;
+								}
+							}
+							&.active>a {
+								border-color: #d2d2d2 transparent #d2d2d2 transparent;
+								padding-left: 10px;
+								font-weight: 600;
+								color: #000;
+								&:hover {
+									border-color: #d2d2d2 #FFF #d2d2d2 transparent;
+									background-color: #FFF;
+								}	
+							}
+						}						
+					}
+				}
+				.modal-right-pane {
+					position:relative;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					margin: 0px 0px 15px 145px;
+					.tab-pane > h4 {
+						margin: 0 0 10px 0;
+					}
+					input + input {
+						margin-top: 12px;
+					}
+					input + h4 {
+						margin: 30px 0 10px 0 !important;
+					}
+					.drag-area {
+						position:relative;
+						margin-bottom: 20px;
+						.drag-area-title {
+							margin-top: 25px;
+							&.file {
+								background: url("../img/dragfiles2.png") no-repeat 50% 0;
+							}
+						}
+						.drag-area-button {
+							margin-bottom: 30px;
+						}
+					}
+				}
+			}
+			.modal-footer {
+				margin:0;
+			}
+		}
+	}
+}
+
 
 /* History, compare dialog */
 .compare {
@@ -2840,7 +2918,7 @@ footer {
 }
 
 @media only screen and (max-width: 1279px) {
-	.bookbar { padding: 10px; }
+	.bookbar { padding: 0 0 0 10px; }
 	.bookbar h1 { width: 44% !important; }
 	.btn-toolbar>.btn-group+.btn-group { margin-left: 6px!important; }
 	.contentHeader { padding: 8px 7px; }

@@ -64,9 +64,7 @@
             </div>
             <div class="btn-group">
               <button href="#newChapter" role="button" class="btn btn-default" data-toggle="modal">New Chapter</button>
-
-
-
+              <button href="#importChapter" role="button" class="btn btn-default" data-toggle="modal">Import Chapter</button>
               <button href="#newSection" role="button" class="btn btn-default" data-toggle="modal">New Section</button>
             </div>
         </div>       
@@ -453,6 +451,52 @@
     </div>
 </div> 
 
+<div id="importChapter" class="modal fade tabbed-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Import Chapter</h3>
+          </div>
+          <div class="modal-body">
+            <div class="modal-left-pane">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#import_booktype" data-toggle="tab">From Booktype</a></li>
+                    <li><a href="#import_file" data-toggle="tab">Upload file</a></li>
+                </ul>
+            </div><!-- end modal-left-pane -->
+
+            <div class="modal-right-pane tab-content">
+                <div class="tab-pane active" id="import_booktype">
+                    <h4>Choose Book and Chapter</h4>
+                    <input type="text" placeholder="Book name" class="form-control">
+                    <input type="text" placeholder="Chapter name" class="form-control">
+                    <h4>New Title (optional)</h4>
+                    <input type="text" placeholder="Enter new Chapter title" class="form-control">
+                </div>
+                <div class="tab-pane" id="import_file">
+                    <p>Available file formats: .doc, .docx, .pdf, .txt</p>
+                    <div class="drag-area">
+                        <div class="drag-area-title file">
+                            Drag Your File Here
+                        </div>
+                        <div class="drag-area-button">
+                            <button class="btn btn-default"><i class="icon-upload"></i> or Select from folder</button>
+                        </div>
+                    </div>
+                    <h4>Enter Title</h4>
+                    <input type="text" placeholder="Enter new Chapter title" class="form-control">
+                </div>
+            </div><!-- end modal-right-pane -->
+
+          </div><!-- end modal-body -->
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button class="btn btn-primary">Import</button>
+          </div><!-- end modal-footer -->
+        </div><!-- end modal-content -->
+    </div><!-- end modal-dialog -->
+</div>
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -460,6 +504,7 @@
 <script type="text/javascript" src="js/dropdown.js"></script>
 <script type="text/javascript" src="js/tooltip.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/transition.js"></script>
 <script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
 <script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
