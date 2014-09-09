@@ -84,7 +84,7 @@
 
 							<button href="#" role="button" class="btn btn-default float-right btn-group" data-toggle="modal" data-target="#myModal" rel="tooltip" title="" data-placement="bottom" data-original-title="Create new book">CREATE NEW BOOK</button>
 
-							<button href="#" role="button" class="btn btn-default float-right btn-group" data-toggle="modal" data-target="#myModal" rel="tooltip" title="" data-placement="bottom" data-original-title="Create new book">UPLOAD EPUB/IMPORT</button>
+							<button href="#" role="button" class="btn btn-default float-right btn-group" data-toggle="modal" data-target="#importBook" rel="tooltip" title="" data-placement="bottom" data-original-title="Create new book">IMPORT BOOK / UPLOAD EPUB</button>
 	    					
 	    					<div class="btn-group float-right">
 							    <button class="btn btn-default btn-sm showGrid" rel="tooltip" title="" data-placement="bottom" data-original-title="Show grid"><i class="icon-th"></i></button>
@@ -99,8 +99,6 @@
 							        <h2 class="modal-title" id="myModalLabel">Create New Book</h2>
 							      </div>
 							      	<div class="modal-body">
-
-
 
 										<section id="basic">
 
@@ -166,25 +164,11 @@
 								            </form>
 
 							            </section>
-
-
-
-
-
-
-
-
-
-
-									</div>
-
-									
+									</div>								
 							    </div><!-- /.modal-content -->
 							  </div><!-- /.modal-dialog -->
 							</div>
-
     					</div>
-
     				</h2>
 
     				<div class="book-thumb" id="books-prew"> <!-- For list view add book-list class, and remove book-thumb -->
@@ -459,7 +443,34 @@
 	    </div>
     </footer>
 
-  
+<!-- Modal windows -->
+<div id="importBook" class="modal fade importBook" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Import Book / Upload Epub</h3>
+          </div>
+          <div class="modal-body">
+            <div class="drag-area">
+                <div class="drag-area-title file">
+                    Drag Your File Here
+                </div>
+                <div class="drag-area-button">
+                    <button class="btn btn-default"><i class="icon-upload"></i> or Select from folder</button>
+                </div>
+            </div>
+            <h4>Book Title (optional)</h4>
+            <input type="text" placeholder="Enter new Book title" class="form-control">
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button class="btn btn-primary">Import</button>
+          </div>
+        </div>
+    </div>
+</div>
+
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script type="text/javascript" src="js/button.js"></script>
@@ -467,7 +478,7 @@
 <script type="text/javascript" src="js/tooltip.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
 <script type="text/javascript" src="js/tab.js"></script>
-<script type="text/javascript" src="js/transition.js"></script>
+<!-- <script type="text/javascript" src="js/transition.js"></script> -->
 <script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
 <script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
 <script type="text/javascript" src="js/booki-init.js"></script>
