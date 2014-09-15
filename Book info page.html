@@ -95,7 +95,7 @@
             <div class="box-bottom-white btn-space">
               <button href="#" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="Edit this Book">EDIT THIS BOOK</button>
               <button href="#" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="View draft">VIEW DRAFT</button>
-              <button href="#" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="Edit book info">EDIT BOOK INFO</button>
+              <button href="#bookInfoModal" data-toggle="modal" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="Edit book info">EDIT BOOK INFO</button>
               <button href="#" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete book">DELETE BOOK</button>
             </div>
           </div>
@@ -305,6 +305,41 @@
 	    </div>
     </footer>
 
+<div id="bookInfoModal" class="modal fade bookInfoModal" tabindex="-1" role="dialog" aria-labelledby="editBookInfoModal" aria-hidden="false">
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <iframe name="hidden_frame" style="border: 0px; width: 0px; height: 0px"></iframe>
+        <form method="post" action="/darkova-knjiga/_info/edit/" target="hidden_frame" enctype="multipart/form-data" style="margin-bottom: 0px">
+            <div class="modal-header"><h4 class="modal-title">Edit Book Info: Darkova knjiga</h4></div>
+            <div class="modal-body">                                
+                <input type="hidden" name="csrfmiddlewaretoken" value="UNm4pX2nImXidDQpbM7JKZm9b2xAq8AK">
+                <p><label for="id_description">Book description:</label> <textarea class=" form-control" cols="40" id="id_description" name="description" rows="10" style="width: 100%; height: 210px;">This is my personal notes book</textarea></p>
+<p><label for="id_book_cover">Book image:</label> <input class=" form-control" id="id_book_cover" name="book_cover" type="file"></p>
+<p><label for="id_license">License:</label> <select class=" form-control" id="id_license" name="license">
+<option value="">---------</option>
+<option value="11">Neka moja licenca</option>
+<option value="1">Public Domain</option>
+<option value="2">MIT License</option>
+<option value="3">Creative Commons No Rights Reserved</option>
+<option value="4" selected="selected">Creative Commons Attribution</option>
+<option value="5">Creative Commons Attribution-ShareAlike</option>
+<option value="6">Creative Commons Attribution-NoDerivs</option>
+<option value="7">Creative Commons Attribution-NonCommercial</option>
+<option value="8">Creative Commons Attribution-NonCommercial-ShareAlike</option>
+<option value="9">Creative Commons Attribution-NonCommercial-NoDerivs</option>
+<option value="10">GNU General Public License</option>
+</select></p>
+<p><label for="id_hidden">Initially hide from others:</label> <input checked="checked" class=" form-control" id="id_hidden" name="hidden" type="checkbox"></p>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+        </form>
+    </div>
+</div></div>
   
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
