@@ -5,11 +5,11 @@
 	<title>Booktype Edit Screen</title>
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />
-  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />  
   <link href='css/bootstrap-theme.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
   <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-	<link href='css/booki-new.css' rel='stylesheet' type='text/css' />
+  <link href='css/booki-new.css' rel='stylesheet' type='text/css' />
   <link href='css/bt20.css' rel='stylesheet' type='text/css' />  
   <link href='css/aloha.css' rel='stylesheet' type='text/css' />
 
@@ -181,7 +181,7 @@
     				</div> <!-- End of book list (book-thumb or book-list) -->
 
 					<div class="box-bottom-white">
-						<button href="#" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="Add book to the group">ADD BOOK TO THE GROUP</button>
+						<button href="#addBookModal" data-toggle="modal" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="Add book to the group">ADD BOOK TO THE GROUP</button>
 					</div>
 
     			</div>
@@ -280,7 +280,236 @@
 	    </div>
     </footer>
 
-  
+<div class="modal fade addBookGroup" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+  <div class="modal-dialog add_book">
+    
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title" id="myModalLabel">Select books to add</h2>
+            </div>
+            <div class="modal-body">     
+                <section id="basic">
+                    <form method="post" action="/groups/nova-gruppaaaa/add_book/" target="hidden_frame" enctype="multipart/form-data">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="WhUAnY7xZjBwG7TLvuAHihDEEZkgaWRU">
+
+                        <div class="book-list">
+                                          
+                                <div class="item">
+                                    <figure class="custom-cover">                                        
+                                            <img src="pictures/cover.png">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add1" value="a-webpage-is-a-book">
+                                      <label for="add1"><span></span></label>
+                                    </div>
+                                </div>                       
+                                <div class="item">
+                                    <figure class="custom-cover">                                  
+                                    <img src="http://booktype-dev.sourcefabric.org/static/core/img/thumb-default.png">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">A webpage is a book</a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add2" value="a-webpage-is-a-book">
+                                      <label for="add2"><span></span></label>
+                                    </div>
+                                </div>          
+                                <div class="item">
+                                    <figure class="custom-cover">                                        
+                                            <img src="pictures/cover5.jpg">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">Sed ut perspiciatis unde omnis iste natus error sit voluptatem </a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add3" value="a-webpage-is-a-book">
+                                      <label for="add3"><span></span></label>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <figure class="custom-cover">
+                                        
+                                            <img src="pictures/cover4.png">
+                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/decalogo-de-practicas-culturales-de-codigo-abierto/_info/">Decálogo de prácticas culturales de código abierto</a></h4>
+                                    </div>
+                                     <div class="add-box">
+                                      <input type="checkbox" id="add4" value="a-webpage-is-a-book">
+                                      <label for="add4"><span></span></label>
+                                    </div>
+                                </div>
+                                
+                                <div class="item">
+                                    <figure class="custom-cover">                                        
+                                            <img src="pictures/cover.png">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add5" value="a-webpage-is-a-book">
+                                      <label for="add5"><span></span></label>
+                                    </div>
+                                </div>                       
+                                <div class="item">
+                                    <figure class="custom-cover">                                  
+                                    <img src="http://booktype-dev.sourcefabric.org/static/core/img/thumb-default.png">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">A webpage is a book</a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add6" value="a-webpage-is-a-book">
+                                      <label for="add6"><span></span></label>
+                                    </div>
+                                </div>          
+                                <div class="item">
+                                    <figure class="custom-cover">                                        
+                                            <img src="pictures/cover5.jpg">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">Sed ut perspiciatis unde omnis iste natus error sit voluptatem </a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add7" value="a-webpage-is-a-book">
+                                      <label for="add7"><span></span></label>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <figure class="custom-cover">
+                                        
+                                            <img src="pictures/cover4.png">
+                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/decalogo-de-practicas-culturales-de-codigo-abierto/_info/">Decálogo de prácticas culturales de código abierto</a></h4>
+                                    </div>
+                                     <div class="add-box">
+                                      <input type="checkbox" id="add8" value="a-webpage-is-a-book">
+                                      <label for="add8"><span></span></label>
+                                    </div>
+                                </div>      
+                                         
+                                <div class="item">
+                                    <figure class="custom-cover">                                        
+                                            <img src="pictures/cover.png">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add9" value="a-webpage-is-a-book">
+                                      <label for="add9"><span></span></label>
+                                    </div>
+                                </div>                       
+                                <div class="item">
+                                    <figure class="custom-cover">                                  
+                                    <img src="http://booktype-dev.sourcefabric.org/static/core/img/thumb-default.png">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">A webpage is a book</a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add10" value="a-webpage-is-a-book">
+                                      <label for="add10"><span></span></label>
+                                    </div>
+                                </div>          
+                                <div class="item">
+                                    <figure class="custom-cover">                                        
+                                            <img src="pictures/cover5.jpg">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">Sed ut perspiciatis unde omnis iste natus error sit voluptatem </a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add11" value="a-webpage-is-a-book">
+                                      <label for="add11"><span></span></label>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <figure class="custom-cover">
+                                        
+                                            <img src="pictures/cover4.png">
+                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/decalogo-de-practicas-culturales-de-codigo-abierto/_info/">Decálogo de prácticas culturales de código abierto</a></h4>
+                                    </div>
+                                     <div class="add-box">
+                                      <input type="checkbox" id="add12" value="a-webpage-is-a-book">
+                                      <label for="add12"><span></span></label>
+                                    </div>
+                                </div>
+                                
+                                <div class="item">
+                                    <figure class="custom-cover">                                        
+                                            <img src="pictures/cover.png">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add13" value="a-webpage-is-a-book">
+                                      <label for="add13"><span></span></label>
+                                    </div>
+                                </div>                       
+                                <div class="item">
+                                    <figure class="custom-cover">                                  
+                                    <img src="http://booktype-dev.sourcefabric.org/static/core/img/thumb-default.png">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">A webpage is a book</a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add14" value="a-webpage-is-a-book">
+                                      <label for="add14"><span></span></label>
+                                    </div>
+                                </div>          
+                                <div class="item">
+                                    <figure class="custom-cover">                                        
+                                            <img src="pictures/cover5.jpg">                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/a-webpage-is-a-book/_info/">Sed ut perspiciatis unde omnis iste natus error sit voluptatem </a></h4>
+                                    </div>
+                                    <div class="add-box">
+                                      <input type="checkbox" id="add15" value="a-webpage-is-a-book">
+                                      <label for="add15"><span></span></label>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <figure class="custom-cover">
+                                        
+                                            <img src="pictures/cover4.png">
+                                        
+                                    </figure>
+                                    <div class="book-info">
+                                        <h4><a href="/decalogo-de-practicas-culturales-de-codigo-abierto/_info/">Decálogo de prácticas culturales de código abierto</a></h4>
+                                    </div>
+                                     <div class="add-box">
+                                      <input type="checkbox" id="add16" value="a-webpage-is-a-book">
+                                      <label for="add16"><span></span></label>
+                                    </div>
+                                </div>                                             
+                        </div>                  
+                    </form>
+                </section>
+            </div>
+            <div class="modal-footer">
+              <button type="button" group-name-url="/groups/nova-gruppaaaa/add_book/" class="btn btn-primary">Add books</button>
+            </div>  
+        </div>
+    </div>
+    
+</div>
+
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script type="text/javascript" src="js/button.js"></script>

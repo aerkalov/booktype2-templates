@@ -290,7 +290,7 @@
             $('.notification-writer').toggleClass('important');
         });
 
-        //$('#importBook').modal('show')
+        //$('#addBookModal').modal('show')
 
 
         // Table of contents fix (view draft page) 

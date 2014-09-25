@@ -1709,6 +1709,90 @@ a:focus, a:hover {
 	}
 }
 
+/* Add books to group modal */
+.addBookGroup {
+	position: fixed;
+    width: auto;
+    height: auto;
+    margin: 0 50px 50px;
+    left: 0!important;
+    top: 0!important;
+    right: 0!important;
+    bottom: 0!important;
+    padding: 0!important;
+    overflow: hidden!important;
+	.modal-dialog {
+		padding: 50px 0 0;
+        height: 100%;
+		.modal-content {
+			height: 98%;
+        	margin:5px;
+			.modal-body {
+				.box-sizing(border-box);
+        		position: absolute;
+        		top: 49px;
+        		left: 0;
+        		bottom: 58px;
+        		right: 0;
+        		max-height: none!important;
+        		min-height: auto!important;
+				background: #f5f5f5;
+				overflow-y: auto;
+				&::-webkit-scrollbar { width: 8px !important; height: 8px; margin: -1px 0; }
+    			&::-webkit-scrollbar-track { background:#f5f5f5; border:none; box-shadow: none; }
+    			&::-webkit-scrollbar-thumb { background: #949494; background-clip: padding-box !important; }
+    			&::-webkit-scrollbar-thumb:hover { background: #6e6e6e; background-clip: padding-box; }
+				.book-list {
+					margin: 0;
+					.item {
+						position:relative;
+						margin: 0 0 5px 0;
+						min-height: 70px;
+						&:last-child {
+							margin:0;
+						}
+						.add-box {
+							position: absolute;
+							top: 13px;
+							right: 8px;
+							input[type="checkbox"] {
+								display: none;
+								&+label {
+									color: #000;
+									font-size: 12px;
+									font-weight: normal;
+									margin-top: 1px;
+									span {
+										display: inline-block;
+										width: 19px;
+										height: 19px;
+										margin: -1px 4px 0 0;
+										vertical-align: middle;
+										background: url(../img/check_box.png) left top no-repeat;
+										cursor: pointer;										
+									}
+								}
+								&:checked+label span {
+									background: url(../img/check_box.png) -19px top no-repeat;
+								}
+							}
+						}
+					}
+				}
+			}
+			.modal-footer {
+				margin-top: 0;
+				background: #fff;
+				position: absolute;
+        		bottom: 0;
+        		left: 0;
+        		right: 0;
+			}
+		}
+	}
+}
+
+
 /* Notifications
 ------------------------------------------------------*/
 .notificationContainer {
