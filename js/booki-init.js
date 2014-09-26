@@ -333,4 +333,12 @@
         }
         // end ToC fix
 
+
+        // ZEN mode 
+        $('a.zenBtn').click(function(e){
+            e.preventDefault();
+            $('body').toggleClass('zenMode');
+        });
+
+
    });

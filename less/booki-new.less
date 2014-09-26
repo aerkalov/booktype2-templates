@@ -284,15 +284,35 @@ a:focus, a:hover {
 	left:0;
 	right:0;
 	z-index: 102;
-
 	h2 {
 		float:left;
 		margin: 0;
 		padding: 0;
 		}
-	
 	.btn-toolbar {
 		margin: 5px 0;
+	}
+	&.zen {
+		padding: 8px 60px 8px 20px;
+	}
+	a.zenBtn {
+		display:block;
+		width: 28px;
+		height: 26px;
+		padding: 2px 8px;
+		background: #dfdfe1;
+		position:absolute;
+		top:0;
+		right:10px;
+		color:#444;
+		i {
+			font-size: 20px;
+		}
+		&:hover {
+			text-decoration: none;
+			color:#000;
+			background: #ccc;
+		}
 	}
 }
 .content {
@@ -3101,6 +3121,9 @@ footer {
 	.responsive-popup { margin: 0 30px 30px; }
 	.responsive-popup .modal-dialog { padding: 30px 0 0; }
 	.templateCoversContent .coverInfoButton:after {width: 82%;}
+	.contentHeader.zen {
+		padding:8px 20px;
+	}
 }
 
 @media (max-width: 1200px) {
