@@ -29,7 +29,32 @@ body {
 	padding:0;
 	margin: 0;
 	height: 100%;
+	&.zenMode {
+		.bookbar,
+		.navigation-bar {
+			display: none;
+		}
+		.contentHeader {
+			top: 0;
+		}
+		.contentContainer {
+			padding: 55px 0 0;
+		}
+		.tablist {
+			top: 55px;
+			display: none;
+		}
+		.tabpane {
+			box-shadow: none;
+		}
+		.zenBtn {
+			.icon-double-angle-up:before {
+				content: "\f103";
+			}
+		}
+	} 
 }
+
 ::-webkit-scrollbar {
     width: 12px;
 }

@@ -333,12 +333,10 @@
         }
         // end ToC fix
 
-
-        // ZEN mode 
-        $('#zen').click(function(e) {
-            $('body').toggleClass('zenMode');
-            e.preventDefault();
-        });
-
-
    });
+
+// ZEN mode 
+$(document).on('click', '#zen', function (e) {
+    $('body').toggleClass('zenMode');
+    e.preventDefault();
+});
