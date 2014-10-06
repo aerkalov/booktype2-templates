@@ -2344,7 +2344,10 @@ a:focus, a:hover {
 	margin-bottom: 5px;
 	min-height: 60px;
 	position: relative;
-}
+	}
+	.book-list > div:last-child {
+		margin-bottom: 25px;
+	}
 
 .white .book-list > div {
 	background-color: #f5f5f5;
@@ -2498,7 +2501,6 @@ dd input, dt input, dd textarea, dt textarea {
 	padding: 20px;
 	margin: 0px -20px -20px -20px;
 	border-top: 1px solid #e1e1e1;
-	overflow: hidden;
 }
 
 .box-bottom-white {
@@ -2506,8 +2508,8 @@ dd input, dt input, dd textarea, dt textarea {
 	padding: 20px;
 	margin: 0px -20px -20px -20px;
 	border-top: 1px solid #e1e1e1;
-	overflow: hidden;
 	clear: both;
+	min-height: 72px;
 	}
 
 .box-bottom-gray {
@@ -2515,7 +2517,7 @@ dd input, dt input, dd textarea, dt textarea {
 	padding: 20px;
 	margin: 0px -20px -20px -20px;
 	border-top: 1px solid #e1e1e1;
-	overflow: hidden;
+	min-height: 72px;
 	clear: both;
 }
 
@@ -2612,8 +2614,8 @@ dd input, dt input, dd textarea, dt textarea {
 		vertical-align: top;
 		float: left;
 		img {
-			width: 100%;
-			margin-bottom: 10px;
+			width: 100%;	
+			margin-bottom: 10px;		
 		}
 	}
 	&-people li {

@@ -99,3 +99,18 @@ input[type="radio"].form-control:focus{
 .group-list h4{
     margin-right: 135px;
 }
+ 
+#bookcontent img,
+#bookcontent table{
+    max-width: 100%;
+    height: auto;
+}
+
+.box-bottom-white{
+    overflow: inherit;
+}
+.box-bottom-white:after{
+    display: block;
+    clear: both;
+    content: "";
+}
