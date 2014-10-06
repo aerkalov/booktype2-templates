@@ -335,9 +335,9 @@
 
 
         // ZEN mode 
-        $('a.zenBtn').click(function(e){
-            e.preventDefault();
+        $('#zen').click(function(e) {
             $('body').toggleClass('zenMode');
+            e.preventDefault();
         });
 
 
