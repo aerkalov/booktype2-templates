@@ -3148,8 +3148,6 @@ footer {
 	.responsive-popup { margin: 0 30px 30px; }
 	.responsive-popup .modal-dialog { padding: 30px 0 0; }
 	.templateCoversContent .coverInfoButton:after {width: 82%;}
-	.contentHeader.zen {
-	}
 	.hide1279 {
 		display:none;
 		visibility:hidden;
@@ -3171,12 +3169,15 @@ footer {
 		display:none;
 		visibility:hidden;
 	}
+	.contentHeader.zen {
+		padding: 8px 45px 8px 10px;
+	}
 }
 
 @media only screen and (max-width: 1386px) {
-	.opentabpane-left .templateCoversContent .coverMessageButton:after,  
+	.opentabpane-left .templateCoversContent .coverMessageButton:after,
 	.opentabpane-right .templateCoversContent .coverMessageButton:after {
-		width: 73%;	
+		width: 73%;
 	}
 }
 
@@ -3222,5 +3223,11 @@ footer {
 		&.footer_visible {
 			bottom:334px;
 		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.contentHeader.zen {
+		padding: 8px 55px 8px 50px;
 	}
 }

@@ -73,6 +73,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	.contentHeader .btn.btn-success:first-child {
 		min-width: 66px;
 	}
+	.contentHeader .btn-toolbar:last-child>.btn-group+.btn-group {
+		margin-left: 5px!important;
+	}
 .dropdown-menu {
 	margin:0;
 	-moz-border-radius:2px;
@@ -132,7 +135,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	border-top-right-radius: 0px !important;
 } 
 .edit-menu .btn-toolbar>.btn-group+.btn-group {
-	margin-left: 5px!important;
+	margin-left: 5px !important;
 }
 .hold-chapters li .btn-toolbar>.btn-group+.btn-group {
 	margin-left: 6px !important;
