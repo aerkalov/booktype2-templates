@@ -76,6 +76,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	.contentHeader .btn-toolbar:last-child>.btn-group+.btn-group {
 		margin-left: 5px!important;
 	}
+	.contentHeader .btn-toolbar:last-child .btn {
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
 .dropdown-menu {
 	margin:0;
 	-moz-border-radius:2px;
