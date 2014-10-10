@@ -2397,10 +2397,16 @@ a:focus, a:hover {
 	max-height: 40px;
 }
 
-h2 .view_all {
-	position: absolute;
-	right: 0px;
-	font-size: 13px;
+h2 {
+	.view_all {
+		position: absolute;
+		right: 0px;
+		top: 2px;
+		font-size: 13px;
+	}
+	.btn-toolbar+.view_all {
+		right:100px;
+	}
 }
 
 .profile-box {
