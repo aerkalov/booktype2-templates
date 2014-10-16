@@ -1399,8 +1399,7 @@ a:focus, a:hover {
 		overflow-x: visible;
 		position: absolute;
 		width:100%;
-		}
-		.uploads-grid li {
+		li {
 			max-height: 108px;
 			float: left;
 			margin: 0 15px 15px 0;
@@ -1408,32 +1407,58 @@ a:focus, a:hover {
 			border: 1px solid #d0d0d0;
 			position: relative;
 			overflow:visible;
-			}
-			.uploads-grid li:hover {
+			&:hover {
 				background: #aaa;
 				border-color: #999;
 				cursor: pointer;
 				-webkit-box-shadow: 0 0 3px #a0a0a0;
 				-moz-box-shadow: 0 0 3px #a0a0a0;
 				box-shadow: 0 0 3px #a0a0a0;
-				}
-			.uploads-grid li.active {
+			}
+			&.active {
 				background: #6749a0;
 				border-color: #55398a;
 				cursor: pointer;
 				-webkit-box-shadow: 0 0 3px #a0a0a0;
 				-moz-box-shadow: 0 0 3px #a0a0a0;
 				box-shadow: 0 0 3px #a0a0a0;
-				}
-		.uploads-grid li img {
-			height: 100px;
-			max-height: 100px;
+			}
+			img {
+				height: 100px;
+				max-height: 100px;
+			}
 		}
-		.uploads-grid::-webkit-scrollbar {
+		&::-webkit-scrollbar {
 			width: 8px;
 			height: 8px;
 			margin: -1px 0;
 		}
+		.dropdown-menu {
+			min-width: 140px;
+			left:-1px;
+			li {
+				border: none;
+				margin: 0;
+				padding: 0;
+				float: none;
+				&:hover {
+					border:none;
+					background:transparent;
+				}
+				a {
+					padding: 2px 10px 2px 10px;
+				}
+			}
+			[class^="icon-"] {
+				min-width: 20px;
+			}
+			&.right {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+	
 	.image-info-container {
 		position: absolute;
 		right: 0;
@@ -1566,26 +1591,7 @@ a:focus, a:hover {
 		.open-image-menu .image-dropdown-button {
 			display:block;
 		}
-		.uploads-grid .dropdown-menu {
-			min-width: 140px;
-			left:-1px;
-		}
-		.uploads-grid .dropdown-menu li {
-			border: none;
-			margin: 0;
-			padding: 0;
-			float: none;
-		}
-		.uploads-grid .dropdown-menu li:hover {
-			border:none;
-			background:transparent;
-		}
-		.uploads-grid .dropdown-menu li a {
-			padding: 2px 3px 2px 10px;
-		}
-		.uploads-grid .dropdown-menu [class^="icon-"] {
-			min-width: 20px;
-		}
+
 
 
 /* Modal with tabs */

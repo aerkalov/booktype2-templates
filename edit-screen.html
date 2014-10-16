@@ -267,7 +267,7 @@
 
   <div class="btn-group">
     <button class="btn btn-default btn-sm action aloha-dialog insertLink" rel="tooltip" title="" data-placement="bottom" data-original-title="Insert Link"><i class="icon-link"></i></button>
-    <button class="btn btn-default btn-sm action aloha-dialog insertImage" rel="tooltip" title="" data-placement="bottom" data-original-title="Insert Figure"><i class="icon-picture"></i></button>
+    <button class="btn btn-default btn-sm action aloha-dialog insertImage" rel="tooltip" title="" data-placement="bottom" data-original-title="Insert Figure" data-toggle="modal" href="#imageManager"><i class="icon-picture"></i></button>
   </div>            
 
 
@@ -291,8 +291,8 @@
 
 <div class="btn-toolbar float-right">
     <div class="btn-group">
-      <button href="#save" role="button" class="btn btn-success" data-toggle="modal" id="button-save" rel="tooltip" title="" data-placement="bottom" data-original-title="Save chapter" disabled="">SAVE</button>
-      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" id="button-save-toggle" disabled="">
+      <button href="#save" role="button" class="btn btn-success" data-toggle="modal" id="button-save" rel="tooltip" title="" data-placement="bottom" data-original-title="Save chapter">SAVE</button>
+      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" id="button-save-toggle">
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
       </button>
@@ -885,14 +885,15 @@ make a right on Europe”</i> to review</p>
                   </ul>
                 </li>
                 <li>
-                  <img src="pictures/sarkyDM1910_468x505.jpg">
+                  <img src="pictures/Strong-turnout-for-French-election2.jpg">
                   <a class="image-dropdown-button" data-toggle="dropdown"><i class="icon-caret-down"></i></a>
-                  <ul class="dropdown-menu" style="">
+                  <ul class="dropdown-menu right" style="">
                     <li><a href="#"><i class="icon-list-alt"></i> Edit metadata</a></li>
                     <li><a href="#"><i class="icon-download-alt"></i> Download</a></li>
                     <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
                   </ul>
-                </li></ul>
+                </li>
+              </ul><!-- end uploads grid -->
             </div>
             <div class="tab-pane" id="from_web">
               <input type="text" class="form-control" id="webSearch" placeholder="Enter image link">

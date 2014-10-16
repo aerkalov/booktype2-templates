@@ -226,18 +226,26 @@
             $(this).closest('.tab-pane').removeClass('open-info');
             $(this).parent().removeClass('metadata-switch');
             $('.uploads-grid').css('width', ''); 
+            $('.uploads-grid li').removeClass('active');
         });
 
         $('.uploads-grid > li').hover(
             function() {
-                $(this).addClass('open-image-menu');  
+                $(this).addClass('open-image-menu');
+                // check position and turn dropdown to right oriented
+                var dd_position = $(this).find('a.image-dropdown-button');
+                var ending_right = ($(window).width() - (dd_position.offset().left));
+                if (ending_right < 250) {
+                    $(this).find('.dropdown-menu').addClass('right');
+                }
             },
             function() {
                 $(this).removeClass('open-image-menu');
                 $(this).removeClass('open');
+                $(this).find('.dropdown-menu').removeClass('right');
             }
         );
-
+        
         $('a.metadata-btn').click(function(){
             $(this).parent().toggleClass('metadata-switch');
         });
@@ -290,7 +298,7 @@
             $('.notification-writer').toggleClass('important');
         });
 
-        //$('#addBookModal').modal('show')
+        //$('#imageManager').modal('show')
 
 
         // Table of contents fix (view draft page) 
