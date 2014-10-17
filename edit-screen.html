@@ -779,7 +779,7 @@ make a right on Europe”</i> to review</p>
               </ul>
           </div><!-- end modal-left-pane -->
           <div class="modal-right-pane tab-content">
-            <div class="tab-pane" id="upload_image">
+            <div class="tab-pane active" id="upload_image">
               <div class="drag-area">
                   <div class="drag-area-title">
                     Drag Your Images Here
@@ -788,8 +788,22 @@ make a right on Europe”</i> to review</p>
                     <button class="btn btn-default"><i class="icon-upload"></i> or Select them from folder</button>
                   </div>
               </div>
+
+              <!-- turn alert wrapper on during upload -->
+              <div class="alert-wrapper">
+                <div class="alert alert-warning animated" role="alert">Please wait, we are processing your image...
+                  <div class="spinner">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                  </div>
+                </div>
+              </div><!-- end alert wrapper -->
+
             </div>
-            <div class="tab-pane active" id="media_library">
+            <div class="tab-pane" id="media_library">
               <div class="image-info-container">
                 <div class="image-preview">
                   <img src="pictures/Carla-bruni-sarkozy.jpg">

@@ -979,10 +979,6 @@ a:focus, a:hover {
 			        color: #949494;
 			      	}
 			   
-
-
-
-
 [class^="toc-icon-"], [class*=" toc-icon-"] {
 	display: inline-block;
 	position:absolute;
@@ -1288,37 +1284,58 @@ a:focus, a:hover {
 	bottom: 0!important;
 	padding: 0!important;
 	overflow: hidden!important;
-}
-	.responsive-popup .modal-dialog {
+	.modal-dialog {
 		width: auto;
 		padding: 70px 0 0;
 		margin: 0;
 		height: 100%;
-		}
-	.responsive-popup .modal-content {
+	}
+	.modal-content {
 		height: 98%;
 		margin:5px;
+		.modal-body {
+			.box-sizing(border-box);
+			position: absolute;
+			top: 42px;
+			left: 0;
+			bottom: 58px;
+			right: 0;
+			max-height: none!important;
+			min-height: auto!important;		
+			.alert-wrapper {
+				position: absolute;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+				background: rgba(255,255,255,0.8);
+				.alert {
+					position: relative;
+					width: 400px;
+					margin: 0 auto;
+					margin-top: 30px;
+					padding: 10px;
+					.spinner {
+						position: absolute;
+						top: 5px;
+						right: 0;
+					}
+				}
+			}
+		}
+		.modal-header {
+			min-height: 28px;
+			margin-bottom: 0;
+		}
+		.modal-footer {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
 	}
-	.responsive-popup .modal-body {
-		.box-sizing(border-box);
-		position: absolute;
-		top: 42px;
-		left: 0;
-		bottom: 58px;
-		right: 0;
-		max-height: none!important;
-		min-height: auto!important;
-	}
-	.responsive-popup .modal-header {
-		min-height: 28px;
-		margin-bottom: 0;
-	}
-	.responsive-popup .modal-footer {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-	}
+}
+
 	.modal-left-pane {
 		width: 130px;
 		.box-sizing(border-box);
@@ -1375,19 +1392,22 @@ a:focus, a:hover {
 		left: 0;
 		bottom: 0;
 		right: 0;
-	}
-	.drag-area-title {
-		width: 100%;
-		background: url("../img/dragfiles.png") no-repeat 50% 0;
-		margin-top: 100px;
-		padding-top: 100px;
-		text-align: center;
-		color: #a0a0a0;
-		font-size: 24px;
-	}
-	.drag-area-button {
-		text-align: center;
-		margin-top: 30px;
+		&-title {
+			width: 100%;
+			background: url("../img/dragfiles.png") no-repeat 50% 0;
+			margin-top: 100px;
+			padding-top: 100px;
+			text-align: center;
+			color: #a0a0a0;
+			font-size: 24px;
+		}
+		&-button {
+			text-align: center;
+			margin-top: 30px;
+		}
+		&.disabled {
+			opacity: 0.4;
+		}
 	}
 	.uploads-grid {
 		list-style-type: none;
