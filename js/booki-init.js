@@ -300,6 +300,8 @@
 
         //$('#imageManager').modal('show')
 
+        // alert call
+        $(".alert").alert()
 
         // Table of contents fix (view draft page) 
         $.fn.isOnScreen = function(){
