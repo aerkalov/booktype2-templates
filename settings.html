@@ -34,20 +34,21 @@
     <!-- end Navbar -->
 
     <!-- Bookbar -->
-	<div class="bookbar">
+	<div class="bookbar flat">
       <h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</h1>       
       <div class="btn-toolbar float-right">      
-      <div class="btn-group" data-toggle="buttons-radio">
-        <button type="button" data-toggle="button" class="btn btn-default" title="" id="button-toc">Table of Contents</button>
-        <button type="button" data-toggle="button" class="btn btn-default" title="" id="button-media" >Media</button>        
-        <button type="button" data-toggle="button" class="btn btn-default" title="" id="button-cover" data-original-title="Cover Manager">Cover Manager</button>
-        <button type="button" data-toggle="button" class="btn btn-default" title="" id="button-history" data-original-title="History">History</button>
-        <button type="button" data-toggle="button" class="btn btn-default active" title="" id="button-settings" data-original-title="Settigns">Settings</button>
-        
-      </div>
-      <div class="btn-group">            
-      <button type="button" class="btn btn-primary" id="button-publish" title="">Publish</button> 
-      </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" title="" id="button-toc" data-original-title="Table of Contents" rel="tooltip" data-placement="bottom"><i class="bk-icon-toc"></i></button>
+          <button type="button" class="btn btn-default" title="" id="button-media" data-original-title="Media" rel="tooltip" data-placement="bottom"><i class="bk-icon-media"></i></button>        
+          <button type="button" class="btn btn-default" title="" id="button-cover" data-original-title="Cover Manager" rel="tooltip" data-placement="bottom"><i class="bk-icon-cover"></i></button>
+        </div>
+        <div class="btn-group float-right"> 
+          <button type="button" class="btn btn-default" title="" id="button-history" data-original-title="History" rel="tooltip" data-placement="bottom"><i class="bk-icon-history"></i></button>
+          <button type="button" class="btn btn-default active" title="" id="button-settings" data-original-title="Settings" rel="tooltip" data-placement="bottom"><i class="bk-icon-settings"></i></button>          
+        </div>
+          <div class="btn-group">            
+          <button type="button" class="btn btn-primary" id="button-publish" title="">Publish</button> 
+          </div>
       </div>
     </div>
     <!-- end Bookbar -->
@@ -64,23 +65,28 @@
       <div class="row two-col">
       <div class="col-xs-12">
         <div class="box white clearfix">
-          <ul id="settings" class="nav nav-tabs col-xs-3">
-            <h4>Site</h4>
-            <li class="active"><a href="#description" data-toggle="tab">Description</a></li>
-            <li class=""><a href="#appearance" data-toggle="tab">Appearance</a></li>
-            <li class=""><a href="#frontpage" data-toggle="tab">Frontpage</a></li>
+          <ul id="settings" class="nav nav-tabs col-xs-3" data-active-tab="">
+                    <h4>Book</h4>
+                    <li><a href="#language" data-toggle="tab">Language</a></li>
+                    <li><a href="#license" data-toggle="tab">License</a></li>
+                    <br>
+                    
+                    <h4>Workflow</h4>
+                    <li><a href="#chapter-status" data-toggle="tab">Chapter status</a></li>
+                    <br>
+        
+                    <h4>Metadata</h4>
+                    <br>
+                    
+                    <h4>Security</h4>
+                    <li class="active"><a href="#roles" data-toggle="tab">Roles</a></li>
+                    <li><a href="#permissions" data-toggle="tab">Permissions</a></li>
+                    <li><a href="#visibility" data-toggle="tab">Visibility</a></li>
 
-            <br>
-
-            <h4>General</h4>
-            <li class=""><a href="#default_book_settings" data-toggle="tab">Default Book Settings</a></li>
-            <li class=""><a href="#privacy" data-toggle="tab">Privacy</a></li>
-             <br>            
-
-
-          </ul>
+                    <br>
+                </ul>
           <div id="myTabContent" class="tab-content col-xs-9">
-            <div class="tab-pane fade active in" id="description">
+            <div class="tab-pane fade" id="description">
               <h4 class="border-bottom">Description</h4>
               <form enctype="multipart/form-data" action="/_control/settings/description/" method="POST" role="form">
                 <ul class="list">
@@ -119,7 +125,93 @@
                 </ul>
               </form>
             </div>
-            
+
+            <!-- roles code -->
+            <div class="tab-pane fade active in" id="roles">
+              <h4 class="border-bottom">Roles</h4>
+                <div class="roles">
+                  <div class="assign">
+                    <button href="#assignUsers" role="button" class="btn btn-primary" data-toggle="modal"><i class="icon-plus"></i> Assign</button>
+                  </div>
+                  <div class="box gray">
+                    <h4 class="box-title">Editor</h4>
+                    <div class="toggle-description"><a href="#">description</a></div>
+                    <div class="role-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+                    <ul class="list border-top user-avatar circle">                
+                      <li>
+                          <figure><img src="pictures/fritz.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Fritz</a></h4>
+                            <p>Vladimir Stefanović</p>
+                          </div>
+                          <div class="remove-btn">
+                            <button class="btn btn-default btn-sm"><i class="icon-remove"></i>REMOVE</button>
+                          </div>
+                      </li>
+                    </ul>
+
+                  </div>
+                  <div class="box gray">
+                    <h4 class="box-title">Proofreader</h4>
+                    <div class="toggle-description"><a href="#">description</a></div>
+                    <div class="role-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+                    <ul class="list border-top user-avatar circle">
+                      <li>
+                          <figure><img src="pictures/fritz.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Fritz</a></h4>
+                            <p>Vladimir Stefanović</p>
+                          </div>
+                          <div class="remove-btn">
+                            <button class="btn btn-default btn-sm"><i class="icon-remove"></i>REMOVE</button>
+                          </div>
+                      </li>
+
+                      <li>
+                          <figure><img src="img/default-profile.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Backo</a></h4>
+                            <p>Aleksandar Jeličić</p>
+                          </div>
+                          <div class="remove-btn">
+                            <button class="btn btn-default btn-sm"><i class="icon-remove"></i>REMOVE</button>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="box gray">
+                    <h4 class="box-title">Translator</h4>
+                    <div class="toggle-description"><a href="#">description</a></div>
+                    <div class="role-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+                    <ul class="list border-top user-avatar circle">
+
+                      <li>
+                        <figure><img src="pictures/aco.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">aerkalov</a></h4>
+                          <p>Aco Erkalović</p>
+                        </div>
+                        <div class="remove-btn">
+                            <button class="btn btn-default btn-sm"><i class="icon-remove"></i>REMOVE</button>
+                          </div>
+                      </li>
+
+                      <li>
+                        <figure><img src="pictures/iva.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">iva.h</a></h4>
+                          <p>Iva Heilová</p>
+                        </div>
+                        <div class="remove-btn">
+                            <button class="btn btn-default btn-sm"><i class="icon-remove"></i>REMOVE</button>
+                          </div>
+                      </li>
+
+                    </ul>
+                  </div> 
+                </div>
+
+            </div>
 
             <div class="tab-pane fade" id="default_book_settings">
       <h4 class="border-bottom">Default Book Settings for Creating Books</h4>
@@ -218,9 +310,188 @@
     
 </div>
 
+<!-- Modal windows -->
+<div id="assignUsers" class="modal assignUsers fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Assign Roles</h3>
+          </div>
+          <div class="modal-body">
+            <div class="search-box">
+              <div class="input-group">
+                <input type="text" placeholder="Search for users" class="form-control">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Search</button>
+                </span>
+        </div>
+            </div>
+            <div class="users-list">
+              <ul class="list user-avatar circle">
+                      <li>
+                        <figure><img src="pictures/aco.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">aerkalov</a></h4>
+                          <p>Aco Erkalović</p>
+                        </div>                      
+                      </li>
+                      <li>
+                        <figure><img src="pictures/iva.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">iva.h</a></h4>
+                          <p>Iva Heilová</p>
+                        </div>
+                      </li>
+                      <li>
+                          <figure><img src="pictures/fritz.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Fritz</a></h4>
+                            <p>Vladimir Stefanović</p>
+                          </div>                          
+                      </li>
+                      <li>
+                          <figure><img src="img/default-profile.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Backo</a></h4>
+                            <p>Aleksandar Jeličić</p>
+                          </div>                          
+                      </li>
+                      <li>
+                        <figure><img src="pictures/aco.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">aerkalov</a></h4>
+                          <p>Aco Erkalović</p>
+                        </div>                      
+                      </li>
+                      <li>
+                        <figure><img src="pictures/iva.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">iva.h</a></h4>
+                          <p>Iva Heilová</p>
+                        </div>
+                      </li>
+                      <li>
+                          <figure><img src="pictures/fritz.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Fritz</a></h4>
+                            <p>Vladimir Stefanović</p>
+                          </div>                          
+                      </li>
+                      <li>
+                          <figure><img src="img/default-profile.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Backo</a></h4>
+                            <p>Aleksandar Jeličić</p>
+                          </div>                          
+                      </li>
+                      <li>
+                        <figure><img src="pictures/aco.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">aerkalov</a></h4>
+                          <p>Aco Erkalović</p>
+                        </div>                     
+                      </li>
+                      <li>
+                        <figure><img src="pictures/iva.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">iva.h</a></h4>
+                          <p>Iva Heilová</p>
+                        </div>
+                      </li>
+                      <li>
+                          <figure><img src="pictures/fritz.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Fritz</a></h4>
+                            <p>Vladimir Stefanović</p>
+                          </div>                          
+                      </li>
+                      <li>
+                          <figure><img src="img/default-profile.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Backo</a></h4>
+                            <p>Aleksandar Jeličić</p>
+                          </div>
+                      </li>
+                      <li>
+                        <figure><img src="pictures/aco.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">aerkalov</a></h4>
+                          <p>Aco Erkalović</p>
+                        </div>                      
+                      </li>
+                      <li>
+                        <figure><img src="pictures/iva.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">iva.h</a></h4>
+                          <p>Iva Heilová</p>
+                        </div>
+                      </li>
+                      <li>
+                          <figure><img src="pictures/fritz.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Fritz</a></h4>
+                            <p>Vladimir Stefanović</p>
+                          </div>                          
+                      </li>
+                      <li>
+                          <figure><img src="img/default-profile.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Backo</a></h4>
+                            <p>Aleksandar Jeličić</p>
+                          </div>                          
+                      </li>
+                      <li>
+                        <figure><img src="pictures/aco.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">aerkalov</a></h4>
+                          <p>Aco Erkalović</p>
+                        </div>                      
+                      </li>
+                      <li>
+                        <figure><img src="pictures/iva.png"></figure>
+                        <div class="list-info">
+                          <h4><a href="#">iva.h</a></h4>
+                          <p>Iva Heilová</p>
+                        </div>
+                      </li>
+                      <li>
+                          <figure><img src="pictures/fritz.png"></figure>
+                          <div class="list-info">
+                            <h4><a href="#">Fritz</a></h4>
+                            <p>Vladimir Stefanović</p>
+                          </div>                          
+                      </li>
+                    </ul>
+            </div>
+            <div class="assign-options">
+              <div class="user-roles">User:<span></span></div>
+              <div class="roles-options">
+                <button type="button" class="btn btn-default disabled" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Editor</button>               
+                <button type="button" class="btn btn-default disabled" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Proofreader</button>
+                <button type="button" class="btn btn-default disabled" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Translator</button>
+                <button type="button" class="btn btn-default disabled" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Illustrator</button>
+                <button type="button" class="btn btn-default disabled" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Collaborator</button>
+                <button type="button" class="btn btn-default disabled" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Editor</button>
+                <button type="button" class="btn btn-default disabled" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Proofreader</button>
+                <button type="button" class="btn btn-default disabled" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Translator</button>
+                <button type="button" class="btn btn-default disabled" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Illustrator</button>
+                <button type="button" class="btn btn-default disabled" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.">Collaborator</button>
+              </div>
+              <div><p>To apply changes, click on Save</p></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true" id="modal-close">Close</button>
+            <button id="assign" class="btn btn-primary disabled">Save</button>
+          </div>
+        </div>
+    </div>
+</div>
 
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/button.js"></script>
 <script type="text/javascript" src="js/dropdown.js"></script>
 <script type="text/javascript" src="js/tooltip.js"></script>

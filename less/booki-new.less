@@ -1878,6 +1878,139 @@ a:focus, a:hover {
 	}
 }
 
+/* Roles (book settings) modal */
+.assignUsers {
+	position: fixed;
+    width: auto;
+    height: auto;
+    margin: 0 50px 50px;
+    left: 0!important;
+    top: 0!important;
+    right: 0!important;
+    bottom: 0!important;
+    padding: 0!important;
+    overflow: hidden!important;
+	.modal-dialog {
+		padding: 50px 0 0;
+        height: 100%;
+		.modal-content {
+			height: 98%;
+        	margin: 5px;
+        	overflow: hidden;
+			.modal-body {
+				.box-sizing(border-box);
+        		position: absolute;
+        		top: 59px;
+        		left: 0;
+        		bottom: 58px;
+        		right: 0;
+        		max-height: none!important;
+        		min-height: auto!important;
+    			.search-box {
+    				position: absolute;
+    				top: 0;
+    				left: 0;
+    				right: 0;
+    				padding: 15px;
+    				background-color: #fafafa;
+    				border-bottom: 1px solid #ddd;
+    				.form-control {
+    					height: auto;
+    				}
+    				.btn-default {
+    					border-left: none;
+    				}
+    			}
+    			.users-list {
+    				position: absolute;
+    				top: 61px;
+    				left: 0;
+    				right: 0;
+    				padding: 0;
+    				overflow-y: auto;
+					&::-webkit-scrollbar { width: 8px !important; height: 8px; margin: -1px 0; }
+	    			&::-webkit-scrollbar-track { background:#f2f2f2; border:none; box-shadow: none; }
+	    			&::-webkit-scrollbar-thumb { background: #949494; background-clip: padding-box !important; }
+	    			&::-webkit-scrollbar-thumb:hover { background: #6e6e6e; background-clip: padding-box; }
+	    			.list {
+	    				margin-bottom: 0;
+	    				li {
+	    					padding: 10px 15px;
+	    					border-bottom: 1px solid #eee;
+	    					overflow: hidden;
+	    					figure {
+	    						img {
+	    							margin: 0;
+	    						}
+	    					}
+	    					&:hover {
+	    						background: #f8f8f8;
+	    						cursor: pointer;
+	    					}
+	    					&.active {
+	    						background: #e2e2e2;
+	    					}
+	    					&:last-child {
+	    						border-bottom: none;
+	    					}   					
+	    				}
+	    				&.user-avatar {
+	    					figure {
+								width: 36px;
+								&+.list-info {
+									margin-left: 55px;
+								}
+							}
+						}
+	    			}
+    			}
+    			.assign-options {
+    				position: absolute;
+    				bottom: 0;
+    				left: 0;
+    				right: 0;
+    				padding: 15px 15px 8px 15px;
+    				background-color: #fafafa;
+    				border-top: 1px solid #ddd;
+    				.box-sizing(border-box);
+    				.user-roles {
+    					margin-bottom: 15px;
+    					span {
+    						font-weight: 600;
+    						margin-left: 10px;
+    					}
+    				}
+    				.roles-options {
+    					position: relative;
+    					.btn {
+    						margin-right: 4px;
+    						margin-bottom: 14px;
+    					} 
+    					&.disabled {
+    						&:before {
+    							position: absolute;
+    							display: block;
+    							top: 0;
+    							bottom: 0;
+    							right: 0;
+    							left: 0;
+    							background: rgba(255,255,255,.8);
+    						}
+    					}
+    				}
+    			}
+    		}
+    		.modal-footer {
+				margin-top: 0;
+				background: #fff;
+				position: absolute;
+        		bottom: 0;
+        		left: 0;
+        		right: 0;
+			}
+    	}
+    }
+}
 
 /* Notifications
 ------------------------------------------------------*/
@@ -3123,7 +3256,74 @@ footer {
 		.box {
 			border:none;
 			padding:0;
+			margin-bottom: 14px;
 		}
+		/* Roles */
+		.roles {
+			.box-title {
+				font-size: 14px;
+				font-weight: 600;
+				margin: 0;
+				padding: 6px 10px;				
+			}
+			.assign {
+				margin: 20px 0 20px 0;
+			}
+			.role-description {
+				font-size: 13px;
+				font-weight: 400;
+				margin: 0;
+				padding: 0px 10px 10px 10px;
+				display: none;
+				&.show {
+					display: block;
+				}
+			}
+			.box {
+				border: 1px solid #d9d9d9;
+				position: relative;
+				&.gray {
+					background-color: #f8f8f8 !important;
+				}
+				.toggle-description {
+					position: absolute;
+					top: 4px;
+					right: 10px;
+				}
+			}
+			.list {
+				margin-bottom: 0;
+				li {
+					padding: 10px 10px 8px 10px;
+					overflow: hidden;
+					.remove-btn {
+						position: absolute;
+						top: 16px;
+						right: 12px;
+						display: none;
+					}
+					&:hover {
+						background: #f2f2f2;
+					}
+					&.show-remove-btn {
+						.remove-btn {
+							display: block;
+						}
+					}
+				}
+				figure {
+					width: 36px;
+					img {
+						margin: 0;
+					}
+				}
+				&.border-top {
+					li {
+						border-top: 1px solid #e6e6e6;
+					}
+				}
+			}
+		} /* end roles */
 	}
 }
 

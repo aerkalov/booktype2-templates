@@ -298,10 +298,65 @@
             $('.notification-writer').toggleClass('important');
         });
 
-        //$('#imageManager').modal('show')
+        //$('#assignUsers').modal('show')
 
+        // settings roles
+        var noUsersItem = "<li>" +  
+            "<div class=\"list-info\">" +
+            "<p>No users assigned to this role<\/p>" +
+            "<\/div>" +
+            "<\/li>";
+
+        $('.roles .list li').hover(
+            function() {
+                $(this).addClass('show-remove-btn');                
+            },
+            function() {
+                $(this).removeClass('show-remove-btn');
+            }
+        );
+        $('.roles .list li .remove-btn button').click(function(){
+            var currentList = $(this).closest('.list');
+            var listItems = $(currentList).children().length;
+            $(this).parent().parent().remove();
+            var count = listItems - 1;
+            if ( count == 0 ) {
+                $(currentList).append(noUsersItem);
+            }
+        });
+        $('.toggle-description a').click(function(){
+            $(this).closest('.box').find('.role-description').toggleClass('show');
+        });
+
+        // Roles Modal
+        // click on a user activates options
+        $('.users-list .list li').click(function(){
+            $(this).parent().children().removeClass('active');
+            $(this).toggleClass('active');
+            var username = $(this).find('p').html();            
+            $(this).closest('.modal-body').find('.assign-options .user-roles span').empty().append(username);
+            $(this).closest('.modal-body').find('.assign-options .roles-options button').removeClass('disabled');
+        });
+        $('.assign-options .roles-options .btn').click(function(){
+            $(this).closest('.modal-content').find('#assign').removeClass('disabled');
+        });
+        // reset everything on modal hide
+        $('#assignUsers').on('hidden.bs.modal', function (e) {
+            $('.users-list .list li').removeClass('active');
+            $('.assign-options .roles-options button').addClass('disabled').removeClass('active');
+            $('.assign-options .user-roles span').empty();
+            $('#assign').addClass('disabled');
+        });
+        // calculate the height and apply to user list
+        $('#assignUsers').on('shown.bs.modal', function (e) {
+            var optionsHeight = $(this).find('.assign-options').outerHeight();
+            $(this).find('.users-list').css('bottom', optionsHeight);
+        });
+
+        
         // alert call
-        $(".alert").alert()
+        $(".alert").alert();
+
 
         // Table of contents fix (view draft page) 
         $.fn.isOnScreen = function(){
