@@ -5,12 +5,12 @@
 	<title>Booktype Edit Screen</title>
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />
-  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />  
   <link href='css/bootstrap-theme.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
   <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-	<link href='css/booki-new.css' rel='stylesheet' type='text/css' />
-  <link href='css/bt20.css' rel='stylesheet' type='text/css' />  
+  <link href='css/booki-new.css' rel='stylesheet' type='text/css' />
+  <link href='css/bt20.css' rel='stylesheet' type='text/css' />
   <link href='css/aloha.css' rel='stylesheet' type='text/css' />
 
 </head>
@@ -182,7 +182,7 @@
             </ul>
 
             <div class="box-bottom-gray">
-              <button href="#" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="Invite people">INVITE PEOPLE</button>
+              <button href="#invitePeople" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="Invite people" data-toggle="modal">INVITE PEOPLE</button>
             </div>
           </div>
 
@@ -296,15 +296,101 @@
 	    </div>
     </footer>
 
+
+<!-- Invite people modal -->
+<div id="invitePeople" class="modal invitePeople fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Invite People</h3>
+          </div>
+          <div class="modal-body">
+            <div class="invite-box">
+                <textarea class="form-control" id="invite_id" name="invite_id" rows="1" placeholder="Enter email addresses separated by comma"></textarea>
+                <textarea class="form-control" id="invite_text" name="invite_text" rows="3">I am inviting you to proof read my new book. Thank you for participating.</textarea>
+            </div>
+            <div class="books-header">
+              Choose Book: <span>All</span>
+              <div class="switcher">
+                <label for="check_all">Check all / clear</label>
+                <input checked="checked" id="check_all" type="checkbox" class="checkall">
+              </div>
+            </div>
+            <div class="books-list">
+              <ul>
+                <li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>
+                 <li><a href="#"> "Io mi oriento" conoscere vivere e valorizzare l'ambiente.......lo sport incontra la natura <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> biommicrist booktest <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> Buone abitudini alimentari per una buona salute <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> Cellula <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> ID PORTFOLIO <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> LA 5A <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> libro del corso <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> m m m  <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> Nature and Importance of Archiving in the Digital Age. <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> sistema nervoso <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> Wg JavaScript <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> yuitrer <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#"> "Quadri di un'esposizione" arte a confronto <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">&gt;&lt;ScrIpt&gt;alert(1)&lt;/scrIpt&gt; <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>           
+                 <li><a href="#">"Citius!, Altius!, Fortius!" <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">"Lasciate ogni speranza..." <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">"Me Enamore Y No Se Como Fue" *---* <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>            
+                 <li><a href="#">#Q <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">$perm, Egg$ and Epigenetics <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">Living on the Edger <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">(No title.YET..... <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">jgjgkh <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">-R!d!cu70u5...- <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">1 <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">1 2 3 und aus <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">1 libro <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">1-Testing-Booktype.v01 <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">1-TS-T <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">10 <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">10 anos do Programa Onda Digital <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>             
+                 <li><a href="#">10 эффективных свободных инструментов для молодых журналистов <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">100 заблуждений на пути к успеху <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>             
+                 <li><a href="#">1001 Broadway Fun Facts <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">1001 Nacht <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">101 New Ways to Irritate People <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>           
+                 <li><a href="#">101 Recipes for the Single Guy <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>             
+                 <li><a href="#">111 <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">123 <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">123 v dq  <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">1234 <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+                 <li><a href="#">1234567890 <input checked="checked" id="book_id" name="book_id" type="checkbox"></a></li>              
+              </ul>
+            </div>
+            <div class="assign-options">
+              <div class="user-roles">Set Roles for this invitation:<span></span></div>
+              <div class="roles-options">
+                <button type="button" class="btn btn-default" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Editor</button>               
+                <button type="button" class="btn btn-default" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Proofreader</button>
+                <button type="button" class="btn btn-default" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Translator</button>
+                <button type="button" class="btn btn-default" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Illustrator</button>
+                <button type="button" class="btn btn-default" data-toggle="button" rel="tooltip" title="" data-placement="top" data-original-title="Description goes here">Collaborator</button>                
+              </div>
+              <!-- <div><p>To apply changes, click on Save</p></div> -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true" id="modal-close">Close</button>
+            <button id="assign" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+    </div>
+</div>
   
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/button.js"></script>
 <script type="text/javascript" src="js/dropdown.js"></script>
 <script type="text/javascript" src="js/tooltip.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
-<script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
 <script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
 <script type="text/javascript" src="js/booki-init.js"></script>

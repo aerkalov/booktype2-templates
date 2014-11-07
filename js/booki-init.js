@@ -298,7 +298,8 @@
             $('.notification-writer').toggleClass('important');
         });
 
-        //$('#assignUsers').modal('show')
+        
+        //$('#invitePeople').modal('show')
 
         // settings roles
         var noUsersItem = "<li>" +  
@@ -353,7 +354,29 @@
             $(this).find('.users-list').css('bottom', optionsHeight);
         });
 
+        // Invite people modal
+        // calculate the height and apply to user list
+        $('#invitePeople').on('shown.bs.modal', function (e) {
+            var optionsHeight = $(this).find('.assign-options').outerHeight();
+            $(this).find('.books-list').css('bottom', optionsHeight);
+                // check all / clear all
+                $('.checkall').on('click', function () {
+                    $(this).closest('.modal-body').find('.books-list :checkbox').prop('checked', this.checked);
+                });
+                // check for the books scrollbar
+                var booksListHeight = $('.books-list ul').outerHeight();
+                var booksVisibleHeight = $('.books-list').outerHeight();
+
+                if ( booksListHeight > booksVisibleHeight ) {
+                    $('.books-header .switcher').css('right', 27);
+                }
+                else {
+                    $('.books-header .switcher').css('right', 15);
+                }
+        });
+    
         
+
         // alert call
         $(".alert").alert();
 

@@ -1883,7 +1883,7 @@ a:focus, a:hover {
 	position: fixed;
     width: auto;
     height: auto;
-    margin: 0 50px 50px;
+    margin: 0 20px 20px;
     left: 0!important;
     top: 0!important;
     right: 0!important;
@@ -1891,7 +1891,7 @@ a:focus, a:hover {
     padding: 0!important;
     overflow: hidden!important;
 	.modal-dialog {
-		padding: 50px 0 0;
+		padding: 20px 0 0;
         height: 100%;
 		.modal-content {
 			height: 98%;
@@ -1928,10 +1928,6 @@ a:focus, a:hover {
     				right: 0;
     				padding: 0;
     				overflow-y: auto;
-					&::-webkit-scrollbar { width: 8px !important; height: 8px; margin: -1px 0; }
-	    			&::-webkit-scrollbar-track { background:#f2f2f2; border:none; box-shadow: none; }
-	    			&::-webkit-scrollbar-thumb { background: #949494; background-clip: padding-box !important; }
-	    			&::-webkit-scrollbar-thumb:hover { background: #6e6e6e; background-clip: padding-box; }
 	    			.list {
 	    				margin-bottom: 0;
 	    				li {
@@ -1985,6 +1981,173 @@ a:focus, a:hover {
     					.btn {
     						margin-right: 4px;
     						margin-bottom: 14px;
+    					} 
+    					&.disabled {
+    						&:before {
+    							position: absolute;
+    							display: block;
+    							top: 0;
+    							bottom: 0;
+    							right: 0;
+    							left: 0;
+    							background: rgba(255,255,255,.8);
+    						}
+    					}
+    				}
+    			}
+    		}
+    		.modal-footer {
+				margin-top: 0;
+				background: #fff;
+				position: absolute;
+        		bottom: 0;
+        		left: 0;
+        		right: 0;
+			}
+    	}
+    }
+}
+
+/* Roles (book settings) modal */
+.invitePeople {
+	position: fixed;
+    width: auto;
+    height: auto;
+    margin: 0 20px 20px;
+    left: 0!important;
+    top: 0!important;
+    right: 0!important;
+    bottom: 0!important;
+    padding: 0!important;
+    overflow: hidden!important;
+	.modal-dialog {
+		padding: 20px 0 0;
+        height: 100%;
+		.modal-content {
+			height: 98%;
+        	margin: 5px;
+        	overflow: hidden;
+			.modal-body {
+				.box-sizing(border-box);
+        		position: absolute;
+        		top: 59px;
+        		left: 0;
+        		bottom: 58px;
+        		right: 0;
+        		max-height: none!important;
+        		min-height: auto!important;
+    			.invite-box {
+    				position: absolute;
+    				top: 0;
+    				left: 0;
+    				right: 0;
+    				padding: 15px;
+    				background-color: #fafafa;
+    				border-bottom: 1px solid #ddd;
+    				textarea {
+    					resize: none;
+    					margin-bottom: 15px;
+    					&:last-child {
+    						margin:0;
+    					}
+    				}
+    				.form-control {
+    					height: auto;
+    				}
+    				.btn-default {
+    					border-left: none;
+    				}
+    			}
+    			.books-header {
+    				position: absolute;
+    				top: 142px;
+    				left: 0;
+    				right: 0;
+    				padding: 10px 160px 10px 15px;
+    				border-bottom: 1px solid #ddd;
+    				white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+    				span {
+    					font-weight: 600;
+    					margin-left: 6px;
+    				}
+    				label {
+    					font-weight: 400;
+    				}
+    				.switcher {
+    					position: absolute;
+    					right: 20px;
+    					top: 10px;
+    					display: block;
+    					input[type="checkbox"] {
+    						vertical-align: middle;
+    						margin: 0 0 0 8px;
+    					}
+    				}
+    			}
+    			.books-list {
+    				position: absolute;
+    				top: 181px;
+    				left: 0;
+    				right: 0;
+    				padding: 0;
+    				overflow-y: auto;
+	    			ul {
+	    				list-style: none;
+	    				margin: 0;
+	    				padding: 0 0 3px 0;
+	    				li {
+	    					padding: 0;
+	    					border-bottom: 1px solid #eee;
+	    					&:last-child {
+	    						border-bottom: none;
+	    					}
+	    					a {
+	    						padding: 7px 50px 7px 15px;
+	    						display: block;
+	    						.box-sizing(border-box);
+								white-space: nowrap;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								position: relative;
+	    						&:hover {
+	    							text-decoration: none;
+	    							background: #f8f8f8;
+	    							cursor: default;
+	    						}
+	    						input[type="checkbox"] {
+	    							position: absolute;
+	    							right: 15px;
+	    							top: 6px;
+	    							display: block;
+	    						}
+	    					}	    					
+	    				}
+	    			}
+    			}
+    			.assign-options {
+    				position: absolute;
+    				bottom: 0;
+    				left: 0;
+    				right: 0;
+    				padding: 10px 15px 8px 15px;
+    				background-color: #fafafa;
+    				border-top: 1px solid #ddd;
+    				.box-sizing(border-box);
+    				box-shadow: 0 -2px 4px rgba(0,0,0,.1);
+    				.user-roles {
+    					margin-bottom: 10px;
+    					span {
+    						font-weight: 600;
+    						margin-left: 10px;
+    					}
+    				}
+    				.roles-options {
+    					position: relative;
+    					.btn {
+    						margin-right: 4px;
+    						margin-bottom: 10px;
     					} 
     					&.disabled {
     						&:before {
@@ -3089,6 +3252,7 @@ textarea.form-control {
 .wizard>.steps .current a .number {
 	background: #685886;
 	color: #fff;
+	height: 45px;
 }
 
 .wizard>.steps .disabled a .number {
@@ -3187,20 +3351,16 @@ textarea.form-control {
 .new_book .modal-body {
 	padding: 0px;
 }
-
 .new_book form {
 	margin-bottom: 0px;
 }
-
 .new_book textarea {
 	max-width: 480px;
 	display: inline-block;
 }
-
 .new_book select, .new_book input {
 	font-size: 13px;
 }
-
 .wizard_desc {
 	font-family: Arial, sans-serif;
 	font-style: italic;
