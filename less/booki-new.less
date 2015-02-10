@@ -227,14 +227,14 @@ a:focus, a:hover {
 			}
 		}
 		.btn {
-			padding: 9px 8px 9px 8px;
+			padding: 9px 8px 10px 8px;
 			border-radius: 0;
 		}
 		.btn-default {
 			border-color: transparent #d7d6d8 transparent #d7d6d8;
 			background-image: none !important;
 			background-color: #eae9eb;
-			border-width: 0 1px 1px 1px; 
+			border-width: 0 1px 0px 1px; 
 			box-shadow: none;
 			&:hover {
 				background-color: #e4e3e6;
@@ -290,7 +290,7 @@ a:focus, a:hover {
 		}
 		.btn-primary { 
 			background-color: #704db3;
-			padding: 21px 38px 21px 22px;
+			padding: 29px 38px 30px 22px;
 			color: #fff;
 			text-transform: uppercase;
 			background-image: url(../img/arrow-right-big.png);
@@ -299,6 +299,7 @@ a:focus, a:hover {
 			text-shadow: none;
 			box-shadow: none;
 			border: none;
+			line-height: 0;
 			&:active {
 				background-image: url(../img/arrow-right-big.png) !important;
 				background-repeat: no-repeat !important;
@@ -1012,7 +1013,7 @@ a:focus, a:hover {
 /* Nested Sortable classes
 ------------------------------------------------------*/
 		.placeholder {
-			outline: 1px dashed #4183C4;
+			outline: 1px dashed #ccc;
 		}
 
 		.mjs-nestedSortable-error {
@@ -1041,7 +1042,6 @@ a:focus, a:hover {
 		}
 
 		.sortable li > div  {
-			/*border: 1px solid #d6d6d6;*/
 			border-left: 3px solid #ddd;
 			-webkit-border-radius: 0px;
 			-moz-border-radius: 0px;
@@ -1123,6 +1123,116 @@ a:focus, a:hover {
 	.sortable .btn-group + .btn-group {
 	  	margin-left: 5px !important;
 	}
+
+	/* chapter status sortable */
+	.placeholder-status {
+			outline: 1px dashed #ccc;
+		}
+	.statuses {
+		margin: 0 0 30px 0;
+	}
+	.sortable-status {
+			margin: 0 0 2em 0;
+			list-style: none;
+			padding: 0;
+			li {
+				margin: 5px 0 0 0;
+				padding: 0;
+				position:relative;
+				> div  {
+					border-left: 3px solid #ddd;
+					-webkit-border-radius: 0px;
+					-moz-border-radius: 0px;
+					border-radius: 0px;
+					padding: 6px 10px 6px 10px;
+					margin: 0;
+					cursor: move;
+					background: #eee;
+					font-size: 13px;
+					&:hover, 
+					&.hover-effect { 
+						border-left: 3px solid #444; 
+					}
+					.status-name {
+						padding: 3px 4px;
+						display: block;
+					}
+					.edit-status-block {
+						display: none;
+						margin-right: 60px;
+						padding-right: 40px;
+						.input-group {
+							width: 100%;
+							input {
+								&.form-control {
+									padding: 4px 10px;
+									height: auto;
+								}
+							}
+							.input-group-btn {
+								&:last-child>.btn {
+									margin-left: -1px;
+								}
+								.btn {
+									+ .btn {
+										margin: -4px;
+									}
+								}
+							}
+						}
+					}
+				&.btn-toolbar {
+					position:absolute;
+					right: 6px;
+					top: 0px;
+					border: 0;
+					padding: 5px 0;
+					}
+					.btn {
+						&:hover {							
+						}
+						&-xs {
+							padding: 6px 8px 7px;
+						}
+						[class^="icon-"] {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+
+/* book versions */
+.book-versions	{
+	margin: 30px 0;
+	.version-list {
+		list-style: none;
+		padding: 0;
+		margin: 10px 0;
+		background: #f6f6f6;
+		border-top: 1px solid #c2c2c2;
+		border-bottom: 1px solid #c2c2c2;
+		li {
+			border-bottom: 1px solid #e6e6e6;
+			&:last-child {
+				border-bottom: none;
+			}
+			a {
+				display: block;
+				padding: 4px 10px;
+				&:hover, &:focus {
+					background: #eee;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.all {
+		margin-top: 30px;
+	}
+}
+
+
 
 /* Chapter details view 
 ------------------------------------------------------*/

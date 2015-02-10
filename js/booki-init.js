@@ -15,7 +15,6 @@
             maxLevels: 2,           
             disableNestingClass: 'chapter',
             connectWith: ".hold-target-box",
-
             isTree: true,
             expandOnHover: 700,
             startCollapsed: true
@@ -54,6 +53,40 @@
         $('#detail-switch').click(function() {
             $('.sortable li').toggleClass('detail-switch')
         });
+
+        // Chapter status sortable
+        $('.sortable-status').nestedSortable({
+            forcePlaceholderSize: true,
+            handle: 'div',
+            helper: 'clone',
+            items: 'li.item',
+            opacity: .6,
+            placeholder: 'placeholder-status',
+            revert: 250,
+            tabSize: 25,
+            tolerance: 'pointer',
+            toleranceElement: '> div',
+            maxLevels: 1,           
+            expandOnHover: 700,
+            startCollapsed: true,
+            protectRoot: true
+        });
+        // remove status 
+        $('.remove-status').click(function() {
+            $(this).closest('li.item').remove();
+        });        
+        // edit status
+        $('.edit-status').click(function() {
+            var statusname = $(this).closest('li.item').find('.status-name').text();
+            $(this).closest('li.item').find('.status-name').remove();
+            $(this).closest('li.item').find('.edit-status-block').show();
+            //console.log(statusname);
+            $(this).closest('li.item').find('.edit-status-block').find('input').val(statusname);
+            $(this).closest('li.item').find('.edit-status-block').find('input').focus(); 
+        });
+
+
+
 
         // Tab panes
         // right side

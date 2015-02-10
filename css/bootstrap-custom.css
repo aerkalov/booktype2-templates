@@ -157,6 +157,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	box-shadow: none;
 	height: 32px;
 }
+.form-control.chapter-status {
+	height: auto;
+	width: 98%;
+}
 .form-control:focus {
 	border-color: rgba(137,83,237,0.8);
 	outline: 0;
@@ -224,7 +228,9 @@ input[type="checkbox"].form-control {
 	padding-left: 10px;
 	padding-right: 10px;
 }
-
+.alert.smaller {
+	font-size: 13px;
+}
 
 @media (min-width: 1200px) {
 	.container {
