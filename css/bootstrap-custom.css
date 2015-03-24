@@ -228,6 +228,10 @@ input[type="checkbox"].form-control {
 	padding-left: 10px;
 	padding-right: 10px;
 }
+.row {
+	margin-left: -10px;
+	margin-right: -10px;
+}
 .alert.smaller {
 	font-size: 13px;
 }

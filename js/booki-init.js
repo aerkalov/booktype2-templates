@@ -86,8 +86,6 @@
         });
 
 
-
-
         // Tab panes
         // right side
         $('.right-tablist li a').click(function() {
@@ -217,8 +215,6 @@
             $(this).find('.list-info').append(restoreBtn);
         });
 
-
-
         // link to chapter
         $('.linktochapter-header i').click(function() {
             $(this).closest('.linktochapter').toggleClass('open');
@@ -332,7 +328,25 @@
         });
 
         
-        //$('#invitePeople').modal('show')
+        // Backo book lists and thumb
+        $('.showList').click(function(){
+            console.log('aaaa');
+            $('#books-prew, #books-prew-2').attr('class','book-list');
+        });
+        $('.showGrid').click(function(){
+            $('#books-prew, #books-prew-2').attr('class','book-thumb');
+        });
+
+        //$('#settings').modal('show')
+
+
+        // Publish 
+        $('.export-expand').click(function() {
+            $(this).closest('.export-item').toggleClass('detail-view');
+        });
+        $('.export-comments .expand').click(function() {
+            $(this).closest('.export-comments').toggleClass('show');
+        });
 
         // settings roles
         var noUsersItem = "<li>" +  
@@ -389,30 +403,17 @@
 
         // Invite people modal
         // calculate the height and apply to user list
-        $('#invitePeople').on('shown.bs.modal', function (e) {
+        $('#inviteWizard').on('shown.bs.modal', function (e) {
             var optionsHeight = $(this).find('.assign-options').outerHeight();
             $(this).find('.books-list').css('bottom', optionsHeight);
-                // check all / clear all
-                $('.checkall').on('click', function () {
-                    $(this).closest('.modal-body').find('.books-list :checkbox').prop('checked', this.checked);
-                });
-                // check for the books scrollbar
-                var booksListHeight = $('.books-list ul').outerHeight();
-                var booksVisibleHeight = $('.books-list').outerHeight();
-
-                if ( booksListHeight > booksVisibleHeight ) {
-                    $('.books-header .switcher').css('right', 27);
-                }
-                else {
-                    $('.books-header .switcher').css('right', 15);
-                }
-        });
-    
-        
+            // check all / clear all
+            $('.checkall').on('click', function () {
+                $(this).closest('.modal-body').find('.books-list :checkbox').prop('checked', this.checked);
+            });
+        });        
 
         // alert call
         $(".alert").alert();
-
 
         // Table of contents fix (view draft page) 
         $.fn.isOnScreen = function(){

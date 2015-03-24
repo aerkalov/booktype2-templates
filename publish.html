@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en" class="custom-scroll">
+<head>
+	<meta charset="UTF-8">
+	<title>Book Settings</title>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />  
+  <link href='css/bootstrap-theme.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
+  <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href='css/booki-new.css' rel='stylesheet' type='text/css' />
+  <link href='css/bt20.css' rel='stylesheet' type='text/css' />
+  <link href='css/aloha.css' rel='stylesheet' type='text/css' />
+
+</head>
+<body>
+  <div class="sf-main-menu">
+  <div class="sf-menu-header-bar"></div>
+  <div class="sf-menu-content">
+    <ul>
+      <li class="active">
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">My Dashboard</a>
+      </li>
+      <li>
+        <a href="#">Books</a>
+      </li>
+      <li>
+        <a href="#">Groups</a>
+      </li>
+      <li>
+        <a href="#">People</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+    <!-- Navbar -->
+    <div class="navigation-bar">
+      <div class="user">
+        <div class="btn-group">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Vladimir Stefanovic<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-user"></i>Profile</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-gears"></i>Control Center</a></li>
+              <li class="divider"></li>
+              <li><a href="/accounts/signout/"><i class="icon-signout"></i>Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-flag"></i>en</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-flag"></i>de</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="collapse-navigation"><a href="#"></a></div>   
+    <div class="logo"><a href="#"></a></div>
+    </div>
+    <!-- end Navbar -->
+
+    <!-- Bookbar -->
+	<div class="bookbar flat">
+      <h1>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequu</h1>       
+      <div class="btn-toolbar float-right">      
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" title="" id="button-toc" data-original-title="Table of Contents" rel="tooltip" data-placement="bottom"><i class="bk-icon-toc"></i></button>
+          <button type="button" class="btn btn-default" title="" id="button-media" data-original-title="Media" rel="tooltip" data-placement="bottom"><i class="bk-icon-media"></i></button>        
+          <button type="button" class="btn btn-default" title="" id="button-cover" data-original-title="Cover Manager" rel="tooltip" data-placement="bottom"><i class="bk-icon-cover"></i></button>
+        </div>
+        <div class="btn-group float-right"> 
+          <button type="button" class="btn btn-default" title="" id="button-history" data-original-title="History" rel="tooltip" data-placement="bottom"><i class="bk-icon-history"></i></button>
+          <button type="button" class="btn btn-default" title="" id="button-settings" data-original-title="Settings" rel="tooltip" data-placement="bottom"><i class="bk-icon-settings"></i></button>          
+        </div>
+          <div class="btn-group">            
+          <button type="button" class="btn btn-primary" id="button-publish" title="">Publish</button> 
+          </div>
+      </div>
+    </div>
+    <!-- end Bookbar -->
+
+    <!-- ToC / Chapter header -->
+	<div class="contentHeader">
+        <h2>Publish</h2>            
+	</div>
+    <!-- end ToC/Chapter header -->
+
+    <div class="contentContainer">
+   		<div class="content small-padding">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8" id="publish-filter">
+                <div class="box gray">
+                <h4 class="border-bottom no-margin">Book export</h4>
+                <form>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h5>Choose format for export</h5>
+                  </div>
+                </div>
+                <div class="row export-formats">
+                  <div class="col-sm-4">
+                    <div class="checkbox">
+                      <label>
+                        <input name="mpdf" type="checkbox"> Book PDF
+                      </label>
+                      <a href="#settings" data-toggle="modal">settings</a>
+                    </div>
+
+                    <div class="checkbox">
+                      <label>
+                        <input name="screenpdf" type="checkbox"> Screen PDF
+                      </label>
+                      <a href="#settings" data-toggle="modal">settings</a>
+                    </div>
+
+                    <div class="checkbox">
+                      <label>
+                        <input name="epub" type="checkbox"> EPUB
+                      </label>
+                      <a href="#settings" data-toggle="modal">settings</a>
+                    </div>
+
+                    <div class="checkbox">
+                      <label>
+                        <input name="mobi" type="checkbox"> MOBI
+                      </label>
+                      <a href="#settings" data-toggle="modal">settings</a>
+                    </div>        
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="checkbox">
+                      <label>
+                          <input name="xhtml" type="checkbox"> Book PDF (BookJS) 
+                      </label>
+                      <a href="#settings" data-toggle="modal">settings</a>
+                      </div>                
+
+                      <div class="checkbox">
+                        <label>
+                          <input name="xhtml" type="checkbox"> XHTML
+                        </label>
+                        <a href="#settings" data-toggle="modal">settings</a>
+                      </div>                
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-primary btn-publish" aria-disabled="true">EXPORT YOUR BOOK</button>
+                </form>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h4 class="border-bottom">Export history</h4>
+                    <div class="publish_history">
+                      
+                      
+                      <div class="alert alert-warning" role="alert">Exporting, please wait</div>
+
+                      <!-- export-item-->
+                      <div class="export-item published">
+                        <div class="published-label"></div>
+                        <div class="export-expand">
+                          <i class="icon-chevron-right"></i>
+                          <i class="icon-chevron-down"></i>
+                        </div>
+                        <div class="export-name" contenteditable="true">This is export name</div> 
+                        <div class="export-stamp">
+                          <span>darconny</span><span>2015-03-12</span><span>15:33:41</span>
+                        </div>
+                        <div class="btn-group">
+                          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                            Action <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Remove export</a></li>
+                            <li><a href="#">Comment</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#publishDialog" data-toggle="modal">Publish</a></li>       
+                          </ul>
+                        </div>
+                        <div class="export-results">
+                          <div class="group">
+                            <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/mpdf/knellers-happy-campers.pdf" rel="tooltip" title="" data-placement="bottom" data-original-title="Download">mpdf</a>                           
+                            <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/epub/knellers-happy-campers.epub" rel="tooltip" title="" data-placement="bottom" data-original-title="Download">epub</a>
+                          </div>
+                          <div class="group">
+                            <span class="label label-default disabled" rel="tooltip" title="" data-placement="bottom" data-original-title="Failed">xhtml</span>                    
+                            <span class="label label-default disabled" rel="tooltip" title="" data-placement="bottom" data-original-title="Failed">mobi</span> 
+                            <span class="label label-default disabled" rel="tooltip" title="" data-placement="bottom" data-original-title="Failed">screenpdf</span>
+                          </div>
+                        </div>
+                        <div class="export-results-detail">
+                          <ul>
+                            <li>
+                             <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/mpdf/knellers-happy-campers.pdf">mpdf</a>
+                             <span>136MB</span><span>356 pages</span>
+                            </li>
+                            <li>
+                              <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/epub/knellers-happy-campers.epub">epub</a> 
+                              <span>136MB</span><span>356 pages</span>
+                            </li>
+                            <li>
+                              <span class="label label-default disabled">xhtml</span>
+                              <span>Failed info here</span>
+                            </li>                            
+                            <li>
+                              <span class="label label-default disabled">mobi</span>
+                              <span>Failed info here</span>
+                            </li> 
+                            <li>
+                              <span class="label label-default disabled">screenpdf</span>
+                              <span>Failed info here</span>
+                            </li> 
+                          </ul>
+                        </div>
+                        <div class="export-comments">
+                          <div class="expand">
+                            comments
+                            <span class="badge">53</span>
+                          </div>
+                          <div class="wrapper">
+                            <ul class="notification-list">
+                              <li>
+                                <figure class="notification-avatar"><img src="pictures/gideon_thumb.png"></figure>
+                                <div class="notification-content">                
+                                  <p class="notification-text"><span class="notification-author">Gideon Lehmann</span> sent article <i>“Two Nigels don't make a right on Europe”</i> to review</p>
+                                  <span class="notification-info">Today at 12:45</span>
+                                </div>
+                              </li>
+                              <li>
+                                <figure class="notification-avatar"></figure>
+                                <div class="notification-content">
+                                  <p class="notification-text"><span class="notification-author">John Doe</span> finished article <i>“Europe car sales break losing streak”</i></p>
+                                  <span class="notification-info">Today at 12:39</span>
+                                </div>
+                              </li>            
+                              <li>
+                                <figure class="notification-avatar"></figure>
+                                <div class="notification-content">                
+                                  <p class="notification-text"><span class="notification-author">Michael White</span> sent article <i>“Two Nigels don't make a right on Europe”</i> to review</p>
+                                  <span class="notification-info">Today at 12:45</span>
+                                </div>
+                              </li>
+                              <li>
+                                <figure class="notification-avatar"><img src="pictures/aco.png"></figure>
+                                <div class="notification-content">                
+                                  <p class="notification-text"><span class="notification-author">Aco Erkalovic</span> sent article <i>“Two Nigels don't make a right on Europe”</i> to review</p>
+                                  <span class="notification-info">Today at 12:45</span>
+                                </div>
+                              </li>              
+                            </ul>
+                            <div class="post-comment">                            
+                              <textarea name="comment" class="form-control" cols="4" rows="4" placeholder="Your comment here"></textarea>
+                              <button type="button" class="btn btn-primary btn-sm">SEND COMMENT</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- export-item-->
+                      <!-- export-item-->
+                      <div class="export-item">
+                        <div class="published-label"></div>
+                        <div class="export-expand">
+                          <i class="icon-chevron-right"></i>
+                          <i class="icon-chevron-down"></i>
+                        </div>
+                        <div class="export-name" contenteditable="true">This is export name</div> 
+                        <div class="export-stamp">
+                          <span>darconny</span><span>2015-03-12</span><span>15:33:41</span>
+                        </div>
+                        <div class="btn-group">
+                          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                            Action <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Remove export</a></li>
+                            <li><a href="#">Comment</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#publishDialog" data-toggle="modal">Publish</a></li>      
+                          </ul>
+                        </div>
+                        <div class="export-results">
+                          <div class="group">
+                            <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/mpdf/knellers-happy-campers.pdf" rel="tooltip" title="" data-placement="bottom" data-original-title="Download">mpdf</a>                           
+                            <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/epub/knellers-happy-campers.epub" rel="tooltip" title="" data-placement="bottom" data-original-title="Download">epub</a>
+                          </div>
+                          <div class="group">
+                            <span class="label label-default disabled" rel="tooltip" title="" data-placement="bottom" data-original-title="Failed">xhtml</span>                    
+                            <span class="label label-default disabled" rel="tooltip" title="" data-placement="bottom" data-original-title="Failed">mobi</span> 
+                            <span class="label label-default disabled" rel="tooltip" title="" data-placement="bottom" data-original-title="Failed">screenpdf</span>
+                          </div>
+                        </div>
+                        <div class="export-results-detail">
+                          <ul>
+                            <li>
+                             <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/mpdf/knellers-happy-campers.pdf">mpdf</a>
+                             <span>136MB</span><span>356 pages</span>
+                            </li>
+                            <li>
+                              <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/epub/knellers-happy-campers.epub">epub</a> 
+                              <span>136MB</span><span>356 pages</span>
+                            </li>
+                            <li>
+                              <span class="label label-default disabled">xhtml</span>
+                              <span>Failed info here</span>
+                            </li>                            
+                            <li>
+                              <span class="label label-default disabled">mobi</span>
+                              <span>Failed info here</span>
+                            </li> 
+                            <li>
+                              <span class="label label-default disabled">screenpdf</span>
+                              <span>Failed info here</span>
+                            </li> 
+                          </ul>
+                        </div>
+                        <div class="export-comments">
+                          <div class="expand">
+                            comments
+                            <span class="badge">53</span>
+                          </div>
+                          <div class="wrapper">
+                            <ul class="notification-list">
+                              <li>
+                                <figure class="notification-avatar"><img src="pictures/gideon_thumb.png"></figure>
+                                <div class="notification-content">                
+                                  <p class="notification-text"><span class="notification-author">Gideon Lehmann</span> sent article <i>“Two Nigels don't make a right on Europe”</i> to review</p>
+                                  <span class="notification-info">Today at 12:45</span>
+                                </div>
+                              </li>
+                              <li>
+                                <figure class="notification-avatar"></figure>
+                                <div class="notification-content">
+                                  <p class="notification-text"><span class="notification-author">John Doe</span> finished article <i>“Europe car sales break losing streak”</i></p>
+                                  <span class="notification-info">Today at 12:39</span>
+                                </div>
+                              </li>            
+                              <li>
+                                <figure class="notification-avatar"></figure>
+                                <div class="notification-content">                
+                                  <p class="notification-text"><span class="notification-author">Michael White</span> sent article <i>“Two Nigels don't make a right on Europe”</i> to review</p>
+                                  <span class="notification-info">Today at 12:45</span>
+                                </div>
+                              </li>
+                              <li>
+                                <figure class="notification-avatar"><img src="pictures/aco.png"></figure>
+                                <div class="notification-content">                
+                                  <p class="notification-text"><span class="notification-author">Aco Erkalovic</span> sent article <i>“Two Nigels don't make a right on Europe”</i> to review</p>
+                                  <span class="notification-info">Today at 12:45</span>
+                                </div>
+                              </li>              
+                            </ul>
+                            <div class="post-comment">                            
+                              <textarea name="comment" class="form-control" cols="4" rows="4" placeholder=" Your comment here"></textarea>
+                              <button type="button" class="btn btn-primary btn-sm">SEND COMMENT</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- export-item-->
+                      <!-- export-item-->
+                      <div class="export-item">
+                        <div class="published-label"></div>
+                        <div class="export-expand">
+                          <i class="icon-chevron-right"></i>
+                          <i class="icon-chevron-down"></i>
+                        </div>
+                        <div class="export-name" contenteditable="true">This is export name</div> 
+                        <div class="export-stamp">
+                          <span>darconny</span><span>2015-03-12</span><span>15:33:41</span>
+                        </div>
+                        <div class="btn-group">
+                          <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                            Action <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Remove export</a></li>
+                            <li><a href="#">Comment</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#publishDialog" data-toggle="modal">Publish</a></li>      
+                          </ul>
+                        </div>
+                        <div class="export-results">
+                          <div class="group">
+                            <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/mpdf/knellers-happy-campers.pdf" rel="tooltip" title="" data-placement="bottom" data-original-title="Download">mpdf</a>                           
+                            <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/epub/knellers-happy-campers.epub" rel="tooltip" title="" data-placement="bottom" data-original-title="Download">epub</a>
+                          </div>
+                          <div class="group">
+                            <span class="label label-default disabled" rel="tooltip" title="" data-placement="bottom" data-original-title="Failed">xhtml</span>                    
+                            <span class="label label-default disabled" rel="tooltip" title="" data-placement="bottom" data-original-title="Failed">mobi</span> 
+                            <span class="label label-default disabled" rel="tooltip" title="" data-placement="bottom" data-original-title="Failed">screenpdf</span>
+                          </div>
+                        </div>
+                        <div class="export-results-detail">
+                          <ul>
+                            <li>
+                             <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/mpdf/knellers-happy-campers.pdf">mpdf</a>
+                             <span>136MB</span><span>356 pages</span>
+                            </li>
+                            <li>
+                              <a target="_blank" class="label label-primary" href="http://booktype-dev.sourcefabric.org/data/tmp/ed9f21e2-c8c9-11e4-8160-22572b7d661e/epub/knellers-happy-campers.epub">epub</a> 
+                              <span>136MB</span><span>356 pages</span>
+                            </li>
+                            <li>
+                              <span class="label label-default disabled">xhtml</span>
+                              <span>Failed info here</span>
+                            </li>                            
+                            <li>
+                              <span class="label label-default disabled">mobi</span>
+                              <span>Failed info here</span>
+                            </li> 
+                            <li>
+                              <span class="label label-default disabled">screenpdf</span>
+                              <span>Failed info here</span>
+                            </li> 
+                          </ul>
+                        </div>
+                        <div class="export-comments">
+                          <div class="expand">
+                            comments
+                            <span class="badge">53</span>
+                          </div>
+                          <div class="wrapper">
+                            <ul class="notification-list">
+                              <li>
+                                <figure class="notification-avatar"><img src="pictures/gideon_thumb.png"></figure>
+                                <div class="notification-content">                
+                                  <p class="notification-text"><span class="notification-author">Gideon Lehmann</span> sent article <i>“Two Nigels don't make a right on Europe”</i> to review</p>
+                                  <span class="notification-info">Today at 12:45</span>
+                                </div>
+                              </li>
+                              <li>
+                                <figure class="notification-avatar"></figure>
+                                <div class="notification-content">
+                                  <p class="notification-text"><span class="notification-author">John Doe</span> finished article <i>“Europe car sales break losing streak”</i></p>
+                                  <span class="notification-info">Today at 12:39</span>
+                                </div>
+                              </li>            
+                              <li>
+                                <figure class="notification-avatar"></figure>
+                                <div class="notification-content">                
+                                  <p class="notification-text"><span class="notification-author">Michael White</span> sent article <i>“Two Nigels don't make a right on Europe”</i> to review</p>
+                                  <span class="notification-info">Today at 12:45</span>
+                                </div>
+                              </li>
+                              <li>
+                                <figure class="notification-avatar"><img src="pictures/aco.png"></figure>
+                                <div class="notification-content">                
+                                  <p class="notification-text"><span class="notification-author">Aco Erkalovic</span> sent article <i>“Two Nigels don't make a right on Europe”</i> to review</p>
+                                  <span class="notification-info">Today at 12:45</span>
+                                </div>
+                              </li>              
+                            </ul>
+                            <div class="post-comment">                            
+                              <textarea name="comment" class="form-control" cols="4" rows="4" placeholder=" Your comment here"></textarea>
+                              <button type="button" class="btn btn-primary btn-sm">SEND COMMENT</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- export-item-->
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>  
+
+              <div class="col-sm-4">
+               <h4 class="border-bottom">Book Info</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+              </div>
+              </div>              
+          </div><!-- container -->
+      </div>
+    </div>
+
+<!-- Tabs content -->
+<div class="tablist left-tablist">
+</div>
+<div class="tablist right-tablist"></div>
+<div id="left-tabpane" class="tabpane left-tabpane">
+    <section class="tab-content hold" source_id="online-users-tab">
+        <h3>Online Users</h3>
+        <p>Online users content here</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+    </section>
+    <section class="tab-content" source_id="chat-tab">
+        <h3>Chat</h3>
+        <p>some chat here</p>        
+    </section>
+</div>
+<div id="right-tabpane" class="tabpane right-tabpane">
+    
+</div>
+
+<!-- Modal windows -->
+
+<!-- publish dialog -->
+<div id="publishDialog" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Publish?</h3>
+          </div>
+          <div class="modal-body">
+            <p>Do you want to publish this version?</p>
+            <div class="alert alert-warning" role="alert">
+                <p>Please wait while publishing</p>                
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">No</button>
+            <button class="btn btn-primary">Yes</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+<!-- settings dialog -->
+<div class="modal fade" id="settings" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog new_book">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h2 class="modal-title" id="myModalLabel">Settings</h2>
+                    </div>
+                      <div class="modal-body">
+
+                    <section id="basic">
+
+                            <form method="post" action="/accounts/Fritz/_create_book/" target="hidden_frame" enctype="multipart/form-data"><input type="hidden" name="csrfmiddlewaretoken" value="cbFF3Y1lqxPMojRh0EOxNEWwv4oOpwdu">
+
+                                <div id="wizard-settings">
+
+                                    <h3>Title</h3>
+                                    <section>
+                                        <p class="wizard_desc">What is the title of your book?</p>
+                                  <label for="title">Title of Book</label> <input class="form-control" maxlength="200" name="title" type="text">
+                                    </section>
+
+                                    <h3>Description</h3>
+                                    <section>
+                                        <p class="wizard_desc">Give some information so others can find it to help you (this can be added or changed later).</p>
+                                <label for="description">Description</label>
+                            <textarea class="form-control" name="description" cols="40" rows="7"></textarea>
+
+                                    </section>
+
+                                    <h3>Choose license</h3>
+                                    <section>
+                                        <p class="wizard_desc">Choose from the following license</p>
+                            <label for="hidden">License</label>
+                            <select id="id_license" name="license">
+                              <option value="">---------</option>
+                              <option value="4" selected="selected">Creative Commons Attribution</option>
+                              <option value="6">Creative Commons Attribution-NoDerivs</option>
+                              <option value="7">Creative Commons Attribution-NonCommercial</option>
+                              <option value="9">Creative Commons Attribution</option>
+                              <option value="8">Creative Commons Attribution-NonCommercial</option>
+                              <option value="5">Creative Commons Attribution-ShareAlike</option>
+                              <option value="3">Creative Commons No Rights Reserved</option>
+                              <option value="10">GNU General Public License</option>
+                              <option value="2">MIT License</option>
+                              <option value="11">Neka moja licenca</option>
+                              <option value="1">Public Domain</option>
+                            </select>
+                                        
+                                    </section>
+
+                                    <h3>Image</h3>
+                                    <section>
+                                        <p class="wizard_desc">If you have an image for the book then add it now (this can be added or changed later)</p>
+                                        <label for="hidden">Book Image</label>
+                            <input type="file" name="cover" size="40">
+                                    </section>
+
+                                    <h3>Make Public?</h3>
+                                    <section>
+                                        <p class="wizard_desc">Would you like to keep your book private or make it public? If the book is public others can find the book to help you.
+                            <b>Note:</b> this setting can be changed later from your dashboard.</p>
+
+                            <label for="hidden">Initially hide from others</label> <input checked="checked" name="hidden" type="checkbox">
+
+
+
+                                    </section>
+
+                                </div>
+
+                            </form>
+
+                          </section>
+                  </div>                
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div>
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+<script type="text/javascript" src="js/tooltip.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
+<script type="text/javascript" src="js/booki-init.js"></script>
+<script type="text/javascript" src="js/jquery.steps.min.js"></script>
+
+<script type="text/javascript">
+        // settings wizard
+        $("#wizard-settings").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            autoFocus: true
+        });
+</script>
+
+</body>
+</html>

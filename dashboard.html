@@ -532,25 +532,13 @@
 <script type="text/javascript" src="js/jquery.steps.min.js"></script>
 
 <script type="text/javascript">
-    // Backo book lists and thumb
-    $( document ).ready(function() {
-        $('.showList').click(function(){
-        	$('#books-prew, #books-prew-2').attr('class','book-list');
+        // create book wizard
+        $("#wizard-1").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            autoFocus: true
         });
-        $('.showGrid').click(function(){
-        	$('#books-prew, #books-prew-2').attr('class','book-thumb');
-        });
-   });
-</script>
-
-
-<script>
-	$("#wizard-1").steps({
-                headerTag: "h3",
-                bodyTag: "section",
-                transitionEffect: "slideLeft",
-                autoFocus: true
-            });
 </script>
 
 </body>
