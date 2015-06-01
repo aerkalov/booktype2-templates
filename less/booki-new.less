@@ -2891,6 +2891,9 @@ dd input, dt input, dd textarea, dt textarea {
 			top:0;
 			right:0;
 		}
+		button + h4 {
+			margin-right: 95px;
+		}
 	}
 	p {
 		margin: 0px;
@@ -3030,7 +3033,9 @@ dd input, dt input, dd textarea, dt textarea {
 }
 
 /* Book draft page styles */
-
+#bookcontent {
+	min-height: 200px;
+}
 #bookcontent p {
 	font-size: 13px;
 	line-height: 20px;
@@ -3059,8 +3064,7 @@ dd input, dt input, dd textarea, dt textarea {
 
 .table_of_contents {
 	height: 100%;
-	padding-bottom: 50px;
-	padding-right: 10px;
+	padding: 0px 10px 50px 20px;
 }
 
  .table_of_contents .list h4 a {
@@ -3071,7 +3075,14 @@ dd input, dt input, dd textarea, dt textarea {
 	padding-left: 15px;
 	font-weight: 800;
 }
-
+.table_of_contents .box-title {
+	margin-bottom: 0;
+	margin-right: -10px;
+	margin-left: -20px;
+	padding: 10px 10px 10px 20px;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+	overflow: hidden;
+}
 .toc_wrap {
 	overflow-y: scroll;
 	height: 96%;
@@ -4004,5 +4015,19 @@ footer {
 @media (min-width: 1400px) {
 	.contentHeader.zen {
 		padding: 8px 55px 8px 50px;
+	}
+}
+@media (max-height: 640px) {
+	.two-col, .three-col {
+ 		margin-top: 120px;
+	}
+	.toc_sidebar {
+		top: 120px;
+		&.footer_visible {
+			display: none;
+		}
+	}
+	footer {
+		/*margin-top: 10px;*/
 	}
 }

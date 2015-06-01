@@ -413,9 +413,18 @@
         });        
 
         // alert call
-        $(".alert").alert();
+        $(".alert").alert();      
 
-        // Table of contents fix (view draft page) 
+   });
+
+// ZEN mode 
+$(document).on('click', '#zen', function (e) {
+    $('body').toggleClass('zenMode');
+    e.preventDefault();
+});
+
+
+// Table of contents fix (view draft page) 
         $.fn.isOnScreen = function(){
         
             var win = $(window);
@@ -454,11 +463,3 @@
             });
         }
         // end ToC fix
-
-   });
-
-// ZEN mode 
-$(document).on('click', '#zen', function (e) {
-    $('body').toggleClass('zenMode');
-    e.preventDefault();
-});
