@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en" class="custom-scroll">
+<head>
+	<meta charset="UTF-8">
+	<title>Booktype Edit Screen</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link href='css/bootstrap.css' rel='stylesheet' type='text/css' />  
+  <link href='css/bootstrap-theme.css' rel='stylesheet' type='text/css' />
+  <link href='css/bootstrap-custom.css' rel='stylesheet' type='text/css' />
+  <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href='css/booki-new.css' rel='stylesheet' type='text/css' />
+  <link href='css/bt20.css' rel='stylesheet' type='text/css' />
+  <link href='css/aloha.css' rel='stylesheet' type='text/css' />
+
+</head>
+<body>
+	
+<!-- Main menu left -->
+<div class="sf-main-menu">
+  <div class="sf-menu-header-bar"></div>
+  <div class="sf-menu-content">
+    <ul>
+      <li class="active">
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">My Dashboard</a>
+      </li>
+      <li>
+        <a href="#">Books</a>
+      </li>
+      <li>
+        <a href="#">Groups</a>
+      </li>
+      <li>
+        <a href="#">People</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+
+    <!-- Navbar -->
+    <div class="navigation-bar">
+      <div class="user">
+        <div class="btn-group">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Vladimir Stefanovic<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-user"></i>Profile</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-gears"></i>Control Center</a></li>
+              <li class="divider"></li>
+              <li><a href="/accounts/signout/"><i class="icon-signout"></i>Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">en<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right">
+              <li><a href="/accounts/Fritz/" target="_blank"><i class="icon-flag"></i>en</a></li>
+              <li><a href="/_control/" target="_blank"><i class="icon-flag"></i>de</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="collapse-navigation"><a href="#"></a></div>  	
+    <div class="logo"><a href="#"></a></div>
+  	</div>
+    <!-- end Navbar -->
+
+    <!-- Bookbar -->
+  	<div class="bookbar">
+	   	<h1>Home</h1>             
+	  </div>
+    <!-- end Bookbar -->
+
+    <div class="container">
+    	<div class="row three-col">
+    		<div class="col-xs-4">
+    			<div class="box white">
+    				<h2 class="box-title">
+    					Books
+
+    					<div class="btn-toolbar float-right">	    					
+	    				   <div class="btn-group float-right">
+                    <button class="btn btn-default btn-sm showGrid" rel="tooltip" title="" data-placement="bottom" data-original-title="Show grid"><i class="icon-th"></i></button>
+                    <button class="btn btn-default btn-sm showList" rel="tooltip" title="" data-placement="bottom" data-original-title="Show List"><i class="icon-list-ul"></i></button>
+                  </div>
+    					</div>
+              <a class="view_all" href="#">view all</a>
+
+    				</h2>
+
+    				<div class="book-thumb no-buttons" id="books-prew"> <!-- For list view add book-list class, and remove book-thumb -->
+						<div class="grid-2">
+							<figure class="custom-cover">
+								<img src="pictures/cover3.jpg">
+							</figure>
+							<div class="book-info">
+							<h4><a href="#">AMNESTY REPORT BRAZILIAN</a></h4>								
+							</div>
+						</div>
+
+						<div class="grid-2">
+							<figure class="default-cover">
+								<img src="img/thumb-default.png">
+							</figure>
+							<div class="book-info">
+							<h4><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a></h4>								
+							</div>
+						</div>
+
+						<div class="grid-2">
+							<figure class="custom-cover">
+								<img src="pictures/cover5.jpg">
+							</figure>
+							<div class="book-info">
+							<h4><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a></h4>								
+							</div>
+						</div>
+
+						<div class="grid-2">
+							<figure class="default-cover">
+								<img src="img/thumb-default.png">
+							</figure>
+							<div class="book-info">
+							<h4><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</a></h4>						
+							</div>
+						</div>
+            </div> <!-- End of book list (book-thumb or book-list) -->           
+
+    			</div>
+
+    		</div> <!-- End of col-xs-4 -->
+
+        <div class="col-xs-4">
+          <div class="box white">
+            <h2 class="box-title">
+              People
+              <a class="view_all" href="#">view all</a>
+            </h2>
+
+            <ul class="list-people list user-avatar">
+              <li>
+                <figure><img src="pictures/aco.png"></figure>
+                <div class="people-info gray">
+                  <h4><a href="#">aerkalov</a></h4>
+                  <span>Aco Erkalović</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/iva.png"></figure>
+                <div class="people-info gray">
+                  <h4><a href="#">iva.h</a></h4>
+                  <span>Iva Heilová</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/fritz.png"></figure>
+                <div class="people-info">
+                  <h4><a href="#">Fritz</a></h4>
+                  <span>Vladimir Stefanovic</span>
+                </div>
+              </li>
+              <li>
+                <figure><img src="pictures/gideon_thumb.png"></figure>
+                <div class="people-info">
+                  <h4><a href="#">Gideon</a></h4>
+                  <span>Gideon Lehmann</span>
+                </div>
+              </li>
+            </ul>
+
+            <!-- <div class="box-bottom-gray">
+              <button href="#inviteWizard" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="Invite people" data-toggle="modal">INVITE PEOPLE</button>
+            </div> -->
+          </div>
+
+          <div class="box white">
+            <h2 class="box-title">
+              Groups
+              <a class="view_all" href="#">view all</a>
+            </h2>
+
+            <ul class="list">
+                        
+                        <li>
+                            <figure><img src="img/groups.png"></figure>
+                            <div class="list-info">
+                            <h4><a href="/groups/darkova-grupa/">darkova grupa</a> - neki opis grupe</h4>
+                                <span>Members: 2  Books: 0</span>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <figure><img src="img/groups.png"></figure>
+                            <div class="list-info">
+                            <h4><a href="/groups/local-history/">Local history</a> - </h4>
+                                <span>Members: 3  Books: 2</span>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <figure><img src="img/groups.png"></figure>
+                            <div class="list-info">
+                            <h4><a href="/groups/food-writers-group/">Food writers' group</a> - For those with an interest in food, from field to plate.</h4>
+                                <span>Members: 2  Books: 2</span>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <figure><img src="img/groups.png"></figure>
+                            <div class="list-info">
+                            <h4><a href="/groups/nova-grupa2/">NOVA GRUPA2</a> - Ovo je moja nova grupa</h4>
+                                <span>Members: 1  Books: 0</span>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <figure><img src="img/groups.png"></figure>
+                            <div class="list-info">
+                            <h4><a href="/groups/sourcefabric-documentation/">Sourcefabric documentation</a> - </h4>
+                                <span>Members: 2  Books: 0</span>
+                            </div>
+                        </li>
+                        
+                    </ul>
+            
+          </div>
+
+        </div> <!-- End of col-xs-4 -->
+
+    		<div class="col-xs-4">
+    			<div class="box gray">
+    				<h2 class="box-title">My Profile</h2>
+    				<ul class="list-people list user-avatar">
+    					<li>
+    						<figure><img src="pictures/fritz.png"></figure>
+    						<div class="people-info">
+	    						<h4><a href="#">Fritz</a></h4>
+	    						<span>Vladimir Stefanovic</span>
+    						</div>
+    					</li>
+    				</ul>
+
+    				<div class="box-bottom-white">
+    					<button href="#" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="My Dashboard">MY DASHBOARD</button>
+    					<button href="#" role="button" class="btn btn-default float-right" rel="tooltip" title="" data-placement="bottom" data-original-title="Go to settings">SETTINGS</button>
+    				</div>
+    			</div>
+
+    			<div class="box white">
+    				<h2 class="box-title">Recent Activity</h2>
+    				<ul class="list border-top user-avatar circle">
+    					<li>
+	    					<figure><img src="pictures/gideon_thumb.png"></figure>
+	    					<div class="list-info">
+	    						<span class="time">6 hours ago</span>
+	    						<h4><a href="#">Gideon</a></h4>
+	    						<p>
+	    							New book created <a href="#">"Airtime for broadcasters"</a>
+	    							<span>#airtime-25-for-broadcasters</span>
+	    						</p>
+    						</div>
+    					</li>
+
+    					<li>
+	    					<figure><img src="pictures/fritz.png"></figure>
+	    					<div class="list-info">
+	    						<span class="time">6 hours ago</span>
+		    					<h4><a href="#">Fritz</a></h4>
+	    						<p>
+	    							Published a book <a href="#">"Best UI design resources"</a>
+	    							<span>#best-ui-design-resources</span>
+	    						</p>
+    						</div>
+    					</li>
+              <li>
+                <figure><img src="img/default-profile.png"></figure>
+                <div class="list-info">
+                  <span class="time">1 minute ago</span>
+                  <h4><a href="#">admin</a></h4>
+                  <p>
+                    New user on the platform<a href="#">"Iva Heilova"</a>
+                    <span>#iva-heilova</span>
+                  </p>
+                </div>
+              </li>
+    				</ul>
+    			</div>
+
+          <div class="box white">
+            <h2 class="box-title">Platform Notifications</h2>
+            <ul class="list border-top user-avatar circle">
+              <li>
+                <figure><img src="img/default-profile.png"></figure>
+                <div class="list-info">
+                  <span class="time">5 minutes ago</span>
+                  <h4><a href="#">admin</a></h4>
+                  <p>
+                    <strong>Server maintenance</strong> scheduled for Monday, 24th of August 2015
+                  </p>
+                </div>
+              </li>
+              <li>
+                <figure><img src="img/default-profile.png"></figure>
+                <div class="list-info">
+                  <span class="time">2 hours ago</span>
+                  <h4><a href="#">admin</a></h4>
+                  <p>
+                    <strong>System upgrade to 2.0</strong> scheduled for Wednesday, 26th of August 2015
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+    		</div> <!-- End of col-xs-4 -->
+
+
+    	</div>
+    </div> <!-- End of container -->
+
+    <footer>
+    	<div class="container">
+	    	<div class="col-xs-4">
+	    		<h2>About</h2>
+	    		<p>This is a demonstration server for Booktype. This server is reset on a regular basis, and any books created here will be deleted at that time.</p>
+	    	</div>
+
+	    	<div class="col-xs-4">
+	    		<h2>How to use</h2>
+	    		<p>If you wish to have your own installation please either download the sources <a href="http://www.sourcefabric.org/en/booktype/">http://www.sourcefabric.org/en/booktype/</a> or check out Booktype Pro, our free, cloud-hosted publishing service - <a href="http://sourcefabric.com/en/booktypepro/">http://sourcefabric.com/en/booktypepro/</a>.</p>
+	    	</div>
+
+	    	<div class="col-xs-4">
+	    		<h2>Need Help?</h2>
+	    		<p>With social tools, easy workflows and freedom to choose your own licences, Booktype Pro is perfect for internal, or public-facing, use. Publishers, print-on-demand services and education institutions produce better books, faster, while Sourcefabric takes care of your own platform's installation, hosting, upgrades, and security.</p>
+	    	</div>
+	    	<div class="content-divider"></div>
+	    	<div class="col-xs-4">
+	    		<img class="pull-right" src="img/footer_logo.png">
+	    	</div>
+	    	<div class="col-xs-8">
+	    		<p>Powered by Booktype, the open content management system for professional  writers. <br>
+				© 2013 Sourcefabric o.p.s. | contact@sourcefabric.org</p>
+	    	</div>
+	    </div>
+    </footer>
+
+
+            <!-- Invite people wizard modal -->
+            <div class="modal fade invitePeopleWizard" id="inviteWizard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h2 class="modal-title" id="myModalLabel">Invite people</h2>
+                    </div>
+                    <div class="modal-body">
+
+                    <section id="basic">
+                      <div id="wizard-invite">
+
+                        <h3>Enter email adresses</h3>
+                        <section>
+                          <p class="wizard_desc">Who would you like to invite?</p>
+                          <label for="title">Enter email addresses separated by comma</label>
+                          <textarea class="form-control" id="invite_id" name="invite_id" rows="7"></textarea>
+                        </section>
+
+                        <h3>Enter message</h3>
+                        <section>
+                          <p class="wizard_desc">What is the message of your invitation?</p>
+                          <label for="description">Message</label>
+                          <textarea class="form-control" name="message" cols="40" rows="7"></textarea>
+                        </section>                                                          
+                      </div>
+                    </section>
+                  </div>                
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div><!-- /.modal -->
+
+  <!-- Create Book modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog new_book">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h2 class="modal-title" id="myModalLabel">Create New Book</h2>
+                    </div>
+                      <div class="modal-body">
+
+                    <section id="basic">
+
+                            <form method="post" action="/accounts/Fritz/_create_book/" target="hidden_frame" enctype="multipart/form-data"><input type="hidden" name="csrfmiddlewaretoken" value="cbFF3Y1lqxPMojRh0EOxNEWwv4oOpwdu">
+
+                                <div id="wizard-1">
+
+                                    <h3>Title</h3>
+                                    <section>
+                                        <p class="wizard_desc">What is the title of your book?</p>
+                                  <label for="title">Title of Book</label> <input class="form-control" maxlength="200" name="title" type="text">
+                                    </section>
+
+                                    <h3>Description</h3>
+                                    <section>
+                                        <p class="wizard_desc">Give some information so others can find it to help you (this can be added or changed later).</p>
+                                <label for="description">Description</label>
+                            <textarea class="form-control" name="description" cols="40" rows="7"></textarea>
+
+                                    </section>
+
+                                    <h3>Choose license</h3>
+                                    <section>
+                                        <p class="wizard_desc">Choose from the following license</p>
+                            <label for="hidden">License</label>
+                            <select id="id_license" name="license">
+                              <option value="">---------</option>
+                              <option value="4" selected="selected">Creative Commons Attribution</option>
+                              <option value="6">Creative Commons Attribution-NoDerivs</option>
+                              <option value="7">Creative Commons Attribution-NonCommercial</option>
+                              <option value="9">Creative Commons Attribution</option>
+                              <option value="8">Creative Commons Attribution-NonCommercial</option>
+                              <option value="5">Creative Commons Attribution-ShareAlike</option>
+                              <option value="3">Creative Commons No Rights Reserved</option>
+                              <option value="10">GNU General Public License</option>
+                              <option value="2">MIT License</option>
+                              <option value="11">Neka moja licenca</option>
+                              <option value="1">Public Domain</option>
+                            </select>
+                                        
+                                    </section>
+
+                                    <h3>Image</h3>
+                                    <section>
+                                        <p class="wizard_desc">If you have an image for the book then add it now (this can be added or changed later)</p>
+                                        <label for="hidden">Book Image</label>
+                            <input type="file" name="cover" size="40">
+                                    </section>
+
+                                    <h3>Make Public?</h3>
+                                    <section>
+                                        <p class="wizard_desc">Would you like to keep your book private or make it public? If the book is public others can find the book to help you.
+                            <b>Note:</b> this setting can be changed later from your dashboard.</p>
+
+                            <label for="hidden">Initially hide from others</label> <input checked="checked" name="hidden" type="checkbox">
+
+
+
+                                    </section>
+
+                                </div>
+
+                            </form>
+
+                          </section>
+                  </div>                
+                  </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+              </div>
+
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+<script type="text/javascript" src="js/tooltip.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+<script type="text/javascript" src="js/jquery.mjs.nestedSortable.js"></script>
+<script type="text/javascript" src="js/booki-init.js"></script>
+<script type="text/javascript" src="js/jquery.steps.min.js"></script>
+
+<script type="text/javascript">
+        // invite people wizard
+        $("#wizard-invite").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            autoFocus: true
+        });
+        // create book wizard
+        $("#wizard-1").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            autoFocus: true
+        });
+</script>
+
+</body>
+</html>
